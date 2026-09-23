@@ -1,4 +1,6 @@
 import React from "react";
+import { characters } from "@/data/character";
+
 
 type Props = {
   view: string;
@@ -42,7 +44,7 @@ function Dashboard({ view, setView }: Props) {
 
           <div className="dashboard-item">
             <p>EQUIPAGE</p>
-            <button onClick={handleCrew}>X</button>
+            <button onClick={handleCrew}>{characters.length}/8</button>
           </div>
 
           <div className="dashboard-item">
