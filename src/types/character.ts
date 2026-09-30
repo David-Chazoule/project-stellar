@@ -12,10 +12,13 @@ export type Specialty = {
 };
 
 export type Skills = {
+  leadership: number;
   physical: number;
   agility: number;
   perception: number;
   intelligence: number;
+  charisma: number;
+  seduction: number;
   composure: number;
   social: number;
   stealth: number;

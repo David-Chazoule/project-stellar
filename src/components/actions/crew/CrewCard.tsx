@@ -22,10 +22,13 @@ function CrewCard({ character }: Props) {
         </div>
         <div className="skills-box">
           <div>
+            <p>Leadership : {character.skills.leadership}</p>
             <p>physique : {character.skills.physical}</p>
             <p>agilité :{character.skills.agility}</p>
             <p>perception :{character.skills.perception}</p>
             <p>intelligence :{character.skills.intelligence}</p>
+            <p>charisme : {character.skills.charisma}</p>
+            <p>séduction : {character.skills.seduction}</p>
             <p>sang-froid :{character.skills.composure}</p>
             <p>social :{character.skills.social}</p>
             <p>discrétion :{character.skills.stealth} </p>
