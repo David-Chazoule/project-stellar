@@ -3,9 +3,10 @@
 import { useState } from "react";
 import Dashboard from "./Dashboard";
 import Crew from "../actions/crew/Crew";
+import MissionsSelection from "../actions/missionSelection/MissionsSelection";
 
 function GameLayout() {
-  const [view, setView] = useState<string>("");
+  const [view, setView] = useState<"crew" | "missions" | null>(null);
   return (
     <div>
       <header>Header</header>
@@ -13,9 +14,10 @@ function GameLayout() {
         <section>
           <Dashboard view={view} setView={setView} />
         </section>
-        <section>
+        <section className="action-area">
           <p>Zone d&apos;action</p>
           {view === "crew" && <Crew />}
+          {view==="missions" && <MissionsSelection/>}
         </section>
       </main>
     </div>

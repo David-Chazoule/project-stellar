@@ -1,24 +1,36 @@
 import React from "react";
 import { characters } from "@/data/character";
 
+type View = "crew" | "missions" | null;
 
 type Props = {
-  view: string;
-  setView: React.Dispatch<React.SetStateAction<string>>;
+  view: View;
+  setView: React.Dispatch<React.SetStateAction<View>>;
 };
+
 
 function Dashboard({ view, setView }: Props) {
   const handleCrew = () => {
     if (view === "crew") {
-      setView("");
+      setView(null);
     } else {
       setView("crew");
     }
   };
 
+  const handleMissionSelection =()=>{
+    if(view ==="missions") {
+      setView(null);
+    } else {
+      setView("missions")
+    }
+  }
+
   return (
     <div className="dashboard-container">
+      
       <div className="dashboard-card">
+        <button onClick={handleMissionSelection}>Missions</button>
         <div className="dashboard-row">
           <div className="dashboard-item">
             <p>CREDITS</p>

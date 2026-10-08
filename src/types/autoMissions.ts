@@ -39,7 +39,7 @@ export type AutoMissionResult = {
 
 export interface AutoMission {
   id: string;
-  repeatable: true,
+  repeatable: boolean,
   duration:number,
 
   card: {
@@ -47,12 +47,12 @@ export interface AutoMission {
     shortDescription: string;
     location: string;
     reward: number;
-    recommendedSkills: SpecialtyName[];
+   
   };
 
   setup: {
-    summary: string;
-    requiredCrew: RequiredCrew[];
+    briefing: string;
+    requiredCrew:{aptitude:SpecialtyName; count:number;}[];
   };
 
   progression: {
