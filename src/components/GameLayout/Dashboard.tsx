@@ -8,7 +8,6 @@ type Props = {
   setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
-
 function Dashboard({ view, setView }: Props) {
   const handleCrew = () => {
     if (view === "crew") {
@@ -18,17 +17,16 @@ function Dashboard({ view, setView }: Props) {
     }
   };
 
-  const handleMissionSelection =()=>{
-    if(view ==="missions") {
+  const handleMissionSelection = () => {
+    if (view === "missions") {
       setView(null);
     } else {
-      setView("missions")
+      setView("missions");
     }
-  }
+  };
 
   return (
     <div className="dashboard-container">
-      
       <div className="dashboard-card">
         <button onClick={handleMissionSelection}>Missions</button>
         <div className="dashboard-row">

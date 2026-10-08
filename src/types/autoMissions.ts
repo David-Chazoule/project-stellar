@@ -1,5 +1,7 @@
 import { SpecialtyName } from "./character";
 
+export type AutoMissionStep = "setup" | "progression" | "conclusion";
+
 export type AutoMissionResultType =
   | "criticalFailure"
   | "failure"
@@ -31,33 +33,30 @@ export type AutoMissionResult = {
     credits?: number;
     reputation?: number;
     moral?: number;
-    fatigue?:number;
-
+    fatigue?: number;
   };
 };
 
-
 export interface AutoMission {
   id: string;
-  repeatable: boolean,
-  duration:number,
+  repeatable: boolean;
+  duration: number;
 
   card: {
     title: string;
     shortDescription: string;
     location: string;
     reward: number;
-   
   };
 
   setup: {
     briefing: string;
-    requiredCrew:{aptitude:SpecialtyName; count:number;}[];
+    requiredCrew: { aptitude: SpecialtyName; count: number }[];
   };
 
   progression: {
     text: string;
   };
 
-  results:  Record<AutoMissionResultType, AutoMissionResult>;
+  results: Record<AutoMissionResultType, AutoMissionResult>;
 }

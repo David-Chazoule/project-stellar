@@ -1,4 +1,4 @@
-import { AutoMission } from "@/types/autoMissions";
+import type { AutoMission } from "@/types/autoMissions";
 
 type Props = {
   mission: AutoMission;

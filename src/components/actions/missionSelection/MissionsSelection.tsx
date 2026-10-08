@@ -2,9 +2,11 @@ import { autoMissions } from "@/data/missions/autoMission";
 import { AutoMission } from "@/types/autoMissions";
 import MissionSelectionCard from "./MissionSelectionCard";
 
-function MissionsSelection() {
+type Props = { setSelectedMission: (mission: AutoMission) => void };
+
+function MissionsSelection({ setSelectedMission }: Props) {
   const handleSelectMission = (mission: AutoMission) => {
-    console.log(mission);
+    setSelectedMission(mission);
   };
   return (
     <div className="missionsSelection-container">
