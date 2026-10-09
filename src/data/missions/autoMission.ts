@@ -18,8 +18,8 @@ export const autoMissions: AutoMission[] = [
         notamment la gestion de l’isolement, de la promiscuité et du confinement à bord des vaisseaux ou des stations spatiales.
         Les membres envoyés représentent l’équipage et interviennent devant le public pour partager leur expérience de la vie dans l’espace.`,
       requiredCrew: [
-        { aptitude: "science", count: 1 },
-        { aptitude: "diplomacy", count: 1 },
+        { aptitude: "scientist", count: 1 },
+        { aptitude: "liaisonOfficer", count: 1 },
       ],
     },
 
@@ -86,7 +86,7 @@ export const autoMissions: AutoMission[] = [
       Leur rôle est de former ses nouvelles recrues aux situations de sécurité propres aux environnements spatiaux : combat rapproché, 
       intervention dans des espaces confinés, protection de personnel, gestion d’incidents à bord et procédures d’urgence.
 `,
-      requiredCrew: [{ aptitude: "security", count: 3 }],
+      requiredCrew: [{ aptitude: "operative", count: 3 }],
     },
 
     progression: {
@@ -160,9 +160,9 @@ export const autoMissions: AutoMission[] = [
 
 `,
       requiredCrew: [
-        { aptitude: "piloting", count: 1 },
-        { aptitude: "security", count: 1 },
-        { aptitude: "diplomacy", count: 1 },
+        { aptitude: "pilot", count: 1 },
+        { aptitude: "operative", count: 1 },
+        { aptitude: "liaisonOfficer", count: 1 },
       ],
     },
 

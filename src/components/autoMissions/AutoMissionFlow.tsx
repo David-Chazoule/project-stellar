@@ -5,6 +5,7 @@ import AutoMissionProgression from "./AutoMissionProgression";
 import AutoMissionConclusion from "./AutoMissionConclusion";
 import type { AutoMission } from "@/types/autoMissions";
 import type { AutoMissionResultType } from "@/types/autoMissions";
+import { Character } from "@/types/character";
 
 type Props = {
   mission: AutoMission;
@@ -13,12 +14,19 @@ type Props = {
 
 function AutoMissionFlow({ setSelectedMission, mission }: Props) {
   const [step, setStep] = useState<AutoMissionStep>("setup");
+  const [selectedCrew, setSelectedCrew] = useState<Character[]>([]);
+
   const result: AutoMissionResultType = "criticalFailure";
 
   return (
     <div>
       {step === "setup" && (
-        <AutoMissionSetup mission={mission} setStep={setStep} />
+        <AutoMissionSetup
+          mission={mission}
+          setStep={setStep}
+          selectedCrew={selectedCrew}
+          setSelectedCrew={setSelectedCrew}
+        />
       )}
       {step === "progression" && (
         <AutoMissionProgression mission={mission} setStep={setStep} />
