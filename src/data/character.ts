@@ -4,10 +4,10 @@ export const characters: Character[] = [
   {
     id: 1,
     name: "David",
-    specialty: { name: "piloting", level: 80 },
+    specialty: { name: "pilot", level: 80 },
     secondarySpecialties: [
-      { name: "security", level: 71 },
-      { name: "diplomacy", level: 78 },
+      { name: "operative", level: 71 },
+      { name: "liaisonOfficer", level: 78 },
     ],
     skills: {
       leadership: 65,
@@ -30,10 +30,10 @@ export const characters: Character[] = [
   {
     id: 2,
     name: "Sunny",
-    specialty: { name: "diplomacy", level: 80 },
+    specialty: { name: "liaisonOfficer", level: 80 },
     secondarySpecialties: [
-      { name: "security", level: 68 },
-      { name: "piloting", level: 75 },
+      { name: "operative", level: 68 },
+      { name: "pilot", level: 75 },
     ],
     skills: {
       leadership: 70,
@@ -56,11 +56,11 @@ export const characters: Character[] = [
   {
     id: 3,
     name: "Randy",
-    specialty: { name: "engineering", level: 85 },
+    specialty: { name: "engineer", level: 85 },
     secondarySpecialties: [
-      { name: "science", level: 75 },
-      { name: "piloting", level: 80 },
-      { name: "security", level: 72 },
+      { name: "scientist", level: 75 },
+      { name: "pilot", level: 80 },
+      { name: "operative", level: 72 },
     ],
     skills: {
       leadership: 60,
@@ -83,8 +83,8 @@ export const characters: Character[] = [
   {
     id: 4,
     name: "Yann",
-    specialty: { name: "piloting", level: 85 },
-    secondarySpecialties: [{ name: "security", level: 72 }],
+    specialty: { name: "pilot", level: 85 },
+    secondarySpecialties: [{ name: "operative", level: 72 }],
     skills: {
       leadership: 50,
       physical: 68,
@@ -106,8 +106,8 @@ export const characters: Character[] = [
   {
     id: 5,
     name: "Alex",
-    specialty: { name: "security", level: 85 },
-    secondarySpecialties: [{ name: "diplomacy", level: 75 }],
+    specialty: { name: "operative", level: 85 },
+    secondarySpecialties: [{ name: "liaisonOfficer", level: 75 }],
     skills: {
       leadership: 60,
       physical: 75,
@@ -129,10 +129,10 @@ export const characters: Character[] = [
   {
     id: 6,
     name: "Cedric",
-    specialty: { name: "security", level: 85 },
+    specialty: { name: "operative", level: 85 },
     secondarySpecialties: [
-      { name: "piloting", level: 80 },
-      { name: "security", level: 72 },
+      { name: "pilot", level: 80 },
+      { name: "liaisonOfficer", level: 72 },
     ],
     skills: {
       leadership: 60,
@@ -155,8 +155,8 @@ export const characters: Character[] = [
   {
     id: 7,
     name: "Ludovic",
-    specialty: { name: "medicine", level: 85 },
-    secondarySpecialties: [{ name: "security", level: 72 }],
+    specialty: { name: "medic", level: 85 },
+    secondarySpecialties: [{ name: "operative", level: 72 }],
     skills: {
       leadership: 60,
       physical: 75,
@@ -178,10 +178,10 @@ export const characters: Character[] = [
   {
     id: 8,
     name: "Jerome",
-    specialty: { name: "engineering", level: 85 },
+    specialty: { name: "engineer", level: 85 },
     secondarySpecialties: [
-      { name: "science", level: 75 },
-      { name: "piloting", level: 80 },
+      { name: "scientist", level: 75 },
+      { name: "pilot", level: 80 },
     ],
     skills: {
       leadership: 60,

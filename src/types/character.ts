@@ -1,10 +1,10 @@
 export type SpecialtyName =
-  | "piloting"
-  | "engineering"
-  | "medicine"
-  | "science"
-  | "security"
-  | "diplomacy";
+  | "pilot"
+  | "engineer"
+  | "medic"
+  | "scientist"
+  | "operative"
+  | "liaisonOfficer";
 
 export type Specialty = {
   name: SpecialtyName;

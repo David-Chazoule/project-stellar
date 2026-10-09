@@ -1,10 +1,10 @@
 import type { SpecialtyName } from "@/types/character";
 
 export const specialtyLabels: Record<SpecialtyName, string> = {
-  piloting: "Pilotage",
-  engineering: "Ingénierie",
-  medicine: "Médecine",
-  science: "Science",
-  security: "Sécurité",
-  diplomacy: "Diplomatie",
+  pilot: "Pilote",
+  engineer: "Ingénieur",
+  medic: "Médecin",
+  scientist: "Scientifique",
+  operative: "Opérateur tactique ",
+  liaisonOfficer: "Agent de liaison",
 };
