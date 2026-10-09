@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import type { AutoMissionStep } from "@/types/autoMissions";
 import { useState } from "react";
 import AutoMissionSetup from "./AutoMissionSetup";
@@ -5,7 +6,7 @@ import AutoMissionProgression from "./AutoMissionProgression";
 import AutoMissionConclusion from "./AutoMissionConclusion";
 import type { AutoMission } from "@/types/autoMissions";
 import type { AutoMissionResultType } from "@/types/autoMissions";
-import { Character } from "@/types/character";
+import { SelectedCrewMember } from "@/types/autoMissions";
 
 type Props = {
   mission: AutoMission;
@@ -14,12 +15,16 @@ type Props = {
 
 function AutoMissionFlow({ setSelectedMission, mission }: Props) {
   const [step, setStep] = useState<AutoMissionStep>("setup");
-  const [selectedCrew, setSelectedCrew] = useState<Character[]>([]);
+  const [selectedCrew, setSelectedCrew] = useState<SelectedCrewMember[]>([]);
 
   const result: AutoMissionResultType = "criticalFailure";
 
+  useEffect(() => {
+  console.log("Crew sélectionné :", selectedCrew);
+}, [selectedCrew]);
+
   return (
-    <div>
+    <div className="autoMissionFlow-container">
       {step === "setup" && (
         <AutoMissionSetup
           mission={mission}

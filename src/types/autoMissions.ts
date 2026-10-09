@@ -1,4 +1,5 @@
 import { SpecialtyName } from "./character";
+import { Character } from "./character";
 
 export type AutoMissionStep = "setup" | "progression" | "conclusion";
 
@@ -19,6 +20,11 @@ export type AutoMissionType =
   | "science"
   | "medical"
   | "logistics";
+
+  export type SelectedCrewMember = {
+  character: Character;
+  aptitude: SpecialtyName;
+};
 
 export interface RequiredCrew {
   specialty: SpecialtyName;
