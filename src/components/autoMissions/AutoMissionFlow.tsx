@@ -16,12 +16,12 @@ type Props = {
 function AutoMissionFlow({ setSelectedMission, mission }: Props) {
   const [step, setStep] = useState<AutoMissionStep>("setup");
   const [selectedCrew, setSelectedCrew] = useState<SelectedCrewMember[]>([]);
-
-  const result: AutoMissionResultType = "criticalFailure";
+  const [missionResult, setMissionResult] =
+    useState<AutoMissionResultType | null>(null);
 
   useEffect(() => {
-  console.log("Crew sélectionné :", selectedCrew);
-}, [selectedCrew]);
+    console.log("Crew sélectionné :", selectedCrew);
+  }, [selectedCrew]);
 
   return (
     <div className="autoMissionFlow-container">
@@ -34,13 +34,20 @@ function AutoMissionFlow({ setSelectedMission, mission }: Props) {
         />
       )}
       {step === "progression" && (
-        <AutoMissionProgression mission={mission} setStep={setStep} />
+        <AutoMissionProgression
+          mission={mission}
+          setStep={setStep}
+          missionResult={missionResult}
+          setMissionResult={setMissionResult}
+          selectedCrew={selectedCrew}
+          setSelectedCrew={setSelectedCrew}
+        />
       )}
-      {step === "conclusion" && (
+      {step === "conclusion" && missionResult && (
         <AutoMissionConclusion
           mission={mission}
           setSelectedMission={setSelectedMission}
-          result={result}
+          result={missionResult}
         />
       )}
     </div>

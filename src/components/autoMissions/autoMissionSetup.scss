@@ -51,6 +51,10 @@
           margin: 4px;
           cursor: pointer;
         }
+
+        .crew-card.selected {
+  background: green;
+}
       }
     }
   }

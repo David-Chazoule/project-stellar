@@ -21,13 +21,13 @@ export type AutoMissionType =
   | "medical"
   | "logistics";
 
-  export type SelectedCrewMember = {
+export type SelectedCrewMember = {
   character: Character;
   aptitude: SpecialtyName;
 };
 
 export interface RequiredCrew {
-  specialty: SpecialtyName;
+  aptitude: SpecialtyName;
   count: number;
 }
 
@@ -43,10 +43,16 @@ export type AutoMissionResult = {
   };
 };
 
+export type AutoMissionResolver = {
+  type: "aptitudeAverage";
+};
+
 export interface AutoMission {
   id: string;
   repeatable: boolean;
   duration: number;
+
+  resolver: AutoMissionResolver;
 
   card: {
     title: string;

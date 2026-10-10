@@ -4,6 +4,7 @@ import { SpecialtyName } from "@/types/character";
 import { AutoMissionStep, SelectedCrewMember } from "../../types/autoMissions";
 import type { AutoMission } from "../../types/autoMissions";
 import { specialtyLabels } from "@/data/labels/specialtyLabels";
+import { getAptitudeLevel } from "../../logic/characters/getAptitudeLevel";
 
 type Props = {
   mission: AutoMission;
@@ -18,18 +19,6 @@ function AutoMissionSetup({
   selectedCrew,
   setSelectedCrew,
 }: Props) {
-  function getAptitudeLevel(character: Character, aptitude: SpecialtyName) {
-    if (character.specialty.name === aptitude) {
-      return character.specialty.level;
-    }
-
-    const secondary = character.secondarySpecialties.find(
-      (specialty) => specialty.name === aptitude,
-    );
-
-    return secondary?.level ?? 0;
-  }
-
   function handleCrewSelect(
     character: Character,
     aptitude: SpecialtyName,
@@ -106,24 +95,34 @@ function AutoMissionSetup({
             <div key={required.aptitude} className="aptitude-selected-box">
               <h3>{specialtyLabels[required.aptitude]} </h3>
               <div className="crew-card-box">
-                {candidates.map((character) => (
-                  <div
-                    key={character.id}
-                    className="crew-card"
-                    onClick={() =>
-                      handleCrewSelect(
-                        character,
-                        required.aptitude,
-                        required.count,
-                      )
-                    }
-                  >
-                    <p>
-                      {character.name} -{" "}
-                      {getAptitudeLevel(character, required.aptitude)}
-                    </p>
-                  </div>
-                ))}
+                {candidates.map((character) => {
+                  const isSelected = selectedCrew.some(
+                    (member) =>
+                      member.character.id === character.id &&
+                      member.aptitude === required.aptitude,
+                  );
+
+                  return (
+                    <div
+                      key={character.id}
+                      className={
+                        isSelected ? "crew-card selected" : "crew-card"
+                      }
+                      onClick={() =>
+                        handleCrewSelect(
+                          character,
+                          required.aptitude,
+                          required.count,
+                        )
+                      }
+                    >
+                      <p>
+                        {character.name} -{" "}
+                        {getAptitudeLevel(character, required.aptitude)}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           );

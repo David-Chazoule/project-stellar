@@ -5,6 +5,7 @@ export const autoMissions: AutoMission[] = [
     id: "auto-paris-conference",
     repeatable: true,
     duration: 1,
+    resolver: { type: "aptitudeAverage" },
 
     card: {
       title: "Conférence scientifique à Paris",
@@ -71,6 +72,7 @@ export const autoMissions: AutoMission[] = [
     id: "auto-mars-formation",
     repeatable: false,
     duration: 28,
+    resolver: { type: "aptitudeAverage" },
 
     card: {
       title: "Formation à la sécurité dans l'espace",
@@ -140,6 +142,7 @@ export const autoMissions: AutoMission[] = [
     id: "auto-mars-escort",
     repeatable: false,
     duration: 200,
+    resolver: { type: "aptitudeAverage" },
 
     card: {
       title: "Escorter un groupe de voyageurs",
