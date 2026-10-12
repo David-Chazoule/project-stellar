@@ -7,3 +7,8 @@
 @use "../components/actions/missionSelection/missionSelectionCard.scss";
 @use "../components/autoMissions/autoMissionSetup.scss";
 @use "../components/autoMissions/autoMissionFlow.scss";
+@use "../components/starGame/captainSelection";
+@use "../components/starGame/characterSelectionCard";
+@use "../components/starGame/crewSelection";
+@use "../components/starGame/starGameFlow";
+@use "../components/starGame/welcome";

@@ -6,6 +6,8 @@ import Crew from "../actions/crew/Crew";
 import MissionsSelection from "../actions/missionSelection/MissionsSelection";
 import type { AutoMission } from "@/types/autoMissions";
 import AutoMissionFlow from "../autoMissions/AutoMissionFlow";
+import CaptainSelection from "../starGame/CaptainSelection";
+import StartGameFlow from "../starGame/StartGameFlow";
 function GameLayout() {
   const [view, setView] = useState<"crew" | "missions" | null>(null);
   const [selectedMission, setSelectedMission] = useState<AutoMission | null>(
@@ -18,6 +20,7 @@ function GameLayout() {
         <section>
           <Dashboard view={view} setView={setView} />
         </section>
+
         <section className="action-area">
           <p>Zone d&apos;action</p>
           {view === "crew" && <Crew />}
