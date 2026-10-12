@@ -33,8 +33,14 @@ export type States = {
 export type Character = {
   id: number;
   name: string;
+  origin?: {
+    planet?: string;
+    country?: string;
+  };
   specialty: Specialty;
   secondarySpecialties: Specialty[];
   skills: Skills;
   states: States;
+  interests?: string[];
+  personality?: string[];
 };
