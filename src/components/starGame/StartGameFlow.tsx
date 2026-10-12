@@ -2,10 +2,15 @@ import { useState } from "react";
 import CaptainSelection from "./CaptainSelection";
 import CrewSelection from "./CrewSelection";
 import Welcome from "./Welcome";
+import type { View } from "@/types/gameState";
 
 export type StartGameStep = "captain" | "crew" | "welcome";
 
-function StartGameFlow() {
+type Props = {
+  setView: React.Dispatch<React.SetStateAction<View>>;
+};
+
+function StartGameFlow({ setView }: Props) {
   const [startStep, setStartStep] = useState<StartGameStep>("captain");
 
   return (
@@ -18,9 +23,7 @@ function StartGameFlow() {
         <CrewSelection startStep={startStep} setStartStep={setStartStep} />
       )}
 
-      {startStep === "welcome" && (
-        <Welcome startStep={startStep} setStartStep={setStartStep} />
-      )}
+      {startStep === "welcome" && <Welcome setView={setView} />}
     </div>
   );
 }

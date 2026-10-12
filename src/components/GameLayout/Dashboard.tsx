@@ -1,7 +1,6 @@
 import React from "react";
 import { characters } from "@/data/character";
-
-type View = "crew" | "missions" | null;
+import type { View } from "@/types/gameState";
 
 type Props = {
   view: View;

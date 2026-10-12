@@ -3,3 +3,5 @@ export type GameState = {
   cohesion: number;
   reputation: number;
 };
+
+export type View = "startGame" | "crew" | "missions" | null;

@@ -1,6 +1,6 @@
 import CharacterSelectionCard from "./CharacterSelectionCard";
-import type { StartGameStep } from "./StartGameFlow";
 import { characters } from "@/data/character";
+import type { StartGameStep } from "./StartGameFlow";
 
 type Props = {
   startStep: StartGameStep;
@@ -14,6 +14,9 @@ function CrewSelection({ startStep, setStartStep }: Props) {
       {characters.map((character) => (
         <CharacterSelectionCard key={character.id} character={character} />
       ))}
+      <div>
+        <button onClick={() => setStartStep("welcome")}>Continuer</button>
+      </div>
     </div>
   );
 }

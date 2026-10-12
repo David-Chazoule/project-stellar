@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import type { AutoMissionStep } from "@/types/autoMissions";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import AutoMissionSetup from "./AutoMissionSetup";
 import AutoMissionProgression from "./AutoMissionProgression";
 import AutoMissionConclusion from "./AutoMissionConclusion";
 import type { AutoMission } from "@/types/autoMissions";
 import type { AutoMissionResultType } from "@/types/autoMissions";
-import { SelectedCrewMember } from "@/types/autoMissions";
+import type { SelectedCrewMember } from "@/types/autoMissions";
+import type { AutoMissionStep } from "@/types/autoMissions";
 
 type Props = {
   mission: AutoMission;

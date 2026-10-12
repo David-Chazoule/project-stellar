@@ -1,12 +1,18 @@
-import { StartGameStep } from "./StartGameFlow";
+import type { View } from "../../types/gameState";
 
 type Props = {
-  startStep: StartGameStep;
-  setStartStep: React.Dispatch<React.SetStateAction<StartGameStep>>;
+  setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
-function Welcome({ startStep, setStartStep }: Props) {
-  return <div>Welcome</div>;
+function Welcome({ setView }: Props) {
+  return (
+    <div>
+      Welcome
+      <div>
+        <button onClick={() => setView("missions")}>Continuer</button>
+      </div>
+    </div>
+  );
 }
 
 export default Welcome;

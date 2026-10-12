@@ -17,6 +17,10 @@ function CaptainSelection({ startStep, setStartStep }: Props) {
           <CharacterSelectionCard key={character.id} character={character} />
         ))}
       </div>
+
+      <div>
+        <button onClick={() => setStartStep("crew")}>Continuer</button>
+      </div>
     </div>
   );
 }
