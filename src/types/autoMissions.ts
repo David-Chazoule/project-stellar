@@ -51,6 +51,7 @@ export interface AutoMission {
   id: string;
   repeatable: boolean;
   duration: number;
+  minReputation: number;
 
   resolver: AutoMissionResolver;
 
