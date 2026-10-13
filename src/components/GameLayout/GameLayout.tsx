@@ -18,6 +18,20 @@ function GameLayout() {
   const [captainId, setCaptainId] = useState<number | null>(null);
   const [crew, setCrew] = useState<Character[]>([]);
 
+
+ if (view === "startGame") {
+    return (
+      <StartGameFlow
+        setView={setView}
+        captainId={captainId}
+        setCaptainId={setCaptainId}
+        crew={crew}
+        setCrew={setCrew}
+      />
+    );
+  }
+
+
   return (
     <div>
       <header>Header</header>
@@ -27,7 +41,7 @@ function GameLayout() {
         </section>
 
         <section className="action-area">
-          {view === "startGame" && (
+          {/* {view === "startGame" && (
             <StartGameFlow
               setView={setView}
               captainId={captainId}
@@ -35,7 +49,7 @@ function GameLayout() {
               crew={crew}
               setCrew={setCrew}
             />
-          )}
+          )} */}
 
           {view === "crew" && <Crew crew={crew}
               setCrew={setCrew} />}
