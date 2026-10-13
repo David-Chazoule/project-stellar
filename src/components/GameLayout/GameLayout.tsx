@@ -23,7 +23,7 @@ function GameLayout() {
       <header>Header</header>
       <main>
         <section>
-          <Dashboard view={view} setView={setView} />
+          <Dashboard view={view} setView={setView} crew={crew}  />
         </section>
 
         <section className="action-area">
@@ -37,14 +37,21 @@ function GameLayout() {
             />
           )}
 
-          {view === "crew" && <Crew />}
+          {view === "crew" && <Crew crew={crew}
+              setCrew={setCrew} />}
           {view === "missions" && !selectedMission && (
-            <MissionsSelection setSelectedMission={setSelectedMission} />
+            <MissionsSelection
+              setSelectedMission={setSelectedMission}
+              crew={crew}
+              setCrew={setCrew}
+            />
           )}
           {view === "missions" && selectedMission && (
             <AutoMissionFlow
               mission={selectedMission}
               setSelectedMission={setSelectedMission}
+              crew={crew}
+              setCrew={setCrew}
             />
           )}
         </section>

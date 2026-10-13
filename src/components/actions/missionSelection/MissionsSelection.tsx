@@ -1,8 +1,12 @@
 import { autoMissions } from "@/data/missions/autoMission";
-import { AutoMission } from "@/types/autoMissions";
+import type { AutoMission } from "@/types/autoMissions";
 import MissionSelectionCard from "./MissionSelectionCard";
+import type { Character } from "@/types/character";
 
-type Props = { setSelectedMission: (mission: AutoMission) => void };
+type Props = { setSelectedMission: (mission: AutoMission) => void ;
+   crew: Character[];
+    setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
+};
 
 function MissionsSelection({ setSelectedMission }: Props) {
   const handleSelectMission = (mission: AutoMission) => {

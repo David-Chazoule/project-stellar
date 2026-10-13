@@ -1,13 +1,15 @@
 import React from "react";
-import { characters } from "@/data/character";
+
 import type { View } from "@/types/gameState";
+import type { Character } from "@/types/character";
 
 type Props = {
   view: View;
+  crew: Character[];
   setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
-function Dashboard({ view, setView }: Props) {
+function Dashboard({ view, setView,crew }: Props) {
   const handleCrew = () => {
     if (view === "crew") {
       setView(null);
@@ -53,7 +55,7 @@ function Dashboard({ view, setView }: Props) {
 
           <div className="dashboard-item">
             <p>EQUIPAGE</p>
-            <button onClick={handleCrew}>{characters.length}/8</button>
+            <button onClick={handleCrew}>{crew.length}/8</button>
           </div>
 
           <div className="dashboard-item">

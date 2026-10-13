@@ -32,10 +32,13 @@ function CrewSelection({
 
     setCrew((prev) => [...prev, character]);
   }
-
+  const captain = crew.find((character) => character.id === captainId);
   return (
     <div>
-      CrewSelection
+      <h1>
+        Selectionner les membres de votre crew ( capitaine : {captain?.name}){" "}
+        {crew.length} / 8{" "}
+      </h1>
       {characters
         .filter((character) => character.id !== captainId)
         .map((character) => {

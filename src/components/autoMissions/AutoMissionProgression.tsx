@@ -12,8 +12,8 @@ type Props = {
   setMissionResult: React.Dispatch<
     React.SetStateAction<AutoMissionResultType | null>
   >;
-  selectedCrew: SelectedCrewMember[];
-  setSelectedCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
+  missionCrew: SelectedCrewMember[];
+  setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
 };
 
 function AutoMissionProgression({
@@ -21,15 +21,15 @@ function AutoMissionProgression({
   setStep,
   missionResult,
   setMissionResult,
-  selectedCrew,
-  setSelectedCrew,
+  missionCrew,
+  setMissionCrew,
 }: Props) {
   return (
     <div>
       <p>{mission.progression.text}</p>{" "}
       <button
         onClick={() => {
-          const result = resolveAutoMission(selectedCrew);
+          const result = resolveAutoMission(missionCrew);
 
           setMissionResult(result);
           setStep("conclusion");

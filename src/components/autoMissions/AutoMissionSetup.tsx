@@ -1,5 +1,4 @@
 import { Character } from "@/types/character";
-import { characters } from "@/data/character";
 import { SpecialtyName } from "@/types/character";
 import { AutoMissionStep, SelectedCrewMember } from "../../types/autoMissions";
 import type { AutoMission } from "../../types/autoMissions";
@@ -9,32 +8,36 @@ import { getAptitudeLevel } from "../../logic/characters/getAptitudeLevel";
 type Props = {
   mission: AutoMission;
   setStep: (autoMissionsStep: AutoMissionStep) => void;
-  selectedCrew: SelectedCrewMember[];
-  setSelectedCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
+  missionCrew: SelectedCrewMember[];
+  setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
+  crew: Character[];
+  setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
 };
 
 function AutoMissionSetup({
   mission,
   setStep,
-  selectedCrew,
-  setSelectedCrew,
+  missionCrew,
+  setMissionCrew,
+  crew,
+  setCrew,
 }: Props) {
   function handleCrewSelect(
     character: Character,
     aptitude: SpecialtyName,
     maxCount: number,
   ) {
-    const selectedForAptitude = selectedCrew.filter(
+    const selectedForAptitude = missionCrew.filter(
       (member) => member.aptitude === aptitude,
     );
 
-    const alreadySelected = selectedCrew.some(
+    const alreadySelected = missionCrew.some(
       (member) =>
         member.character.id === character.id && member.aptitude === aptitude,
     );
 
     if (alreadySelected) {
-      setSelectedCrew((prev) =>
+      setMissionCrew((prev) =>
         prev.filter(
           (member) =>
             !(
@@ -51,7 +54,7 @@ function AutoMissionSetup({
       return;
     }
 
-    setSelectedCrew((prev) => [
+    setMissionCrew((prev) => [
       ...prev,
       {
         character,
@@ -61,7 +64,7 @@ function AutoMissionSetup({
   }
 
   const canStartMission = mission.setup.requiredCrew.every((required) => {
-    const selectedCount = selectedCrew.filter(
+    const selectedCount = missionCrew.filter(
       (member) => member.aptitude === required.aptitude,
     ).length;
 
@@ -87,7 +90,7 @@ function AutoMissionSetup({
         <h3>selectionner équipe</h3>
 
         {mission.setup.requiredCrew.map((required) => {
-          const candidates = characters.filter(
+          const candidates = crew.filter(
             (character) => getAptitudeLevel(character, required.aptitude) > 0,
           );
 
@@ -96,7 +99,7 @@ function AutoMissionSetup({
               <h3>{specialtyLabels[required.aptitude]} </h3>
               <div className="crew-card-box">
                 {candidates.map((character) => {
-                  const isSelected = selectedCrew.some(
+                  const isSelected = missionCrew.some(
                     (member) =>
                       member.character.id === character.id &&
                       member.aptitude === required.aptitude,

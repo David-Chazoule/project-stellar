@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import AutoMissionSetup from "./AutoMissionSetup";
 import AutoMissionProgression from "./AutoMissionProgression";
@@ -7,21 +7,25 @@ import type { AutoMission } from "@/types/autoMissions";
 import type { AutoMissionResultType } from "@/types/autoMissions";
 import type { SelectedCrewMember } from "@/types/autoMissions";
 import type { AutoMissionStep } from "@/types/autoMissions";
+import type { Character } from "@/types/character";
 
 type Props = {
   mission: AutoMission;
   setSelectedMission: React.Dispatch<React.SetStateAction<AutoMission | null>>;
+  crew: Character[];
+  setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
 };
 
-function AutoMissionFlow({ setSelectedMission, mission }: Props) {
+function AutoMissionFlow({
+  setSelectedMission,
+  mission,
+  crew,
+  setCrew,
+}: Props) {
   const [step, setStep] = useState<AutoMissionStep>("setup");
-  const [selectedCrew, setSelectedCrew] = useState<SelectedCrewMember[]>([]);
+  const [missionCrew, setMissionCrew] = useState<SelectedCrewMember[]>([]);
   const [missionResult, setMissionResult] =
     useState<AutoMissionResultType | null>(null);
-
-  useEffect(() => {
-    console.log("Crew sélectionné :", selectedCrew);
-  }, [selectedCrew]);
 
   return (
     <div className="autoMissionFlow-container">
@@ -29,8 +33,10 @@ function AutoMissionFlow({ setSelectedMission, mission }: Props) {
         <AutoMissionSetup
           mission={mission}
           setStep={setStep}
-          selectedCrew={selectedCrew}
-          setSelectedCrew={setSelectedCrew}
+          missionCrew={missionCrew}
+          setMissionCrew={setMissionCrew}
+          crew={crew}
+          setCrew={setCrew}
         />
       )}
       {step === "progression" && (
@@ -39,8 +45,8 @@ function AutoMissionFlow({ setSelectedMission, mission }: Props) {
           setStep={setStep}
           missionResult={missionResult}
           setMissionResult={setMissionResult}
-          selectedCrew={selectedCrew}
-          setSelectedCrew={setSelectedCrew}
+          missionCrew={missionCrew}
+          setMissionCrew={setMissionCrew}
         />
       )}
       {step === "conclusion" && missionResult && (
