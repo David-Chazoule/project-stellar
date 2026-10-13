@@ -1,5 +1,6 @@
 import { getGeneralLevel } from "@/logic/characters/getGeneralLevel";
 import { specialtyLabels } from "@/data/labels/specialtyLabels";
+
 import type { Character } from "@/types/character";
 
 type Props = {

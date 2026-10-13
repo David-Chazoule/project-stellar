@@ -1,6 +1,7 @@
 import CharacterSelectionCard from "./CharacterSelectionCard";
 import { StartGameStep } from "./StartGameFlow";
 import { characters } from "@/data/character";
+
 import type { Character } from "@/types/character";
 
 type Props = {

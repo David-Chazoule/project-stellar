@@ -1,8 +1,10 @@
 import { resolveAutoMission } from "@/logic/automission/resolveAutoMission";
-import { AutoMissionStep, SelectedCrewMember } from "../../types/autoMissions";
+
 import type {
   AutoMission,
   AutoMissionResultType,
+  AutoMissionStep,
+  SelectedCrewMember,
 } from "../../types/autoMissions";
 
 type Props = {

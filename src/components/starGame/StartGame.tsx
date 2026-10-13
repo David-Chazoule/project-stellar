@@ -1,4 +1,5 @@
 import React from "react";
+
 import { StartGameStep } from "./StartGameFlow";
 
 type Props = {

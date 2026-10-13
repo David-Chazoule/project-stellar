@@ -1,5 +1,7 @@
-import CharacterSelectionCard from "./CharacterSelectionCard";
 import { characters } from "@/data/character";
+
+import CharacterSelectionCard from "./CharacterSelectionCard";
+
 import type { StartGameStep } from "./StartGameFlow";
 import type { Character } from "@/types/character";
 

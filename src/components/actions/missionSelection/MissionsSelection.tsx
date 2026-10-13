@@ -1,7 +1,9 @@
 import { autoMissions } from "@/data/missions/autoMission";
-import type { AutoMission } from "@/types/autoMissions";
+
 import MissionSelectionCard from "./MissionSelectionCard";
+
 import type { Character } from "@/types/character";
+import type { AutoMission } from "@/types/autoMissions";
 
 type Props = { setSelectedMission: (mission: AutoMission) => void ;
    crew: Character[];

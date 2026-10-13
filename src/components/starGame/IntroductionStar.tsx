@@ -1,5 +1,7 @@
 import React from "react";
+
 import type { StartGameStep } from "./StartGameFlow";
+
 type Props = {
   startStep: StartGameStep;
   setStartStep: React.Dispatch<React.SetStateAction<StartGameStep>>;

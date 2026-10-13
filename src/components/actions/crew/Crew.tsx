@@ -1,5 +1,6 @@
 
 import CrewCard from "./CrewCard";
+
 import type { Character } from "@/types/character";
 
 type Props = {

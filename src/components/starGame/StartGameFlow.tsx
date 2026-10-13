@@ -1,11 +1,13 @@
 import { useState } from "react";
+
 import CaptainSelection from "./CaptainSelection";
 import CrewSelection from "./CrewSelection";
 import Welcome from "./Welcome";
-import type { View } from "@/types/gameState";
-import { Character } from "@/types/character";
 import StartGame from "./StartGame";
 import IntroductionStar from "./IntroductionStar";
+
+import type { View } from "@/types/gameState";
+import type { Character } from "@/types/character";
 
 export type StartGameStep =
   | "start"
