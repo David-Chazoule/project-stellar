@@ -2,7 +2,10 @@ import { specialtyLabels } from "@/data/labels/specialtyLabels";
 import { getAptitudeLevel } from "../../logic/characters/getAptitudeLevel";
 
 import type { SpecialtyName } from "@/types/character";
-import type { AutoMissionStep, SelectedCrewMember } from "../../types/autoMissions";
+import type {
+  AutoMissionStep,
+  SelectedCrewMember,
+} from "../../types/autoMissions";
 import type { AutoMission } from "../../types/autoMissions";
 import type { Character } from "@/types/character";
 

@@ -1,9 +1,13 @@
 .characterSelectionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 1px solid black;
-  margin: 10px;
-  width: 290px;
-  min-height: 160px;
-  padding: 8px;
+  margin: 8px;
+  width: 210px;
+  min-height: 120px;
+  padding: 2px;
   cursor: pointer;
 
   .characterSelectionCard-header {
@@ -36,6 +40,7 @@
 
       div {
         p {
+          font-size: 14px;
           margin: 5px;
         }
       }
@@ -43,6 +48,6 @@
   }
 }
 
-.selected{
+.selected {
   background-color: greenyellow;
 }

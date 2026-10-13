@@ -8,6 +8,7 @@ import IntroductionStar from "./IntroductionStar";
 
 import type { View } from "@/types/gameState";
 import type { Character } from "@/types/character";
+import type { Ship } from "@/types/ship";
 
 export type StartGameStep =
   | "start"
@@ -22,6 +23,8 @@ type Props = {
   setCaptainId: React.Dispatch<React.SetStateAction<number | null>>;
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
+  ship: Ship;
+  setShip: React.Dispatch<React.SetStateAction<Ship>>;
 };
 
 function StartGameFlow({
@@ -30,6 +33,8 @@ function StartGameFlow({
   setCaptainId,
   crew,
   setCrew,
+  ship,
+  setShip,
 }: Props) {
   const [startStep, setStartStep] = useState<StartGameStep>("start");
 
@@ -51,6 +56,8 @@ function StartGameFlow({
           setCaptainId={setCaptainId}
           crew={crew}
           setCrew={setCrew}
+          ship={ship}
+          setShip={setShip}
         />
       )}
 

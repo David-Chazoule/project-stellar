@@ -5,9 +5,10 @@ import MissionSelectionCard from "./MissionSelectionCard";
 import type { Character } from "@/types/character";
 import type { AutoMission } from "@/types/autoMissions";
 
-type Props = { setSelectedMission: (mission: AutoMission) => void ;
-   crew: Character[];
-    setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
+type Props = {
+  setSelectedMission: (mission: AutoMission) => void;
+  crew: Character[];
+  setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
 };
 
 function MissionsSelection({ setSelectedMission }: Props) {

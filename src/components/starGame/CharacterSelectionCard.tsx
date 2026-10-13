@@ -20,8 +20,8 @@ function CharacterSelectionCard({ character, onClick, isSelected }: Props) {
       onClick={onClick}
     >
       <div className="characterSelectionCard-header">
-        <h3>{character.name}</h3>
-        <h2>{getGeneralLevel(character)}</h2>
+        <h4>{character.name}</h4>
+        <h3>{getGeneralLevel(character)}</h3>
       </div>
 
       <div className="characterSelectionCard-specialties">

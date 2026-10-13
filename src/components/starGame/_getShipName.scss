@@ -1,0 +1,22 @@
+.shipName_Container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+.shipNameSelection-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shipName-card{
+  width: 100px;
+  text-align: center;
+  border: 1px black solid;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+}
