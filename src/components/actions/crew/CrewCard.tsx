@@ -2,9 +2,10 @@ import type { Character } from "@/types/character";
 
 type Props = {
   character: Character;
+  
 };
 
-function CrewCard({ character }: Props) {
+function CrewCard({ character,  }: Props) {
   return (
     <div>
       <div className="crew-card">

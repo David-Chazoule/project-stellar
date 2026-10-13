@@ -4,11 +4,20 @@ import type { Character } from "@/types/character";
 
 type Props = {
   character: Character;
+  onClick: () => void;
+  isSelected: boolean;
 };
 
-function CharacterSelectionCard({ character }: Props) {
+function CharacterSelectionCard({ character, onClick, isSelected }: Props) {
   return (
-    <div className="characterSelectionCard">
+    <div
+      className={
+        isSelected
+          ? "characterSelectionCard selected"
+          : "characterSelectionCard"
+      }
+      onClick={onClick}
+    >
       <div className="characterSelectionCard-header">
         <h3>{character.name}</h3>
         <h2>{getGeneralLevel(character)}</h2>

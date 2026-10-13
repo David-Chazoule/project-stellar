@@ -4,6 +4,7 @@
   width: 290px;
   min-height: 160px;
   padding: 8px;
+  cursor: pointer;
 
   .characterSelectionCard-header {
     display: flex;
@@ -40,4 +41,8 @@
       }
     }
   }
+}
+
+.selected{
+  background-color: greenyellow;
 }
