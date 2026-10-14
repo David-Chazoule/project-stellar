@@ -1,9 +1,8 @@
-export type SpeechApproach =
-  | "professional"
-  | "casual"
-  | "drunk";
+export type SpeechStep = "preparation" | "choice" | "result";
 
-export type SpeechChoice = {
+export type SpeechApproach = "professional" | "casual" | "drunk";
+
+export type SpeechChoices = {
   id: string;
   text: string;
   result: {
@@ -17,6 +16,5 @@ export type SpeechApproachData = {
   label: string;
   prepText: string;
   choiceIntro: string;
-  choices: SpeechChoice[];
+  choices: SpeechChoices[];
 };
-
