@@ -1,6 +1,6 @@
 import React from "react";
 
-import type { Ship } from "@/types/ship";
+import type { Ship } from "@/types/Ship";
 
 type Props = {
   ship: Ship;
@@ -13,7 +13,7 @@ function GetShipName({ ship, setShip }: Props) {
     "Horizon",
     "Asterion",
     "Odyssey",
-    "Helios",
+    "Ricardo",
     "Nomad",
   ];
   return (
