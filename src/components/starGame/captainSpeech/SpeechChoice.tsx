@@ -1,4 +1,5 @@
 import React from "react";
+import { captainSpeechData } from "@/data/missions/captainspeech";
 import type {
   SpeechApproach,
   SpeechStep,
@@ -16,7 +17,31 @@ function SpeechChoice({
   setSpeechStep,
   setSelectedSpeech,
 }: Props) {
-  return <div>SpeechChoice</div>;
+  if (!speechApproach) return null;
+
+  const currentSpeechData = captainSpeechData[speechApproach];
+
+  console.log(currentSpeechData.choices);
+  console.log(currentSpeechData.choices.length);
+  return (
+    <div>
+      <p>{currentSpeechData.choiceIntro}</p>
+
+      <div>
+        {currentSpeechData.choices.map((choice) => (
+          <span
+            key={choice.id}
+            onClick={() => {
+              setSpeechStep("result");
+              setSelectedSpeech(choice);
+            }}
+          >
+            <p>{choice.text}</p>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default SpeechChoice;

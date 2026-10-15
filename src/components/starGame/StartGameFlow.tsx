@@ -9,7 +9,6 @@ import CaptainSpeechFlow from "./captainSpeech/CaptainSpeechFlow";
 import type { View } from "@/types/gameState";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/ship";
-import { start } from "node:repl";
 
 export type StartGameStep =
   | "start"
@@ -73,7 +72,9 @@ function StartGameFlow({
         />
       )}
 
-      {startStep === "speech" && <CaptainSpeechFlow />}
+      {startStep === "speech" && (
+        <CaptainSpeechFlow setStartStep={setStartStep} />
+      )}
 
       {startStep === "welcome" && <Welcome setView={setView} />}
     </div>

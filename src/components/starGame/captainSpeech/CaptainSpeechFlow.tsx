@@ -4,12 +4,17 @@ import type {
   SpeechChoices,
   SpeechStep,
 } from "@/types/CaptainSpeech";
+import { StartGameStep } from "../StartGameFlow";
 
 import SpeechPrep from "./SpeechPrep";
 import SpeechChoice from "./SpeechChoice";
 import SpeechResult from "./SpeechResult";
 
-function CaptainSpeechFlow() {
+type Props = {
+  setStartStep: React.Dispatch<React.SetStateAction<StartGameStep>>;
+};
+
+function CaptainSpeechFlow({ setStartStep }: Props) {
   const [speechStep, setSpeechStep] = useState<SpeechStep>("preparation");
   const [speechApproach, setSpeechApproach] = useState<SpeechApproach | null>(
     null,
@@ -36,7 +41,10 @@ function CaptainSpeechFlow() {
       )}
 
       {speechStep === "result" && (
-        <SpeechResult selectedSpeech={selectedSpeech} />
+        <SpeechResult
+          selectedSpeech={selectedSpeech}
+          setStartStep={setStartStep}
+        />
       )}
     </section>
   );
