@@ -57,7 +57,7 @@ function CrewSelection({
       <div>
         <button
           disabled={crew.length !== 8}
-          onClick={() => setStartStep("welcome")}
+          onClick={() => setStartStep("speech")}
         >
           Continuer
         </button>

@@ -1,12 +1,22 @@
-import type { SpeechApproach, SpeechStep } from "@/types/CaptainSpeech";
+import type {
+  SpeechApproach,
+  SpeechStep,
+  SpeechApproachData,
+} from "@/types/CaptainSpeech";
+import { captainSpeechData } from "@/data/missions/captainspeech";
 
-type Props ={
-  setSpeechApproach : React.Dispatch<React.SetStateAction<SpeechApproach | null>>;
-  setSpeechStep : React.Dispatch<React.SetStateAction<SpeechStep>>
+type Props = {
+  setSpeechApproach: React.Dispatch<
+    React.SetStateAction<SpeechApproach | null>
+  >;
+  setSpeechStep: React.Dispatch<React.SetStateAction<SpeechStep>>;
+};
 
-}
-
-function SpeechPrep({setSpeechApproach, setSpeechStep}:Props) {
+function SpeechPrep({ setSpeechApproach, setSpeechStep }: Props) {
+  const speechEntries = Object.entries(captainSpeechData) as [
+    SpeechApproach,
+    SpeechApproachData,
+  ][];
   return (
     <div>
       <p>
@@ -23,20 +33,20 @@ function SpeechPrep({setSpeechApproach, setSpeechStep}:Props) {
         rencontre.
       </p>
 
-<div className="">
-<span>
-<h3></h3>
-<p></p>
-
-</span>
-
-
-
-</div>
-
-
-
-
+      <div className="choice-approach-box">
+        {speechEntries.map(([approach, data]) => (
+          <span
+            key={approach}
+            onClick={() => {
+              setSpeechApproach(approach);
+              setSpeechStep("choice");
+            }}
+          >
+            <h3>{data.label}</h3>
+            <p>{data.prepText}</p>
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

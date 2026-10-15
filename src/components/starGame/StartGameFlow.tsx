@@ -5,16 +5,18 @@ import CrewSelection from "./CrewSelection";
 import Welcome from "./Welcome";
 import StartGame from "./StartGame";
 import IntroductionStar from "./IntroductionStar";
-
+import CaptainSpeechFlow from "./captainSpeech/CaptainSpeechFlow";
 import type { View } from "@/types/gameState";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/ship";
+import { start } from "node:repl";
 
 export type StartGameStep =
   | "start"
   | "introduction"
   | "captain"
   | "crew"
+  | "speech"
   | "welcome";
 
 type Props = {
@@ -70,6 +72,8 @@ function StartGameFlow({
           captainId={captainId}
         />
       )}
+
+      {startStep === "speech" && <CaptainSpeechFlow />}
 
       {startStep === "welcome" && <Welcome setView={setView} />}
     </div>
