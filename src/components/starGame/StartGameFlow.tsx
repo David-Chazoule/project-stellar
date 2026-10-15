@@ -73,10 +73,21 @@ function StartGameFlow({
       )}
 
       {startStep === "speech" && (
-        <CaptainSpeechFlow setStartStep={setStartStep} crew={crew} captainId={captainId} />
+        <CaptainSpeechFlow
+          setStartStep={setStartStep}
+          crew={crew}
+          captainId={captainId}
+        />
       )}
 
-      {startStep === "welcome" && <Welcome setView={setView} />}
+      {startStep === "welcome" && (
+        <Welcome
+          setView={setView}
+          captainId={captainId}
+          crew={crew}
+          ship={ship}
+        />
+      )}
     </div>
   );
 }

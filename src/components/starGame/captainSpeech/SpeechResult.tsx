@@ -48,7 +48,7 @@ function SpeechResult({
   }
 
   return (
-    <div>
+    <div className="start-panel">
       <p>
         {selectedSpeech
           ? naming(memberReaction, selectedSpeech?.result.text)

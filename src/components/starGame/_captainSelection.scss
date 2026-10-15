@@ -1,21 +1,30 @@
-.captainSelect-container {
+.start-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   width: 100%;
 
   .text-intro {
+    margin-bottom: 20px;
+    h3 {
+      margin-bottom: 6px;
+    }
   }
 
   .card-captain-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 1000px;
+    width: 100%;
     margin-bottom: 10px;
+
+    .card-wrap {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
   }
 
   .nameShip-box {

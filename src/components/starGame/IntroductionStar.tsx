@@ -10,7 +10,7 @@ type Props = {
 function IntroductionStar({ startStep, setStartStep }: Props) {
   const txtIntro = "C'est parti";
   return (
-    <div>
+    <div className="start-panel">
       <h2>Bienvenue dans Stellar.</h2>
       <p>
         Des contrats douteux, des voyages interminables, des rencontres

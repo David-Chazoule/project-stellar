@@ -18,7 +18,7 @@ function SpeechPrep({ setSpeechApproach, setSpeechStep }: Props) {
     SpeechApproachData,
   ][];
   return (
-    <div>
+    <div className="start-panel">
       <p>
         Vous êtes assis seul dans le cockpit, les doigts glissant nerveusement
         sur le cuir de votre fauteuil. Autour de vous, le vaisseau vit déjà :
@@ -36,6 +36,7 @@ function SpeechPrep({ setSpeechApproach, setSpeechStep }: Props) {
       <div className="choice-approach-box">
         {speechEntries.map(([approach, data]) => (
           <span
+            className="approach-card"
             key={approach}
             onClick={() => {
               setSpeechApproach(approach);

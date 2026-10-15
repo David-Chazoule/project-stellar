@@ -17,7 +17,7 @@ type Props = {
   captainId: number | null;
 };
 
-function CaptainSpeechFlow({ setStartStep, crew ,captainId}: Props) {
+function CaptainSpeechFlow({ setStartStep, crew, captainId }: Props) {
   const [speechStep, setSpeechStep] = useState<SpeechStep>("preparation");
   const [speechApproach, setSpeechApproach] = useState<SpeechApproach | null>(
     null,

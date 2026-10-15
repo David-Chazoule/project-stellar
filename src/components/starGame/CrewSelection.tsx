@@ -36,24 +36,28 @@ function CrewSelection({
   }
   const captain = crew.find((character) => character.id === captainId);
   return (
-    <div>
-      <h1>
-        Selectionner les membres de votre crew ( capitaine : {captain?.name}){" "}
-        {crew.length} / 8{" "}
-      </h1>
-      {characters
-        .filter((character) => character.id !== captainId)
-        .map((character) => {
-          const isSelected = crew.some((member) => member.id === character.id);
-          return (
-            <CharacterSelectionCard
-              key={character.id}
-              character={character}
-              isSelected={isSelected}
-              onClick={() => handleCrewSelect(character)}
-            />
-          );
-        })}
+    <div className="start-panel">
+      <h3>
+        Selectionner les membres de votre crew capitaine {captain?.name}.{" "}
+      </h3>
+      <p>Membres: {crew.length} / 8 </p>
+      <div className="crewSelect-container">
+        {characters
+          .filter((character) => character.id !== captainId)
+          .map((character) => {
+            const isSelected = crew.some(
+              (member) => member.id === character.id,
+            );
+            return (
+              <CharacterSelectionCard
+                key={character.id}
+                character={character}
+                isSelected={isSelected}
+                onClick={() => handleCrewSelect(character)}
+              />
+            );
+          })}
+      </div>
       <div>
         <button
           disabled={crew.length !== 8}

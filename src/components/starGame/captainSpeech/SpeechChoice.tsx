@@ -21,22 +21,21 @@ function SpeechChoice({
 
   const currentSpeechData = captainSpeechData[speechApproach];
 
-  console.log(currentSpeechData.choices);
-  console.log(currentSpeechData.choices.length);
   return (
-    <div>
+    <div className="start-panel">
       <p>{currentSpeechData.choiceIntro}</p>
 
-      <div>
+      <div className="choice-box">
         {currentSpeechData.choices.map((choice) => (
           <span
+            className="choice-card"
             key={choice.id}
             onClick={() => {
               setSpeechStep("result");
               setSelectedSpeech(choice);
             }}
           >
-            <p>{choice.text}</p>
+            <p>💬 {choice.text}</p>
           </span>
         ))}
       </div>

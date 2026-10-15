@@ -9,7 +9,7 @@ type Props = {
 
 function StartGame({ startStep, setStartStep }: Props) {
   return (
-    <div>
+    <div className="starGame_container">
       <button onClick={() => setStartStep("introduction")}>
         Commencer partie
       </button>

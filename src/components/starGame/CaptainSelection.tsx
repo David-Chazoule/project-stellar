@@ -4,7 +4,7 @@ import { StartGameStep } from "./StartGameFlow";
 import { characters } from "@/data/character";
 
 import type { Character } from "@/types/character";
-import type { Ship } from "@/types/ship";
+import type { Ship } from "@/types/Ship";
 
 type Props = {
   startStep: StartGameStep;
@@ -37,28 +37,30 @@ function CaptainSelection({
   }
 
   return (
-    <div className="captainSelect-container">
+    <div className="start-panel ">
       <div className="text-intro">
         {" "}
-        <h1>Identification du commandant requise.</h1>
+        <h3>Identification du commandant requise.</h3>
         <p>
           Qui êtes-vous, Capitaine ? Sélectionnez votre profil avant de prendre
-          le contrôle de l’Infini.
+          le contrôle de votre vaisseau.
         </p>
       </div>
 
       <div className="card-captain-box">
-        {characters.map((character) => {
-          const isSelected = captainId === character.id;
-          return (
-            <CharacterSelectionCard
-              key={character.id}
-              character={character}
-              onClick={() => setCaptainId(character.id)}
-              isSelected={isSelected}
-            />
-          );
-        })}
+        <div className="card-wrap">
+          {characters.map((character) => {
+            const isSelected = captainId === character.id;
+            return (
+              <CharacterSelectionCard
+                key={character.id}
+                character={character}
+                onClick={() => setCaptainId(character.id)}
+                isSelected={isSelected}
+              />
+            );
+          })}
+        </div>
       </div>
 
       <div className="nameShip-box">

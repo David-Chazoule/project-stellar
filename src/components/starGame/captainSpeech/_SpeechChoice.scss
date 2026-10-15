@@ -1,0 +1,19 @@
+.start-panel {
+  .choice-box {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .choice-card {
+      display: flex;
+      flex-direction: column;
+      margin: 6px;
+      border: 1px solid black;
+      padding: 10px;
+      width: 80%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}

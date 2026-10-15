@@ -11,5 +11,10 @@
 @use "../components/starGame/characterSelectionCard";
 @use "../components/starGame/crewSelection";
 @use "../components/starGame/starGameFlow";
+@use "../components/starGame/starGame";
+@use "../components/starGame/introductionStar";
 @use "../components/starGame/welcome";
 @use "../components/starGame/getShipName";
+@use "../components/starGame/captainSpeech/speechPrep";
+@use "../components/starGame/captainSpeech/SpeechChoice";
+@use "../components/starGame/captainSpeech/speechResult";
