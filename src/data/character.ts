@@ -143,7 +143,7 @@ export const characters: Character[] = [
     specialty: { name: "liaisonOfficer", level: 80 },
     secondarySpecialties: [
       { name: "pilot", level: 72 },
-      { name: "operative", level: 58 },
+      { name: "operative", level: 68 },
     ],
     skills: {
       leadership: 55,
@@ -151,8 +151,8 @@ export const characters: Character[] = [
       agility: 70,
       perception: 72,
       intelligence: 60,
-      charisma: 59,
-      seduction: 42,
+      charisma: 60,
+      seduction: 70,
       composure: 70,
       social: 64,
       stealth: 77,

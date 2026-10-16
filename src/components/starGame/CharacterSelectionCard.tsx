@@ -20,16 +20,16 @@ function CharacterSelectionCard({ character, onClick, isSelected }: Props) {
       onClick={onClick}
     >
       <div className="characterSelectionCard-portrait">
-        <img></img>
-      </div>
+        <img src={character.image} alt={character.name} />
 
-      <div className="characterSelectionCard-level">
-        <p>NIV. GLOBAL</p>
-        <p>{getGeneralLevel(character)}</p>
-      </div>
+        <div className="characterSelectionCard-level">
+          <p className="labelLevel">NIV.GEN</p>
+          <p>{getGeneralLevel(character)}</p>
+        </div>
 
-      <div className="characterSelectionCard-name">
-        <h4>{character.name}</h4>
+        <div className="characterSelectionCard-name">
+          <h4>{character.name}</h4>
+        </div>
       </div>
 
       <div className="characterSelectionCard-specialties">

@@ -6,6 +6,9 @@ import { characters } from "@/data/character";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
 
+import { FingerprintPattern } from "lucide-react";
+import { Loader } from "lucide-react";
+
 type Props = {
   startStep: StartGameStep;
   setStartStep: React.Dispatch<React.SetStateAction<StartGameStep>>;
@@ -38,14 +41,25 @@ function CaptainSelection({
 
   return (
     <div className="start-panel ">
-      <div className="text-intro">
+      <div className="captain-intro-header">
+        <span>
+          <FingerprintPattern size={16} color="#4fc3ff" />
+          <p>SYSTÈME DE BORD — IDENTIFICATION</p>
+        </span>
+        <p>AUTH.PROTOCOL_01</p>
+      </div>
+      <div className="captain-intro-txt">
         {" "}
         <h3>Identification du commandant requise.</h3>
-        
-          <p>Qui êtes-vous, Capitaine ?</p>
-          <p>Sélectionnez votre profil avant de prendre
-          le contrôle de votre vaisseau.
+        <p className="asking-txt">Qui êtes-vous, Capitaine ?</p>
+        <p>
+          Sélectionnez votre profil avant de prendre le contrôle de votre
+          vaisseau.
         </p>
+        <span>
+          <Loader size={16} color="#4fc3ff" />
+          <p>EN ATTENTE D'IDENTIFICATION</p>
+        </span>
       </div>
 
       <div className="card-captain-box">
