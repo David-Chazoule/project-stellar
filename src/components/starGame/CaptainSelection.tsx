@@ -41,8 +41,9 @@ function CaptainSelection({
       <div className="text-intro">
         {" "}
         <h3>Identification du commandant requise.</h3>
-        <p>
-          Qui êtes-vous, Capitaine ? Sélectionnez votre profil avant de prendre
+        
+          <p>Qui êtes-vous, Capitaine ?</p>
+          <p>Sélectionnez votre profil avant de prendre
           le contrôle de votre vaisseau.
         </p>
       </div>

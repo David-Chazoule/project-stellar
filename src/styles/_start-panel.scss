@@ -1,0 +1,15 @@
+.start-panel {
+  width: min(800px, 90%);
+  margin: 40px auto;
+  padding: 32px;
+  border: 1px solid white;
+  border-radius: 16px;
+  color: blanchedalmond;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  box-sizing: border-box;
+}

@@ -12,7 +12,8 @@ import { initialShip } from "@/data/ship";
 import type { View } from "@/types/gameState";
 import type { AutoMission } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
-import type { Ship } from "@/types/ship";
+import type { Ship } from "@/types/Ship";
+import Header from "../header/Header";
 
 function GameLayout() {
   const [view, setView] = useState<View>("startGame");
@@ -24,28 +25,26 @@ function GameLayout() {
   const [ship, setShip] = useState<Ship>(initialShip);
 
   return (
-    <div>
-      <header>
-        <p>Header-Stellar</p>
+    <div className="gameLayout-container">
+      <header className="game-header">
+        <Header />
       </header>
-      <main>
-        <section>
-          {view === "startGame" ? (
-            <StartGameFlow
-              setView={setView}
-              captainId={captainId}
-              setCaptainId={setCaptainId}
-              crew={crew}
-              setCrew={setCrew}
-              ship={ship}
-              setShip={setShip}
-            />
-          ) : (
-            <section>
-              <Dashboard view={view} setView={setView} crew={crew} />
-            </section>
-          )}
-        </section>
+      <main className="game-main">
+        {view === "startGame" ? (
+          <StartGameFlow
+            setView={setView}
+            captainId={captainId}
+            setCaptainId={setCaptainId}
+            crew={crew}
+            setCrew={setCrew}
+            ship={ship}
+            setShip={setShip}
+          />
+        ) : (
+          <>
+            <Dashboard view={view} setView={setView} crew={crew} />
+          </>
+        )}
 
         <section className="action-area">
           {view === "crew" && <Crew crew={crew} setCrew={setCrew} />}

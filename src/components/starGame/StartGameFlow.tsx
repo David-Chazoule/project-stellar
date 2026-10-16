@@ -8,7 +8,7 @@ import IntroductionStar from "./IntroductionStar";
 import CaptainSpeechFlow from "./captainSpeech/CaptainSpeechFlow";
 import type { View } from "@/types/gameState";
 import type { Character } from "@/types/character";
-import type { Ship } from "@/types/ship";
+import type { Ship } from "@/types/Ship";
 
 export type StartGameStep =
   | "start"
@@ -40,7 +40,7 @@ function StartGameFlow({
   const [startStep, setStartStep] = useState<StartGameStep>("start");
 
   return (
-    <div>
+    <div className="startGame-container">
       {startStep === "start" && (
         <StartGame startStep={startStep} setStartStep={setStartStep} />
       )}

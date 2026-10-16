@@ -1,0 +1,17 @@
+.gameLayout-container {
+  width: 100%;
+  background-color: rgb(22, 21, 21);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .game-header {
+    flex-shrink: 0;
+  }
+
+  .game-main {
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+  }
+}
