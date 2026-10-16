@@ -8,6 +8,7 @@ export type SpecialtyName =
 
 export type Specialty = {
   name: SpecialtyName;
+ 
   level: number;
 };
 
@@ -33,6 +34,7 @@ export type States = {
 export type Character = {
   id: number;
   name: string;
+  image:string;
   origin?: {
     planet?: string;
     country?: string;
