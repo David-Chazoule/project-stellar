@@ -69,7 +69,7 @@
 
   .card-captain-box {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     .card-wrap {
       width: 100%;
@@ -86,6 +86,71 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+
+    .shipNameIntro-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #354b5b;
+      margin-bottom: 20px;
+
+      span {
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+
+        p {
+          color: #4fc3ff;
+          font-size: 11px;
+          letter-spacing: 1px;
+          margin: 0 6px;
+        }
+      }
+
+      p {
+        color: #4fc3ff;
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin: 0 6px;
+        font-family: monospace;
+      }
+    }
+
+    .shipNameIntro-content {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      text-align: start;
+      h3 {
+        color: #91a9b8;
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #aab8c1;
+        margin: 0 0 14px 0;
+        color: #aab8c1;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+        text-align: start;
+        p {
+          color: #4fc3ff;
+          font-size: 11px;
+          letter-spacing: 1px;
+          margin: 0 0 0 6px;
+        }
+      }
+    }
   }
 
   .button-box {

@@ -6,8 +6,7 @@ import { characters } from "@/data/character";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
 
-import { FingerprintPattern } from "lucide-react";
-import { Loader } from "lucide-react";
+import { FingerprintPattern, Loader, Radar } from "lucide-react";
 
 type Props = {
   startStep: StartGameStep;
@@ -79,9 +78,26 @@ function CaptainSelection({
       </div>
 
       <div className="nameShip-box">
-        <p>Comment s'appelle votre vaisseaux ?</p>
+        <div className="shipNameIntro-header">
+          <span>
+            <Radar size={16} color="#4fc3ff" />
+            <p>SYSTÈME DE BORD — ENREGISTREMENT</p>
+          </span>
+          <p>REG.PROTOCOL_02</p>
+        </div>
+        <div className="shipNameIntro-content">
+          <h3>Identification du vaisseau requise.</h3>
+          <p>Comment s'appelle votre vaisseau ?</p>
+          <span>
+            {" "}
+            <Loader size={16} color="#4fc3ff" />
+            <p>EN ATTENTE DE DÉSIGNATION</p>
+          </span>
+        </div>
 
-        <GetShipName ship={ship} setShip={setShip} />
+        <>
+          <GetShipName ship={ship} setShip={setShip} />
+        </>
       </div>
 
       <div>
