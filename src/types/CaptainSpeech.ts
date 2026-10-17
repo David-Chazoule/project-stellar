@@ -9,6 +9,7 @@ export type SpeechChoices = {
     text: string;
     cohesion?: number;
     moral?: number;
+    image:string;
   };
 };
 

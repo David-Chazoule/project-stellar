@@ -3,6 +3,7 @@ import { StartGameStep } from "../StartGameFlow";
 import { Character } from "@/types/character";
 
 import React, { useEffect, useState } from "react";
+import Button from "@/components/Ui/Button";
 
 type Props = {
   selectedSpeech: SpeechChoices | null;
@@ -40,7 +41,11 @@ function SpeechResult({
       if (/^\{\d+\}$/.test(part)) {
         const index = Number(part[1]);
 
-        return <strong key={i}>{member[index]?.name}</strong>;
+        return (
+          <span className="crew-name" key={i}>
+            {member[index]?.name}
+          </span>
+        );
       }
 
       return part;
@@ -49,19 +54,26 @@ function SpeechResult({
 
   return (
     <div className="start-panel">
-      <p>
-        {selectedSpeech
-          ? naming(memberReaction, selectedSpeech?.result.text)
-          : null}
-      </p>
+      <div className="txt-end-speech">
+        {" "}
+        <p>
+          {selectedSpeech
+            ? naming(memberReaction, selectedSpeech?.result.text)
+            : null}
+        </p>
+      </div>
 
-      <button
+      <div className="img-end-speech">
+        <img src={selectedSpeech?.result.image} alt="speechEnd" />
+      </div>
+
+      <Button
         onClick={() => {
           setStartStep("welcome");
         }}
       >
         Suivant
-      </button>
+      </Button>
     </div>
   );
 }

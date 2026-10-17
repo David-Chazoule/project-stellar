@@ -22,18 +22,40 @@ function CharacterSelectionCard({ character, onClick, isSelected }: Props) {
       <div className="characterSelectionCard-portrait">
         <img src={character.image} alt={character.name} />
 
-        <div className="characterSelectionCard-level">
+        <div
+          className={
+            isSelected
+              ? "characterSelectionCard-level selectedSpecial"
+              : "characterSelectionCard-level"
+          }
+        >
           <p className="labelLevel">NIV.GEN</p>
           <p>{getGeneralLevel(character)}</p>
         </div>
 
-        <div className="characterSelectionCard-name">
+        <div
+          className={
+            isSelected
+              ? "characterSelectionCard-name selectedSpecial"
+              : "characterSelectionCard-name"
+          }
+        >
           <h4>{character.name}</h4>
         </div>
       </div>
 
-      <div className="characterSelectionCard-specialties">
-        <div className="mainSpecialty">
+      <div
+        className={
+          isSelected
+            ? "characterSelectionCard-specialties selectedSpecial"
+            : "characterSelectionCard-specialties"
+        }
+      >
+        <div
+          className={
+            isSelected ? "mainSpecialty selectedSpecial" : "mainSpecialty"
+          }
+        >
           <p>{specialtyLabels[character.specialty.name]}</p>
           <p>{character.specialty.level}</p>
         </div>

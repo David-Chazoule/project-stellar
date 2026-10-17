@@ -6,6 +6,8 @@ import type {
   SpeechChoices,
 } from "@/types/CaptainSpeech";
 
+import { MessageSquareText } from "lucide-react";
+
 type Props = {
   speechApproach: SpeechApproach | null;
   setSpeechStep: React.Dispatch<React.SetStateAction<SpeechStep>>;
@@ -23,7 +25,12 @@ function SpeechChoice({
 
   return (
     <div className="start-panel">
-      <p>{currentSpeechData.choiceIntro}</p>
+      <div className="speech-img-choice">
+        <img src="/captainSpeech/speech-Choice.webp" alt="speechIntro" />
+      </div>
+      <div className="txt-choice">
+        <p>{currentSpeechData.choiceIntro}</p>
+      </div>
 
       <div className="choice-box">
         {currentSpeechData.choices.map((choice) => (
@@ -35,7 +42,9 @@ function SpeechChoice({
               setSelectedSpeech(choice);
             }}
           >
-            <p>💬 {choice.text}</p>
+            <p>
+              <MessageSquareText size={16} color="#4fc3ff" /> "{choice.text}"
+            </p>
           </span>
         ))}
       </div>

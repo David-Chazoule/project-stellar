@@ -1,0 +1,33 @@
+.start-panel {
+  .txt-end-speech {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 30px;
+
+    p {
+      color: #d5e0e8;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 400;
+      margin: 4px 0;
+
+      span {
+        font-weight: 600;
+        color: white;
+      }
+    }
+  }
+  .img-end-speech {
+    img {
+      width: 500px;
+      border-radius: 20px;
+      border: 1px solid #4f6575;
+    }
+  }
+}
+
+.crew-name {
+  color: white;
+  font-weight: 600;
+}

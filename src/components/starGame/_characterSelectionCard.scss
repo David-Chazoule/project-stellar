@@ -50,6 +50,10 @@
       }
     }
 
+    .selectedSpecial {
+      background-color: #203847;
+    }
+
     .characterSelectionCard-name {
       position: absolute;
       bottom: 4px;
@@ -67,7 +71,13 @@
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1px;
-        color: #ffffff;
+      }
+    }
+
+    .selectedSpecial {
+      background-color: #203847;
+      h4 {
+        color: #4fc3ff;
       }
     }
   }
@@ -98,6 +108,10 @@
       }
     }
 
+    .selectedSpecial {
+      border-bottom: 1px solid #4fc3ff;
+    }
+
     .secondarySpecialties {
       display: flex;
       flex-direction: column;
@@ -122,8 +136,13 @@
       }
     }
   }
+
+  .selectedSpecial {
+    background-color: #203847;
+  }
 }
 
 .selected {
   border: 3px solid #4fc3ff;
+  background-color: #203847;
 }

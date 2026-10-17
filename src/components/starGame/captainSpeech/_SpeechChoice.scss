@@ -1,19 +1,55 @@
 .start-panel {
-  .choice-box {
+  .speech-img-choice {
+    img {
+      width: 420px;
+      border-radius: 20px;
+      border: 1px solid #4f6575;
+    }
+  }
+
+  .txt-choice {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
     margin-top: 10px;
+    p {
+      color: #d5e0e8;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 400;
+      margin: 4px 0;
+    }
+  }
+
+  .choice-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px 0;
 
     .choice-card {
       display: flex;
       flex-direction: column;
+      background-color: #1a232c;
       margin: 6px;
-      border: 1px solid black;
+      border: 1px solid #354b5b;
       padding: 10px;
       width: 80%;
       border-radius: 10px;
       cursor: pointer;
+      &:hover {
+        border-color: #4fc3ff;
+        background: #202e39;
+      }
+      p {
+        color: #aab8c1;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        max-width: 680px;
+        margin: 10px auto 18px;
+      }
+      font-style: italic;
     }
   }
 }

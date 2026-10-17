@@ -77,6 +77,7 @@ function StartGameFlow({
           setStartStep={setStartStep}
           crew={crew}
           captainId={captainId}
+          ship={ship}
         />
       )}
 

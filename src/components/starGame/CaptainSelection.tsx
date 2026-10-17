@@ -7,6 +7,7 @@ import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
 
 import { FingerprintPattern, Loader, Radar } from "lucide-react";
+import Button from "../Ui/Button";
 
 type Props = {
   startStep: StartGameStep;
@@ -101,13 +102,9 @@ function CaptainSelection({
       </div>
 
       <div>
-        <button
-          className="button-box"
-          disabled={captainId === null}
-          onClick={handleContinue}
-        >
+        <Button disabled={captainId === null} onClick={handleContinue}>
           Continuer
-        </button>
+        </Button>
       </div>
     </div>
   );

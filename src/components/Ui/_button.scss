@@ -1,0 +1,26 @@
+.ui-button {
+  padding: 10px 20px;
+  background: #1a232c;
+  border: 1px solid #4f6575;
+  border-radius: 6px;
+
+  color: #e8f0f5;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: #243b4b;
+    border-color: #4fc3ff;
+  }
+
+  &:disabled {
+    background: #1a232c;
+    border-color: #354b5b;
+    color: #718b9c;
+    cursor: not-allowed;
+  }
+}

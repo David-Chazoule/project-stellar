@@ -18,6 +18,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "L’équipe accueille votre présentation de manière positive. {0} semble rassuré par l’image professionnelle que vous dégagez. {1} et {2} échangent un regard confiant, comme convaincus par la route qu’ils s’apprêtent à prendre avec vous. {3}, lui, semble déjà prêt à se mettre au travail. Vous invitez ensuite chacun à rejoindre son poste respectif.",
           cohesion: 1,
+          image: "/captainSpeech/speechResultPositive.webp",
         },
       },
 
@@ -27,6 +28,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "Dans l’ensemble, l’équipe réagit plutôt positivement à votre approche, même si certains membres, moins à l’aise avec l’autorité, semblent légèrement agacés. {0} fait une petite moue, tandis que {1} paraît franchement contrarié. {2} vient vous saluer personnellement, comme s’il cherchait déjà à gagner vos faveurs. {3} se lève, prêt à se mettre immédiatement au travail. Vous invitez ensuite chacun à rejoindre son poste respectif.",
           cohesion: 1,
+          image: "/captainSpeech/speechResultNeutral.webp",
         },
       },
 
@@ -36,6 +38,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "Votre discours est plutôt bien accueilli par l’équipe. Des sourires apparaissent sur presque tous les visages. {0} et {1} approuvent vos paroles et commencent déjà à en discuter avec enthousiasme. {2} se lève pour venir vous saluer personnellement. {3}, visiblement séduit par votre discours, en rajoute une couche et adresse quelques mots enthousiastes au reste de l’équipage. Vous invitez ensuite chacun à rejoindre son poste respectif.",
           cohesion: 2,
+          image: "/captainSpeech/speechResultPositive.webp",
         },
       },
     ],
@@ -57,6 +60,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "Votre approche est plutôt bien accueillie par l’ensemble de l’équipage. {0} et {1}, flattés dans leur ego, semblent déjà prêts à se mettre au travail. {2}, visiblement enthousiaste, frappe deux fois dans ses mains avant de se lever avec énergie. {3} échange quelques mots en riant avec son voisin, puis se lève pour venir vous accueillir chaleureusement. Vous invitez ensuite chacun à rejoindre son poste respectif.",
           cohesion: 1,
+          image: "/captainSpeech/speechResultPositive.webp",
         },
       },
 
@@ -66,6 +70,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "Quelques rires étouffés s’échappent dans la salle. Les visages se détendent. {0} se demande encore ce que vous avez réellement voulu dire. Il comprend bien qu’il s’agissait d’humour, mais cette longue métaphore le laisse franchement perplexe. {1} et {2} échangent un regard avant d’éclater de rire. {3}, rassuré de découvrir un capitaine capable d’un peu d’autodérision, se dit que les futurs voyages seront peut-être moins pesants qu’il ne l’imaginait. Il vient vous saluer avec le sourire. Vous invitez ensuite chacun à rejoindre son poste respectif.",
           cohesion: 2,
+          image: "/captainSpeech/speechResultPositive.webp",
         },
       },
 
@@ -76,6 +81,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
           text: "Votre petit discours fait mouche auprès de l’équipage. {0} lève les bras et lance : « Très bonne idée, allons boire un coup ! » {1} et {2} approuvent avec enthousiasme l’idée de commencer l’aventure autour d’une bière bien fraîche et se lèvent aussitôt. {3} apprécie l’ambiance, mais ressent malgré tout une légère appréhension : il espère que le travail à bord ne se transformera pas en fête permanente. Vous invitez finalement l’équipage à rejoindre la salle de vie afin de partager un verre et de faire plus ample connaissance.",
           cohesion: 2,
           moral: 1,
+          image: "/captainSpeech/speechResultBeer.webp",
         },
       },
     ],
@@ -97,6 +103,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "L’accueil est mitigé. Certains prennent votre discours à la légère, tandis que d’autres semblent un peu plus irrités. {0} comprend rapidement que vous avez bu. Il l’accepte, mais s’inquiète à l’idée que ce genre de situation puisse se reproduire. {1}, lui, prend la scène à la rigolade. Il n’y voit rien de dramatique et se dit que le voyage risque au moins d’être haut en couleur. {2} n’est pas particulièrement choqué non plus : il connaît les clichés sur les capitaines amateurs d’alcool. Après tout, dans la Marine, ce n’est pas vraiment nouveau… alors pourquoi pas dans l’espace ? {3}, en revanche, n’est pas totalement convaincu. Il a bien perçu le stress que vous tentiez de dissimuler derrière quelques verres. Vous invitez timidement l’équipage à rejoindre son poste respectif.",
           cohesion: -1,
+          image: "/captainSpeech/speechResultNegative.webp",
         },
       },
 
@@ -106,6 +113,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
         result: {
           text: "Votre manière de communiquer, directe et sans détour, est plutôt bien accueillie par l’ensemble de l’équipage. {0} n’aime pas s’embarrasser d’une autorité trop rigide ou pince-sans-rire. {1}, de son côté, déteste tout le cinéma et la fausse politesse qui accompagnent parfois les figures d’autorité. Il apprécie les gens francs et directs, et semble plutôt séduit par votre discours. {2} approuve également, même s’il fait discrètement remarquer à {3} qu’il semblerait que vous ayez un peu bu. Vous invitez ensuite tout l’équipage à rejoindre son poste respectif.",
           cohesion: 1,
+          image: "/captainSpeech/speechResultNeutral.webp",
         },
       },
 
@@ -116,6 +124,7 @@ export const captainSpeechData: Record<SpeechApproach, SpeechApproachData> = {
           text: "Un silence étrange plane dans la pièce. Certains regards deviennent fuyants, tandis que d’autres membres se retiennent difficilement de rire. {0} comprend immédiatement que vous êtes bourré comme un coin. Il se dit que le voyage risque d’être particulièrement tumultueux. {1} tente de retenir son rire, puis se rappelle que l’idée de s’envoyer en l’air avec des Vénusiennes lui a déjà traversé l’esprit plus d’une fois. Il se dit finalement qu’il risque de bien se marrer avec vous. {2} sourit, malgré un léger malaise, et semble avoir apprécié cette référence aussi ridicule qu’inattendue à un vieux film d’animation du XXe siècle. {3}, en revanche, n’est franchement pas enthousiaste à l’idée de travailler avec vous. Il espère que cette présentation est seulement une exception due au stress et que la suite du voyage sera nettement plus professionnelle. Vous invitez finalement, en bégayant légèrement, votre équipage à rejoindre son poste respectif.",
           cohesion: -2,
           moral: 1,
+          image: "/captainSpeech/speechResultNegative.webp",
         },
       },
     ],

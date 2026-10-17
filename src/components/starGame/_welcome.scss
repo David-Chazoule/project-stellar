@@ -1,5 +1,23 @@
 .start-panel {
-  p {
-    margin: 20px;
+  .img-welcome {
+    img {
+      width: 420px;
+      border-radius: 20px;
+      border: 1px solid #4f6575;
+    }
+  }
+
+  .welcome-txt {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 30px;
+    p {
+      color: #d5e0e8;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      margin: 6px 0;
+    }
   }
 }
