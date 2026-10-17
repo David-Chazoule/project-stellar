@@ -7,9 +7,15 @@ type Props = {
   character: Character;
   onClick: () => void;
   isSelected: boolean;
+  handleContinue?: () => void;
 };
 
-function CharacterSelectionCard({ character, onClick, isSelected }: Props) {
+function CharacterSelectionCard({
+  character,
+  onClick,
+  isSelected,
+  handleContinue,
+}: Props) {
   return (
     <div
       className={
@@ -61,12 +67,34 @@ function CharacterSelectionCard({ character, onClick, isSelected }: Props) {
         </div>
 
         <div className="secondarySpecialties">
-          {character.secondarySpecialties.map((specialty) => (
-            <div key={specialty.name}>
-              <p>{specialtyLabels[specialty.name]}</p>
-              <p>{specialty.level}</p>
-            </div>
-          ))}
+          <div className="secondarySpecialties">
+            {isSelected && handleContinue ? (
+              <div className="confirmation">
+                <span>
+                  <p>Capitaine sélectionné</p>
+                </span>
+
+                <p>Prêt à embarquer</p>
+
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleContinue();
+                  }}
+                >
+                  Continuer
+                </button>
+              </div>
+            ) : (
+              character.secondarySpecialties.map((specialty) => (
+                <div key={specialty.name}>
+                  <p>{specialtyLabels[specialty.name]}</p>
+                  <p>{specialty.level}</p>
+                </div>
+              ))
+            )}
+          </div>
         </div>
       </div>
     </div>

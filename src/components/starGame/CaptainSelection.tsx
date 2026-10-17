@@ -8,8 +8,7 @@ import { characters } from "@/data/character";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
 
-import { FingerprintPattern, Loader, Radar } from "lucide-react";
-import Button from "../Ui/Button";
+import { FingerprintPattern, Loader, Radar, CircleCheck } from "lucide-react";
 
 type Props = {
   startStep: StartGameStep;
@@ -32,8 +31,6 @@ function CaptainSelection({
   ship,
   setShip,
 }: Props) {
- 
-
   function handleContinue() {
     const captain = characters.find((character) => character.id === captainId);
 
@@ -45,12 +42,50 @@ function CaptainSelection({
 
   return (
     <div className="start-panel ">
+      <div className="nameShip-box">
+        <div className="shipNameIntro-header">
+          <span>
+            <Radar size={16} color="#4fc3ff" />
+            <p>SYSTÈME DE BORD — ENREGISTREMENT</p>
+          </span>
+          <p>REG.PROTOCOL_01</p>
+        </div>
+        <div className="shipNameIntro-content">
+          <h3>Identification du vaisseau requise.</h3>
+          <p>Comment s'appelle votre vaisseau ?</p>
+          <span>
+            {" "}
+            <Loader size={16} color="#4fc3ff" />
+            <p>MODULE DE DÉSIGNATION SHIP.REGISTRY_01</p>
+          </span>
+        </div>
+
+        <>
+          <GetShipName ship={ship} setShip={setShip} />
+        </>
+
+        <div className="shipSelect">
+          {" "}
+          <span className="lineOne">
+            <CircleCheck size={16} color="#4fc3ff" />
+            <p>Vaisseau identifié</p>
+          </span>
+          <span className="lineTwo">
+            <p className="shipName">{ship.name}</p>
+            <p>ENREGISTRÉ</p>
+          </span>
+          <span className="modelName">
+            <p>Modèle : {ship.model}</p>
+          </span>
+        </div>
+      </div>
+
       <div className="captain-intro-header">
         <span>
           <FingerprintPattern size={16} color="#4fc3ff" />
           <p>SYSTÈME DE BORD — IDENTIFICATION</p>
         </span>
-        <p>AUTH.PROTOCOL_01</p>
+        <p>AUTH.PROTOCOL_02</p>
       </div>
       <div className="captain-intro-txt">
         {" "}
@@ -62,7 +97,7 @@ function CaptainSelection({
         </p>
         <span>
           <Loader size={16} color="#4fc3ff" />
-          <p>EN ATTENTE D'IDENTIFICATION</p>
+          <p>MODULE D'IDENTIFICATION CAPTAIN.REGISTRY_02</p>
         </span>
       </div>
 
@@ -76,39 +111,11 @@ function CaptainSelection({
                 character={character}
                 onClick={() => setCaptainId(character.id)}
                 isSelected={isSelected}
+                handleContinue={handleContinue}
               />
             );
           })}
         </div>
-      </div>
-
-      <div className="nameShip-box">
-        <div className="shipNameIntro-header">
-          <span>
-            <Radar size={16} color="#4fc3ff" />
-            <p>SYSTÈME DE BORD — ENREGISTREMENT</p>
-          </span>
-          <p>REG.PROTOCOL_02</p>
-        </div>
-        <div className="shipNameIntro-content">
-          <h3>Identification du vaisseau requise.</h3>
-          <p>Comment s'appelle votre vaisseau ?</p>
-          <span>
-            {" "}
-            <Loader size={16} color="#4fc3ff" />
-            <p>EN ATTENTE DE DÉSIGNATION</p>
-          </span>
-        </div>
-
-        <>
-          <GetShipName ship={ship} setShip={setShip} />
-        </>
-      </div>
-
-      <div>
-        <Button disabled={captainId === null} onClick={handleContinue}>
-          Continuer
-        </Button>
       </div>
     </div>
   );

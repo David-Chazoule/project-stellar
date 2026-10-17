@@ -117,11 +117,17 @@
       flex-direction: column;
       gap: 6px;
 
-      > div {
+      > div:not(.confirmation) {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 6px;
+        width: 100%;
+
+        p:last-child {
+          margin-left: auto;
+          text-align: right;
+        }
       }
 
       p {
@@ -133,6 +139,43 @@
       p:last-child {
         font-weight: 600;
         color: #ffffff;
+      }
+
+      .confirmation {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+
+        span {
+          display: flex;
+          align-items: center;
+          margin: 0;
+
+          p {
+            margin-left: 6px;
+          }
+        }
+
+        button {
+          padding: 5px 20px;
+          background: #1a232c;
+          border: 1px solid #4f6575;
+          border-radius: 6px;
+
+          color: #e8f0f5;
+          font-size: 12px;
+          font-weight: 600;
+          font-family: inherit;
+
+          cursor: pointer;
+          transition: 0.2s ease;
+
+          &:hover:not(:disabled) {
+            background: #243b4b;
+            border-color: #4fc3ff;
+          }
+        }
       }
     }
   }
