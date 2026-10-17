@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import CharacterSelectionCard from "./CharacterSelectionCard";
 import GetShipName from "./GetShipName";
 import { StartGameStep } from "./StartGameFlow";
@@ -30,6 +32,8 @@ function CaptainSelection({
   ship,
   setShip,
 }: Props) {
+ 
+
   function handleContinue() {
     const captain = characters.find((character) => character.id === captainId);
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Dashboard from "./Dashboard";
 import Crew from "../actions/crew/Crew";
@@ -23,6 +23,10 @@ function GameLayout() {
   const [captainId, setCaptainId] = useState<number | null>(null);
   const [crew, setCrew] = useState<Character[]>([]);
   const [ship, setShip] = useState<Ship>(initialShip);
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, [view]);
 
   return (
     <div className="gameLayout-container">

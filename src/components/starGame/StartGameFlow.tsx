@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import CaptainSelection from "./CaptainSelection";
 import CrewSelection from "./CrewSelection";
@@ -38,6 +38,10 @@ function StartGameFlow({
   setShip,
 }: Props) {
   const [startStep, setStartStep] = useState<StartGameStep>("start");
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+  }, [startStep]);
 
   return (
     <div className="startGame-container">
