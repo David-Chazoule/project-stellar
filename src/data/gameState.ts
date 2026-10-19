@@ -1,4 +1,4 @@
-export const GameState = {
+export const initialGameState = {
   credits: 10000,
   cohesion: 50,
   reputation: 50,

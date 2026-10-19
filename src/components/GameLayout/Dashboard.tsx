@@ -1,15 +1,16 @@
 import React from "react";
 
-import type { View } from "@/types/gameState";
+import type { GameState, View } from "@/types/gameState";
 import type { Character } from "@/types/character";
 
 type Props = {
   view: View;
   crew: Character[];
   setView: React.Dispatch<React.SetStateAction<View>>;
+  gameState: GameState;
 };
 
-function Dashboard({ view, setView,crew }: Props) {
+function Dashboard({ view, setView, crew, gameState }: Props) {
   const handleCrew = () => {
     if (view === "crew") {
       setView(null);
@@ -33,17 +34,17 @@ function Dashboard({ view, setView,crew }: Props) {
         <div className="dashboard-row">
           <div className="dashboard-item">
             <p>CREDITS</p>
-            <p>12 500</p>
+            <p>{gameState.credits}</p>
           </div>
 
           <div className="dashboard-item">
             <p>COHESION</p>
-            <p>50%</p>
+            <p>{gameState.cohesion} %</p>
           </div>
 
           <div className="dashboard-item">
             <p>REPUTATION</p>
-            <p>10</p>
+            <p>{gameState.reputation}</p>
           </div>
         </div>
 

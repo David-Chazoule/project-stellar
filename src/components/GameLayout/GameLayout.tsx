@@ -8,8 +8,8 @@ import MissionsSelection from "../actions/missionSelection/MissionsSelection";
 import AutoMissionFlow from "../autoMissions/AutoMissionFlow";
 import StartGameFlow from "../starGame/StartGameFlow";
 import { initialShip } from "@/data/ship";
-
-import type { View } from "@/types/gameState";
+import { initialGameState } from "@/data/gameState";
+import { GameState, type View } from "@/types/gameState";
 import type { AutoMission } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
@@ -23,6 +23,7 @@ function GameLayout() {
   const [captainId, setCaptainId] = useState<number | null>(null);
   const [crew, setCrew] = useState<Character[]>([]);
   const [ship, setShip] = useState<Ship>(initialShip);
+  const [gameState, setGameState] = useState<GameState>(initialGameState);
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -46,7 +47,12 @@ function GameLayout() {
           />
         ) : (
           <>
-            <Dashboard view={view} setView={setView} crew={crew} />
+            <Dashboard
+              view={view}
+              setView={setView}
+              crew={crew}
+              gameState={gameState}
+            />
           </>
         )}
 
@@ -65,6 +71,7 @@ function GameLayout() {
               setSelectedMission={setSelectedMission}
               crew={crew}
               setCrew={setCrew}
+              setGameState={setGameState}
             />
           )}
         </section>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 
 import CharacterSelectionCard from "./CharacterSelectionCard";
 import GetShipName from "./GetShipName";
