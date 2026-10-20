@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  background-color: aqua;
+  background-color: rgba(61, 93, 100, 0.136);
 
   .dashboard-screen {
     width: min(92vw, 760px);
@@ -66,16 +66,10 @@
           font-weight: 700;
           color: white;
         }
-      }
-      .dashboard-card--button {
-        cursor: pointer;
-        border: 1px solid rgba(45, 212, 191, 0.45);
-      }
 
-      .dashboard-card--button:hover {
-        transform: translateY(-2px);
-        background: rgba(45, 212, 191, 0.08);
-        box-shadow: 0 0 18px rgba(45, 212, 191, 0.12);
+        .dashboard-crew{
+          width: 100px;
+        }
       }
     }
   }

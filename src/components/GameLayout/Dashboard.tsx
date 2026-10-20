@@ -58,13 +58,13 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
           <div className="dashboard-card">
             <p className="dashBoard-label">EQUIPAGE</p>
             <button
-              className="dashboard-card dashboard-card--button"
+              className="dashboard-crew"
               onClick={handleCrew}
             >
               {" "}
-              <span className="dashboard-label">Équipage</span>
+             
               <strong className="dashboard-value">{crew.length}/8</strong>
-              <span className="dashboard-subvalue">Voir le crew</span>
+              
             </button>
           </div>
 
