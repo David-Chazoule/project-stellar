@@ -29,39 +29,48 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
 
   return (
     <div className="dashboard-container">
-      <div className="dashboard-card">
-        <button onClick={handleMissionSelection}>Missions</button>
-        <div className="dashboard-row">
-          <div className="dashboard-item">
-            <p>CREDITS</p>
-            <p>{gameState.credits}</p>
-          </div>
-
-          <div className="dashboard-item">
-            <p>COHESION</p>
-            <p>{gameState.cohesion} %</p>
-          </div>
-
-          <div className="dashboard-item">
-            <p>REPUTATION</p>
-            <p>{gameState.reputation}</p>
-          </div>
+      <div className="dashboard-screen">
+        <div className="dashboard-header">
+          <p className="dashboard-kicker">SYSTÈME DE BORD // STELLAR</p>
         </div>
-
-        <div className="dashboard-row">
-          <div className="dashboard-item">
-            <p>DATE</p>
-            <p>2187</p>
+        <button onClick={handleMissionSelection}>Missions</button>
+        <div className="dashboard-grid">
+          <div className="dashboard-card">
+            <p className="dashBoard-label">CREDITS</p>
+            <p className="dashboard-value">{gameState.credits}</p>
           </div>
 
-          <div className="dashboard-item">
-            <p>EQUIPAGE</p>
-            <button onClick={handleCrew}>{crew.length}/8</button>
+          <div className="dashboard-card">
+            <p className="dashBoard-label">COHESION</p>
+            <p className="dashboard-value">{gameState.cohesion} %</p>
           </div>
 
-          <div className="dashboard-item">
-            <p>LOCALISATION</p>
-            <p>TERRE</p>
+          <div className="dashboard-card">
+            <p className="dashBoard-label">REPUTATION</p>
+            <p className="dashboard-value">{gameState.reputation}</p>
+          </div>
+
+          <div className="dashboard-card">
+            <p className="dashBoard-label">DATE</p>
+            <p className="dashboard-value">2187</p>
+          </div>
+
+          <div className="dashboard-card">
+            <p className="dashBoard-label">EQUIPAGE</p>
+            <button
+              className="dashboard-card dashboard-card--button"
+              onClick={handleCrew}
+            >
+              {" "}
+              <span className="dashboard-label">Équipage</span>
+              <strong className="dashboard-value">{crew.length}/8</strong>
+              <span className="dashboard-subvalue">Voir le crew</span>
+            </button>
+          </div>
+
+          <div className="dashboard-card">
+            <p className="dashBoard-label">LOCALISATION</p>
+            <p className="dashboard-value">TERRE</p>
           </div>
         </div>
       </div>
