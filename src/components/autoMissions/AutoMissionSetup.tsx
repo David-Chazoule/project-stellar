@@ -76,7 +76,7 @@ function AutoMissionSetup({
   });
 
   return (
-    <div className="autoMissionSetup-container">
+    <div className="start-panel">
       <div className="mission-bref">
         <h2>{mission.card.title}</h2>
         <p>location : {mission.card.location}</p>

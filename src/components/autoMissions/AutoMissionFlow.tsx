@@ -58,6 +58,10 @@ function AutoMissionFlow({
           setSelectedMission={setSelectedMission}
           result={missionResult}
           setGameState={setGameState}
+          missionCrew={missionCrew}
+          setMissionCrew={setMissionCrew}
+          crew={crew}
+          setCrew={setCrew}
         />
       )}
     </div>

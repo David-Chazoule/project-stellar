@@ -5,12 +5,19 @@ import type {
 } from "../../types/autoMissions";
 
 import type { GameState } from "@/types/gameState";
+import type { SelectedCrewMember } from "../../types/autoMissions";
+import type { Character } from "@/types/character";
+import { characters } from "../../data/character";
 
 type Props = {
   mission: AutoMission;
   setSelectedMission: (mission: AutoMission | null) => void;
   result: AutoMissionResultType;
   setGameState: React.Dispatch<React.SetStateAction<GameState>>;
+  missionCrew: SelectedCrewMember[];
+  setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
+  crew: Character[];
+  setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
 };
 
 function AutoMissionConclusion({
@@ -18,6 +25,10 @@ function AutoMissionConclusion({
   result,
   mission,
   setGameState,
+  missionCrew,
+  setMissionCrew,
+  crew,
+  setCrew,
 }: Props) {
   const conclusion = mission.results[result];
 
@@ -28,10 +39,34 @@ function AutoMissionConclusion({
       reputation: prev.reputation + (conclusion.effects.reputation ?? 0),
     }));
     setSelectedMission(null);
+    handleStateCrew();
   }
 
+  function handleStateCrew() {
+    setCrew((prev) =>
+      prev.map((character) => {
+        const participated = missionCrew.some(
+          (member) => member.character.id === character.id,
+        );
+
+        if (participated) {
+          return {
+            ...character,
+            states: {
+              ...character.states,
+              fatigue:
+                character.states.fatigue + (conclusion.effects.fatigue ?? 0),
+              moral: character.states.moral + (conclusion.effects.moral ?? 0),
+            },
+          };
+        }
+
+        return character;
+      }),
+    );
+  }
   return (
-    <div>
+    <div className="start-panel">
       <h2>{conclusion.title}</h2>
       <p>{conclusion.text}</p>
 
