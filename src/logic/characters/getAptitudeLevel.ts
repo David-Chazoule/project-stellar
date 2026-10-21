@@ -1,4 +1,5 @@
 import type { Character, SpecialtyName } from "@/types/character";
+import { specialtySkillMap } from "./specialtySkillMap";
 
 export function getAptitudeLevel(
   character: Character,
@@ -12,5 +13,21 @@ export function getAptitudeLevel(
     (specialty) => specialty.name === aptitude,
   );
 
-  return secondary?.level ?? 0;
+  if (secondary) {
+  return secondary.level;
+}
+
+const relevantSkills = specialtySkillMap[aptitude];
+const skillValues = relevantSkills.map(
+  (skill) => character.skills[skill]
+);
+
+const skillAverage =
+  skillValues.reduce((acc, value) => acc + value, 0) /
+  skillValues.length;
+
+  const improvisedLevel = Math.round(10 + skillAverage / 10);
+
+return improvisedLevel;
+
 }

@@ -4,6 +4,7 @@ export type GameState = {
   reputation: number,
   captainId: number | null,
   elapsedDays: number,
+  completedMissions: string[],
 };
 
 export type View = "startGame" | "crew" | "missions" | null;

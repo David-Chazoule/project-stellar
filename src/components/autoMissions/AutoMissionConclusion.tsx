@@ -38,6 +38,7 @@ function AutoMissionConclusion({
       credits: prev.credits + (conclusion.effects.credits ?? 0),
       reputation: prev.reputation + (conclusion.effects.reputation ?? 0),
       elapsedDays: prev.elapsedDays + mission.duration,
+      completedMissions: [...prev.completedMissions, mission.id]
     }));
     setSelectedMission(null);
     handleStateCrew();

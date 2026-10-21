@@ -4,4 +4,5 @@ export const initialGameState = {
   reputation: 50,
   captainId: null,
   elapsedDays: 0,
+  completedMissions: [],
 };

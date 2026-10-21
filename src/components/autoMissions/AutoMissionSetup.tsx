@@ -26,8 +26,6 @@ function AutoMissionSetup({
   crew,
   setCrew,
 }: Props) {
-
-  
   function handleCrewSelect(
     character: Character,
     aptitude: SpecialtyName,
@@ -103,8 +101,11 @@ function AutoMissionSetup({
         <h3>selectionner équipe</h3>
 
         {mission.setup.requiredCrew.map((required) => {
-          const candidates = crew.filter(
-            (character) => getAptitudeLevel(character, required.aptitude) > 0,
+          const candidates = [...crew];
+          candidates.sort(
+            (a, b) =>
+              getAptitudeLevel(b, required.aptitude) -
+              getAptitudeLevel(a, required.aptitude),
           );
 
           return (
@@ -112,6 +113,11 @@ function AutoMissionSetup({
               <h3>{specialtyLabels[required.aptitude]} </h3>
               <div className="crew-card-box">
                 {candidates.map((character) => {
+                  const isQualified =
+                    character.specialty.name === required.aptitude ||
+                    character.secondarySpecialties.some(
+                      (specialty) => specialty.name === required.aptitude,
+                    );
                   const isSelected = missionCrew.some(
                     (member) =>
                       member.character.id === character.id &&
@@ -121,9 +127,9 @@ function AutoMissionSetup({
                   return (
                     <div
                       key={character.id}
-                      className={
-                        isSelected ? "crew-card selected" : "crew-card"
-                      }
+                      className={`crew-card ${
+                        isQualified ? "qualified" : "unqualified"
+                      } ${isSelected ? "selected" : ""}`}
                       onClick={() =>
                         handleCrewSelect(
                           character,

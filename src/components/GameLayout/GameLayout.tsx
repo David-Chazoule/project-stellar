@@ -63,6 +63,7 @@ function GameLayout() {
               setSelectedMission={setSelectedMission}
               crew={crew}
               setCrew={setCrew}
+              gameState={gameState}
             />
           )}
           {view === "missions" && selectedMission && (
