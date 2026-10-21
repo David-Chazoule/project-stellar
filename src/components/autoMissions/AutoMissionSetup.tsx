@@ -26,6 +26,8 @@ function AutoMissionSetup({
   crew,
   setCrew,
 }: Props) {
+
+  
   function handleCrewSelect(
     character: Character,
     aptitude: SpecialtyName,
@@ -51,6 +53,13 @@ function AutoMissionSetup({
         ),
       );
 
+      return;
+    }
+    const assignedElsewhere = missionCrew.some(
+      (member) => member.character.id === character.id,
+    );
+
+    if (assignedElsewhere) {
       return;
     }
 
