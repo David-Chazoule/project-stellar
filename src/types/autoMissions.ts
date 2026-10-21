@@ -21,6 +21,8 @@ export type AutoMissionType =
   | "medical"
   | "logistics";
 
+export type locationId = "earth" | "moon" | "mars" | "ceres";
+
 export type SelectedCrewMember = {
   character: Character;
   aptitude: SpecialtyName;
@@ -49,6 +51,8 @@ export type AutoMissionResolver = {
 
 export interface AutoMission {
   id: string;
+  locationId: locationId;
+  sectorId:number;
   repeatable: boolean;
   duration: number;
   minReputation: number;
