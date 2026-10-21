@@ -52,7 +52,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
 
           <div className="dashboard-card">
             <p className="dashBoard-label">DATE</p>
-            <p className="dashboard-value">2187</p>
+            <p className="dashboard-value">{gameState.elapsedDays}</p>
           </div>
 
           <div className="dashboard-card">

@@ -3,4 +3,5 @@ export const initialGameState = {
   cohesion: 50,
   reputation: 50,
   captainId: null,
+  elapsedDays: 0,
 };

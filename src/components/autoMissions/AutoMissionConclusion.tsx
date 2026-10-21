@@ -37,6 +37,7 @@ function AutoMissionConclusion({
       ...prev,
       credits: prev.credits + (conclusion.effects.credits ?? 0),
       reputation: prev.reputation + (conclusion.effects.reputation ?? 0),
+      elapsedDays: prev.elapsedDays + mission.duration,
     }));
     setSelectedMission(null);
     handleStateCrew();
@@ -65,6 +66,7 @@ function AutoMissionConclusion({
       }),
     );
   }
+
   return (
     <div className="start-panel">
       <h2>{conclusion.title}</h2>
