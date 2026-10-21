@@ -4,7 +4,8 @@ export type SpecialtyName =
   | "medic"
   | "scientist"
   | "operative"
-  | "liaisonOfficer";
+  | "liaisonOfficer"
+  | "logistician";
 
 export type Specialty = {
   name: SpecialtyName;

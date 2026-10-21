@@ -132,7 +132,7 @@ export const ceresContracts01: AutoMission[] = [
 
     results: {
       criticalFailure: {
-        title: "Incident de sécurité majeur",
+        title: "Echec critique",
         text: `Des marchandises disparaissent pendant votre service.
         L'enquête interne met en évidence plusieurs failles
         dans la surveillance. L'entreprise exprime
@@ -146,7 +146,7 @@ export const ceresContracts01: AutoMission[] = [
       },
 
       failure: {
-        title: "Surveillance insuffisante",
+        title: "Echec",
         text: `Plusieurs incidents mineurs perturbent la mission.
         Votre équipe parvient à terminer son contrat,
         mais les responsables estiment que les procédures
@@ -160,7 +160,7 @@ export const ceresContracts01: AutoMission[] = [
       },
 
       success: {
-        title: "Mission accomplie",
+        title: "Réussite",
         text: `La surveillance se déroule correctement.
         Aucun incident important n'est signalé
         et l'entreprise remercie votre équipage
@@ -174,7 +174,7 @@ export const ceresContracts01: AutoMission[] = [
       },
 
       criticalSuccess: {
-        title: "Vigilance exemplaire",
+        title: "Réussite critique",
         text: `Votre équipe repère une tentative de vol
         et intervient avant la disparition des marchandises.
         Les responsables de l'entrepôt félicitent

@@ -7,4 +7,5 @@ export const specialtyLabels: Record<SpecialtyName, string> = {
   scientist: "Scientifique",
   operative: "Opérateur tactique ",
   liaisonOfficer: "Agent de liaison",
+  logistician: "Logisticien",
 };

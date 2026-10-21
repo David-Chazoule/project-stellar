@@ -39,7 +39,7 @@ export const moonContracts01: AutoMission[] = [
 
     results: {
       criticalFailure: {
-        title: "Inspection catastrophique",
+        title: "Echec critique",
         text: `Une mauvaise manipulation provoque une nouvelle panne.
           Les techniciens locaux doivent intervenir en urgence.
           Votre équipe quitte les installations sous les critiques
@@ -53,7 +53,7 @@ export const moonContracts01: AutoMission[] = [
       },
 
       failure: {
-        title: "Inspection peu concluante",
+        title: "Echec",
         text: `Votre équipe termine son inspection sans parvenir
           à identifier précisément l'origine des anomalies.
           Les autorités devront poursuivre les recherches.`,
@@ -66,7 +66,7 @@ export const moonContracts01: AutoMission[] = [
       },
 
       success: {
-        title: "Inspection réussie",
+        title: "Réussite",
         text: `Les anomalies sont identifiées et les installations
           peuvent être remises en service. Les responsables
           de la colonie remercient votre équipage.`,
@@ -79,7 +79,7 @@ export const moonContracts01: AutoMission[] = [
       },
 
       criticalSuccess: {
-        title: "Intervention exemplaire",
+        title: "Reussite Critique",
         text: `Votre équipe identifie rapidement l'origine du problème
           et découvre également une défaillance jusque-là passée
           inaperçue. Les responsables saluent votre efficacité.`,
@@ -132,7 +132,7 @@ export const moonContracts01: AutoMission[] = [
 
     results: {
       criticalFailure: {
-        title: "Livraison catastrophique",
+        title: "Echec critique",
         text: `Plusieurs équipements sont endommagés pendant
         le transport. Le personnel médical exprime son
         mécontentement et demande un rapport d'incident.
@@ -146,7 +146,7 @@ export const moonContracts01: AutoMission[] = [
       },
 
       failure: {
-        title: "Livraison compliquée",
+        title: "Echec",
         text: `La cargaison arrive avec du retard et certains
         équipements nécessitent des vérifications supplémentaires.
         Les responsables acceptent la livraison, sans être
@@ -160,7 +160,7 @@ export const moonContracts01: AutoMission[] = [
       },
 
       success: {
-        title: "Livraison effectuée",
+        title: "Réussite",
         text: `Le matériel arrive en bon état et dans les délais.
         Le personnel médical remercie votre équipage pour
         son professionnalisme.`,
@@ -173,7 +173,7 @@ export const moonContracts01: AutoMission[] = [
       },
 
       criticalSuccess: {
-        title: "Livraison exemplaire",
+        title: "Réussite critique",
         text: `Votre équipe assure un transport particulièrement
         efficace et facilite également l'installation
         des équipements. Les responsables de la colonie

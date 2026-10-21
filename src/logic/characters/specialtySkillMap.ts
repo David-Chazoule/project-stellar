@@ -27,4 +27,12 @@ export const specialtySkillMap: Record<Specialty["name"], (keyof Skills)[]> = {
     "instinct",
     "seduction",
   ],
+
+  logistician: [
+     "intelligence",
+  "perception",
+  "composure",
+  "leadership",
+  "social",
+  ]
 };
