@@ -1,4 +1,4 @@
-import { SpeechChoices } from "@/types/CaptainSpeech";
+import type  { SpeechChoices } from "@/types/CaptainSpeech";
 import { StartGameStep } from "../StartGameFlow";
 import { Character } from "@/types/character";
 

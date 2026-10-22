@@ -14,6 +14,7 @@ import type { AutoMission } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
 import Header from "../header/Header";
+import EventsFlow from "../events/EventsFlow";
 
 function GameLayout() {
   const [view, setView] = useState<View>("startGame");
@@ -75,6 +76,7 @@ function GameLayout() {
               setGameState={setGameState}
             />
           )}
+          {view === "event" && <EventsFlow crew={crew} />}
         </section>
       </main>
     </div>
