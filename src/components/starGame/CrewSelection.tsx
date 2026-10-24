@@ -1,9 +1,11 @@
 import { characters } from "@/data/character";
 
 import CharacterSelectionCard from "./CharacterSelectionCard";
+import { specialtyLabels } from "@/data/labels/specialtyLabels";
 
 import type { StartGameStep } from "./StartGameFlow";
 import type { Character } from "@/types/character";
+import type { SpecialtyName } from "@/types/character";
 
 import { FingerprintPattern, UserGroup } from "lucide-react";
 import Button from "../Ui/Button";
@@ -38,6 +40,17 @@ function CrewSelection({
     setCrew((prev) => [...prev, character]);
   }
   const captain = crew.find((character) => character.id === captainId);
+
+  const specialties: SpecialtyName[] = [
+    "pilot",
+    "engineer",
+    "medic",
+    "scientist",
+    "operative",
+    "liaisonOfficer",
+    "logistician",
+  ];
+
   return (
     <div className="start-panel">
       <div className="crewSelection-header">
@@ -61,21 +74,38 @@ function CrewSelection({
       </div>
 
       <div className="crewSelect-container">
-        {characters
-          .filter((character) => character.id !== captainId)
-          .map((character) => {
-            const isSelected = crew.some(
-              (member) => member.id === character.id,
-            );
-            return (
-              <CharacterSelectionCard
-                key={character.id}
-                character={character}
-                isSelected={isSelected}
-                onClick={() => handleCrewSelect(character)}
-              />
-            );
-          })}
+        {specialties.map((specialty, index) => {
+          const filteredCharacters = characters
+            .filter((character) => character.id !== captainId)
+            .filter((character) => character.specialty.name === specialty);
+
+          return (
+            <div className="crewSelect-category" key={specialty}>
+              <div className="crewSelect-categoryHeader">
+                <span>SYS.CREW_{specialty.toUpperCase()}</span>
+                <h3>{specialtyLabels[specialty].toUpperCase()}</h3>
+                <span>PERSONNEL DATABASE</span>
+              </div>
+
+              <div className="crewSelect-cards">
+                {filteredCharacters.map((character) => {
+                  const isSelected = crew.some(
+                    (member) => member.id === character.id,
+                  );
+
+                  return (
+                    <CharacterSelectionCard
+                      key={character.id}
+                      character={character}
+                      isSelected={isSelected}
+                      onClick={() => handleCrewSelect(character)}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div>
         <Button

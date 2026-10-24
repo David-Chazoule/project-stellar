@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-   
+
     padding-bottom: 12px;
     border-bottom: 1px solid #354b5b;
     margin-bottom: 20px;
@@ -28,7 +28,7 @@
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 2px;
     text-align: start;
 
     h3 {
@@ -42,19 +42,19 @@
       margin: 0 0 14px 0;
       color: #aab8c1;
 
-      span{
-        color: white;
+      span {
+        color: #4fc3ff;
         font-weight: 600;
       }
     }
 
-    .numberCrew{
-    display: flex;
+    .numberCrew {
+      display: flex;
       align-items: center;
       font-family: monospace;
-      p{
-color: #4fc3ff;
-margin: 0 0 0 4px;
+      p {
+        color: #4fc3ff;
+        margin: 0 0 0 4px;
       }
     }
   }
@@ -65,5 +65,45 @@ margin: 0 0 0 4px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+  }
+
+  .crewSelect-category {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .crewSelect-categoryHeader {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+
+      padding-bottom: 12px;
+      border-bottom: 1px solid #354b5b;
+      border-top: 1px solid #354b5b;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding-top: 12px;
+      span {
+        color: #4fc3ff;
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin: 0 6px;
+        font-family: monospace;
+      }
+
+      h3 {
+        color: #4fc3ff;
+        font-family: monospace;
+        letter-spacing: 1px;
+        font-size: 16px;
+      }
+    }
+
+    .crewSelect-cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
