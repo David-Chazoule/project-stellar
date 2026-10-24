@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function CaptainEventsIntro() {
-  return (
-    <div>CaptainEventsIntro</div>
-  )
+  return <div>CaptainEventsIntro</div>;
 }
 
-export default CaptainEventsIntro
+export default CaptainEventsIntro;
