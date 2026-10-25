@@ -3,6 +3,7 @@ export type CaptainEventsChoices = {
   label: string;
   text: string;
   result: {
+    img: string;
     text: string;
     effects: {
       moral?: number;
@@ -13,6 +14,7 @@ export type CaptainEventsChoices = {
 
 export type captainEvents = {
   id: string;
+  image: string;
   intro: string;
   participantCount: number;
   choices: CaptainEventsChoices[];
