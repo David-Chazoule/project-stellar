@@ -2,7 +2,7 @@ import React from 'react'
 
 function CaptainEventsResult() {
   return (
-    <div>CaptainEventsResult</div>
+    <div className='start-panel'>CaptainEventsResult</div>
   )
 }
 

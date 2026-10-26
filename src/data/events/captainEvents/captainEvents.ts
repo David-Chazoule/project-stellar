@@ -195,39 +195,62 @@ Vous quittez votre fauteuil et décidez de retourner dans votre chambre, satisfa
       },
     ],
   },
+
   {
     id: "crew-captain-002",
     image: "",
-    intro: ``,
-    participantCount: 1,
+    intro: `Alors que vous marchez dans les couloirs de votre vaisseau, vous croisez {0} et {1} en plein débat devant la salle de sport, au lieu d'être à leur poste.
+
+Vous vous arrêtez pour écouter cette conversation particulièrement animée.
+
+« Attends, mais mec, comment tu peux penser que G-Cola, c'est dégueulasse ? C'est le cola original, putain ! » s'exclame {0} en agitant les bras.
+
+« Mais tu racontes quoi ? Cola-Stars, c'est tellement meilleur ! Le goût est plus explosif, plus sucré, et puis cette petite pointe d'agrumes citronnés ! Mec, G-Cola, c'est pour les lopettes ! » réplique sèchement {1}.
+
+« Capitaine ! Dites-lui que G-Cola est la meilleure boisson ! » lance {0} en se tournant vers vous.`,
+    participantCount: 2,
     choices: [
       {
         id: "choice-1",
-        label: "",
-        text: "",
+        label: "G-Cola",
+        text: `Vous choisissez de prendre parti pour G-Cola.`,
         result: {
           img: "",
-          text: ``,
+          text: `« Je préfère G-Cola, pour le coup. C'est moins agressif. Mais le vrai problème, ce n'est pas ce que je préfère. Le problème, c'est que vous êtes là à débattre de deux putains de sodas au lieu d'être à vos postes !
+
+Alors tirez-vous de là ! Au boulot ! »
+
+{0} et {1} repartent en grognant.`,
           effects: { moral: 0, fatigue: 0 },
         },
       },
       {
         id: "choice-2",
-        label: "",
-        text: "",
+        label: "Cola-Stars",
+        text: `Vous choisissez de prendre parti pour Cola-Stars.`,
         result: {
           img: "",
-          text: ``,
+          text: `« Je préfère largement Cola-Stars, mais mon avis n'est pas le plus important. Le plus important, c'est que vous retourniez à vos postes tout de suite !
+
+On a du boulot et pas de temps à perdre avec des débats futiles ! »
+
+{0} et {1} repartent en grognant.`,
           effects: { moral: 0, fatigue: 0 },
         },
       },
       {
         id: "choice-3",
-        label: "",
-        text: "",
+        label: "Aucun des deux",
+        text: `Vous décidez de ne soutenir aucune des deux boissons.`,
         result: {
           img: "",
-          text: ``,
+          text: `« Ni l'un ni l'autre ! Autant boire de l'eau de refroidissement d'un réacteur nucléaire !
+
+Si vous aimez boire des produits chimiques, c'est votre choix, mais l'assurance de ma compagnie ne vous couvrira pas le cul pour vos futurs cancers !
+
+Et puis allez bosser, bordel ! On a beaucoup de boulot ! »
+
+{0} et {1} repartent, visiblement très agacés.`,
           effects: { moral: 0, fatigue: 0 },
         },
       },
@@ -236,37 +259,39 @@ Vous quittez votre fauteuil et décidez de retourner dans votre chambre, satisfa
   {
     id: "crew-captain-003",
     image: "",
-    intro: ``,
+    intro: `Alors que vous vous dirigez vers la salle commune, vous entendez des claquements réguliers derrière la porte de la salle des drones.
+
+Le bruit est fort, répétitif et particulièrement insistant. Votre esprit quelque peu tordu vous laisse imaginer que deux personnes s'adonnent à des jeux pour adultes.`,
     participantCount: 1,
     choices: [
       {
         id: "choice-1",
-        label: "",
-        text: "",
+        label: "Continuer votre chemin",
+        text: `Vous préférez ne pas savoir ce qui se passe dans cette pièce.`,
         result: {
           img: "",
-          text: ``,
-          effects: { moral: 0, fatigue: 0 },
+          text: `Vous continuez votre chemin sans vous soucier davantage du bruit.
+
+Mais votre imagination vous travaille. Le soir, dans la salle commune, vous observez tous les membres de votre équipage avec suspicion.
+
+Qui sont donc les deux gros dégueulasses qui s'amusaient dans la salle des drones ?`,
+          effects: { moral: -1, fatigue: 0 },
         },
       },
       {
         id: "choice-2",
-        label: "",
-        text: "",
+        label: "Ouvrir la porte",
+        text: `Vous décidez d'ouvrir la porte pour découvrir l'origine de ces bruits suspects.`,
         result: {
           img: "",
-          text: ``,
-          effects: { moral: 0, fatigue: 0 },
-        },
-      },
-      {
-        id: "choice-3",
-        label: "",
-        text: "",
-        result: {
-          img: "",
-          text: ``,
-          effects: { moral: 0, fatigue: 0 },
+          text: `Vous ouvrez la porte, redoutant de tomber sur quelque chose de particulièrement répugnant.
+
+Mais finalement, vous découvrez {0}, qui essaie désespérément de faire glisser une lourde caisse sur une autre, à grands coups d'épaule et de reins.
+
+« Tu vas rentrer, bordel !!! » hurle {0}, au bord du désespoir.
+
+Vous décidez de lui donner un coup de main pour déplacer cette caisse qui, effectivement, est particulièrement lourde.`,
+          effects: { moral: 1, fatigue: 2 },
         },
       },
     ],

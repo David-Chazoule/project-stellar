@@ -22,3 +22,7 @@
 @use "../components/header/header";
 @use "../styles/start-panel";
 @use "../components/Ui/button";
+@use "../components//events/eventsLife";
+@use "../components/events/captainEvents/captainEventsFlow";
+@use "../components/events/captainEvents/captainEventsIntro";
+@use "../components/events/captainEvents/-captainEventsResult.scss";
