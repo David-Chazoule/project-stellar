@@ -62,14 +62,15 @@ function CaptainEventsResult({
 
   return (
     <div className="start-panel">
-      <p>
+      <div className="captain-result-text"><p>
         {selectedChoice && naming(participants, selectedChoice.result.text)}
-      </p>
+      </p></div>
+      
       <div className="effect">
         {selectedChoice &&
           Object.entries(selectedChoice.result.effects).map(([stat, value]) => (
             <p key={stat}>
-              {stat} : {value > 0 ? "+" : ""}
+              <span>{stat}</span> : <span>{value > 0 ? "+ " : ""}</span>
               {value}
             </p>
           ))}

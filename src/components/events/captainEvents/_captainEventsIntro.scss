@@ -1,7 +1,6 @@
 .start-panel {
-
-.intro-captain-text{
-  display: flex;
+  .intro-captain-text {
+    display: flex;
     flex-direction: column;
     width: 80%;
     margin-top: 10px;
@@ -12,28 +11,34 @@
       font-weight: 400;
       margin: 4px 0;
     }
-}
+  }
 
-.choice-captain-event{
-display: flex;
+  .choice-captain-event {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
 
-
-  .captain-choice-card{
-    display: flex;
+    .captain-choice-card {
+      display: flex;
       flex-direction: column;
       background-color: #1a232c;
       margin: 6px;
       border: 1px solid #354b5b;
       padding: 10px;
+      max-width: 680px;
       width: 80%;
       border-radius: 10px;
+
       cursor: pointer;
       &:hover {
         border-color: #4fc3ff;
         background: #202e39;
+      }
+
+      h3 {
+        color: #d5e0e8;
+        margin: 6px 0 4px 5px;
       }
       p {
         color: #aab8c1;
@@ -41,16 +46,10 @@ display: flex;
         line-height: 1.5;
         font-weight: 400;
         max-width: 680px;
-        margin: 10px auto 18px;
+        margin: 6px 5px;
+        text-align: start;
       }
       font-style: italic;
-
+    }
   }
-
-
-
-}
-
-
-
 }

@@ -1,0 +1,31 @@
+.start-panel {
+  .life-event-card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #354b5b;
+    background-color: #1a232c;
+    width: 80%;
+
+    .life-event-card {
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      margin: 4px;
+      padding: 5px;
+      text-align: start;
+      border-radius: 10px;
+
+      .lifeEvent-text {
+        color: #d5e0e8;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 400;
+        margin: 6px;
+
+        text-align: left;
+      }
+    }
+  }
+}

@@ -80,8 +80,8 @@ function EventsLife({ crew, setView }: Props) {
 
       <div className="life-event-card-box">
         {preparedEvents.map(({ event, participants }) => (
-          <div key={event.id}>
-            <p>{naming(participants, event.text)}</p>
+          <div className="life-event-card" key={event.id}>
+            <p className="lifeEvent-text">{naming(participants, event.text)}</p>
           </div>
         ))}
       </div>

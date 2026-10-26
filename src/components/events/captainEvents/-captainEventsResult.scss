@@ -1,0 +1,32 @@
+.start-panel {
+  .captain-result-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 10px;
+    p {
+      color: #d5e0e8;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 400;
+      margin: 4px 0;
+    }
+  }
+
+  .effect {
+    display: flex;
+
+    p {
+      margin: 4px;
+      background-color: #354b5b;
+      border: 1px solid #d5e0e8;
+      padding: 6px;
+      color: #4fc3ff;
+      border-radius: 5px;
+    }
+  }
+
+  .crew-name {
+    color: #4fc3ff;
+  }
+}
