@@ -3,6 +3,7 @@ import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
 import type { LifeEvent } from "@/types/lifeEvent";
 import { useState } from "react";
 import type { View } from "@/types/gameState";
+import EventsCrew from "./EventsCrew";
 type Props = {
   crew: Character[];
   setView: React.Dispatch<React.SetStateAction<View>>;
@@ -67,6 +68,10 @@ function EventsLife({ crew, setView }: Props) {
   return (
     <div className="start-panel">
       <div className="life-event-header"></div>
+
+      <div className="event-crew-container">
+        <EventsCrew />
+      </div>
 
       <div className="life-event-card-box">
         {preparedEvents.map(({ event, participants }) => (
