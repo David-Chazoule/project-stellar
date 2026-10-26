@@ -1,9 +1,13 @@
-import type { Character } from "@/types/character";
-import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
-import type { LifeEvent } from "@/types/lifeEvent";
 import { useState } from "react";
-import type { View } from "@/types/gameState";
+
+import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
+
 import EventsCrew from "./EventsCrew";
+
+import type { LifeEvent } from "@/types/lifeEvent";
+import type { Character } from "@/types/character";
+import type { View } from "@/types/gameState";
+
 type Props = {
   crew: Character[];
   setView: React.Dispatch<React.SetStateAction<View>>;

@@ -8,7 +8,7 @@ import type { GameState } from "@/types/gameState";
 import type { SelectedCrewMember } from "../../types/autoMissions";
 import type { Character } from "@/types/character";
 import type { View } from "@/types/gameState";
-import { characters } from "../../data/character";
+
 
 type Props = {
   mission: AutoMission;

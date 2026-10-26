@@ -10,21 +10,19 @@ import type {
 type Props = {
   mission: AutoMission;
   setStep: (autoMissionsStep: AutoMissionStep) => void;
-  missionResult: AutoMissionResultType | null;
+
   setMissionResult: React.Dispatch<
     React.SetStateAction<AutoMissionResultType | null>
   >;
   missionCrew: SelectedCrewMember[];
-  setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
 };
 
 function AutoMissionProgression({
   mission,
   setStep,
-  missionResult,
+
   setMissionResult,
   missionCrew,
-  setMissionCrew,
 }: Props) {
   return (
     <div>

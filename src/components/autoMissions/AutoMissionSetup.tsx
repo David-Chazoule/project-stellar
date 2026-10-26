@@ -15,7 +15,6 @@ type Props = {
   missionCrew: SelectedCrewMember[];
   setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
   crew: Character[];
-  setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
 };
 
 function AutoMissionSetup({
@@ -24,7 +23,6 @@ function AutoMissionSetup({
   missionCrew,
   setMissionCrew,
   crew,
-  setCrew,
 }: Props) {
   function handleCrewSelect(
     character: Character,

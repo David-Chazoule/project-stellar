@@ -1,8 +1,10 @@
 import { useState } from "react";
-import type { Character } from "@/types/character";
+
 import EventsLife from "./EventsLife";
 import CaptainEventsFlow from "./captainEvents/CaptainEventsFlow";
+
 import type { View } from "@/types/gameState";
+import type { Character } from "@/types/character";
 type Props = {
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;

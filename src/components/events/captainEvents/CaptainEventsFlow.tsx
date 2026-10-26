@@ -60,14 +60,9 @@ function CaptainEventsFlow({
       <div>
         {captainEventStep === "intro" && (
           <CaptainEventsIntro
-            crew={crew}
-            setCrew={setCrew}
-            captainId={captainId}
             selectedEvent={selectedEvent}
             participants={participants}
-            captainEventStep={captainEventStep}
             setCaptainEventStep={setCaptainEventStep}
-            selectedChoice={selectedChoice}
             setSelectedChoice={setSelectedChoice}
           />
         )}
@@ -76,15 +71,11 @@ function CaptainEventsFlow({
       <div>
         {captainEventStep === "result" && selectedChoice && (
           <CaptainEventsResult
-            crew={crew}
             setCrew={setCrew}
             captainId={captainId}
-            selectedEvent={selectedEvent}
             participants={participants}
-            captainEventStep={captainEventStep}
             setCaptainEventStep={setCaptainEventStep}
             selectedChoice={selectedChoice}
-            setSelectedChoice={setSelectedChoice}
           />
         )}
       </div>

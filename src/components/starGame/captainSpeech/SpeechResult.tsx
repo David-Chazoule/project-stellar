@@ -1,8 +1,10 @@
-import type  { SpeechChoices } from "@/types/CaptainSpeech";
-import { StartGameStep } from "../StartGameFlow";
-import { Character } from "@/types/character";
+import React, { useState } from "react";
 
-import React, { useEffect, useState } from "react";
+import { StartGameStep } from "../StartGameFlow";
+
+import { Character } from "@/types/character";
+import type { SpeechChoices } from "@/types/CaptainSpeech";
+
 import Button from "@/components/Ui/Button";
 
 type Props = {

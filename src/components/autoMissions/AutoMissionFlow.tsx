@@ -42,17 +42,14 @@ function AutoMissionFlow({
           missionCrew={missionCrew}
           setMissionCrew={setMissionCrew}
           crew={crew}
-          setCrew={setCrew}
         />
       )}
       {step === "progression" && (
         <AutoMissionProgression
           mission={mission}
           setStep={setStep}
-          missionResult={missionResult}
           setMissionResult={setMissionResult}
           missionCrew={missionCrew}
-          setMissionCrew={setMissionCrew}
         />
       )}
       {step === "conclusion" && missionResult && (
