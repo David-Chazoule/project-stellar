@@ -9,6 +9,7 @@ import type { SelectedCrewMember } from "@/types/autoMissions";
 import type { AutoMissionStep } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { GameState } from "@/types/gameState";
+import type { View } from "@/types/gameState";
 
 type Props = {
   mission: AutoMission;
@@ -16,6 +17,7 @@ type Props = {
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
   setGameState: React.Dispatch<React.SetStateAction<GameState>>;
+  setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
 function AutoMissionFlow({
@@ -24,6 +26,7 @@ function AutoMissionFlow({
   crew,
   setCrew,
   setGameState,
+  setView,
 }: Props) {
   const [step, setStep] = useState<AutoMissionStep>("setup");
   const [missionCrew, setMissionCrew] = useState<SelectedCrewMember[]>([]);
@@ -62,6 +65,7 @@ function AutoMissionFlow({
           setMissionCrew={setMissionCrew}
           crew={crew}
           setCrew={setCrew}
+          setView={setView}
         />
       )}
     </div>

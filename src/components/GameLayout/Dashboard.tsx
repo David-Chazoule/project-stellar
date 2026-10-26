@@ -34,7 +34,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
           <p className="dashboard-kicker">SYSTÈME DE BORD // STELLAR</p>
         </div>
         <button onClick={handleMissionSelection}>Missions</button>
-        < button onClick={()=>{setView("event")}}>XXX</button>
+
         <div className="dashboard-grid">
           <div className="dashboard-card">
             <p className="dashBoard-label">CREDITS</p>

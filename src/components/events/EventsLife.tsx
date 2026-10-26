@@ -2,11 +2,13 @@ import type { Character } from "@/types/character";
 import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
 import type { LifeEvent } from "@/types/lifeEvent";
 import { useState } from "react";
+import type { View } from "@/types/gameState";
 type Props = {
   crew: Character[];
+  setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
-function EventsLife({ crew }: Props) {
+function EventsLife({ crew, setView }: Props) {
   function shuffleLifeEvent(lifeEvents: LifeEvent[]) {
     const copyLifeEvent = [...lifeEvents];
     for (let i = copyLifeEvent.length - 1; i > 0; i--) {
@@ -73,7 +75,7 @@ function EventsLife({ crew }: Props) {
           </div>
         ))}
       </div>
-      <button>Suivant</button>
+      <button onClick={() => setView("missions")}>Continuer</button>
     </div>
   );
 }

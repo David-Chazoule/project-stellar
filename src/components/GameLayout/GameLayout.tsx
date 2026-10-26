@@ -9,7 +9,7 @@ import AutoMissionFlow from "../autoMissions/AutoMissionFlow";
 import StartGameFlow from "../starGame/StartGameFlow";
 import { initialShip } from "@/data/ship";
 import { initialGameState } from "@/data/gameState";
-import { GameState, type View } from "@/types/gameState";
+import type { GameState, View } from "@/types/gameState";
 import type { AutoMission } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
@@ -74,9 +74,10 @@ function GameLayout() {
               crew={crew}
               setCrew={setCrew}
               setGameState={setGameState}
+              setView={setView}
             />
           )}
-          {view === "event" && <EventsFlow crew={crew} setCrew={setCrew} captainId={captainId} />}
+          {view === "event" && <EventsFlow crew={crew} setCrew={setCrew} captainId={captainId} setView={setView} />}
         </section>
       </main>
     </div>

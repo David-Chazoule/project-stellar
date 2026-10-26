@@ -2,7 +2,7 @@ import React from "react";
 
 import type { Character } from "@/types/character";
 import { captainEvents, CaptainEventsChoices } from "@/types/captainEvent";
-import { CaptainEventStep } from "./CaptainEventsFlow";
+import { CaptainEventStep } from "../EventsFlow";
 
 type Props = {
   crew: Character[];
@@ -51,12 +51,13 @@ function CaptainEventsIntro({
     <div className="start-panel">
       <div className="captain-event-img"></div>
       <div className="intro-captain-text">
-        <p>{ naming(participants, selectedEvent.intro)}</p>
+        <p>{naming(participants, selectedEvent.intro)}</p>
       </div>
 
       <div className="choice-captain-event">
         {selectedEvent.choices.map((choice) => (
-          <span className="captain-choice-card"
+          <span
+            className="captain-choice-card"
             key={choice.id}
             onClick={() => {
               setSelectedChoice(choice);

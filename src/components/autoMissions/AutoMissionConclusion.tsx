@@ -7,6 +7,7 @@ import type {
 import type { GameState } from "@/types/gameState";
 import type { SelectedCrewMember } from "../../types/autoMissions";
 import type { Character } from "@/types/character";
+import type { View } from "@/types/gameState";
 import { characters } from "../../data/character";
 
 type Props = {
@@ -18,6 +19,7 @@ type Props = {
   setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
+  setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
 function AutoMissionConclusion({
@@ -29,6 +31,7 @@ function AutoMissionConclusion({
   setMissionCrew,
   crew,
   setCrew,
+  setView,
 }: Props) {
   const conclusion = mission.results[result];
 
@@ -38,10 +41,12 @@ function AutoMissionConclusion({
       credits: prev.credits + (conclusion.effects.credits ?? 0),
       reputation: prev.reputation + (conclusion.effects.reputation ?? 0),
       elapsedDays: prev.elapsedDays + mission.duration,
-      completedMissions: [...prev.completedMissions, mission.id]
+      completedMissions: [...prev.completedMissions, mission.id],
     }));
-    setSelectedMission(null);
+
     handleStateCrew();
+    setSelectedMission(null);
+    setView("event");
   }
 
   function handleStateCrew() {

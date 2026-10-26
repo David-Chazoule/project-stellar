@@ -4,18 +4,23 @@ import CaptainEventsResult from "./CaptainEventsResult";
 import { CaptainEvents } from "@/data/events/captainEvents/captainEvents";
 import type { Character } from "@/types/character";
 import type { captainEvents } from "@/types/captainEvent";
+import type { CaptainEventStep } from "../EventsFlow";
 
 type Props = {
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
   captainId: number | null;
+  captainEventStep: CaptainEventStep;
+  setCaptainEventStep: React.Dispatch<React.SetStateAction<CaptainEventStep>>;
 };
 
-export type CaptainEventStep = "intro" | "result";
-
-function CaptainEventsFlow({ crew, setCrew, captainId }: Props) {
-  const [captainEventStep, setCaptainEventStep] =
-    useState<CaptainEventStep>("intro");
+function CaptainEventsFlow({
+  crew,
+  setCrew,
+  captainId,
+  captainEventStep,
+  setCaptainEventStep,
+}: Props) {
   const [selectedChoice, setSelectedChoice] = useState<
     captainEvents["choices"][number] | null
   >(null);

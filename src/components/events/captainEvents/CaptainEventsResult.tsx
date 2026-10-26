@@ -2,7 +2,7 @@ import React from "react";
 
 import type { Character } from "@/types/character";
 import type { captainEvents, CaptainEventsChoices } from "@/types/captainEvent";
-import type { CaptainEventStep } from "./CaptainEventsFlow";
+import { CaptainEventStep } from "../EventsFlow";
 
 type Props = {
   crew: Character[];
@@ -46,12 +46,43 @@ function CaptainEventsResult({
       return part;
     });
   }
+  const effects = selectedChoice?.result.effects;
+  function handleStateCaptain() {
+    setCrew((prev) =>
+      prev.map((character) => {
+        if (character.id === captainId) {
+          return {
+            ...character,
+            states: {
+              ...character.states,
+              moral: character.states.moral + (effects?.moral ?? 0),
+              fatigue: character.states.fatigue + (effects?.fatigue ?? 0),
+            },
+          };
+        }
+
+        return character;
+      }),
+    );
+    setCaptainEventStep("life");
+  }
 
   return (
     <div className="start-panel">
       <p>
         {selectedChoice && naming(participants, selectedChoice.result.text)}
       </p>
+      <div className="effect">
+        {selectedChoice &&
+          Object.entries(selectedChoice.result.effects).map(([stat, value]) => (
+            <p key={stat}>
+              {stat} : {value > 0 ? "+" : ""}
+              {value}
+            </p>
+          ))}
+      </div>
+
+      <button onClick={handleStateCaptain}>continuer</button>
     </div>
   );
 }

@@ -1,14 +1,21 @@
-import { Character } from "@/types/character";
+import { useState } from "react";
+import type { Character } from "@/types/character";
 import EventsLife from "./EventsLife";
 import CaptainEventsFlow from "./captainEvents/CaptainEventsFlow";
-
+import type { View } from "@/types/gameState";
 type Props = {
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
   captainId: number | null;
+  setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
-function EventsFlow({ crew, setCrew, captainId }: Props) {
+export type CaptainEventStep = "intro" | "result" | "life";
+
+function EventsFlow({ crew, setCrew, captainId, setView }: Props) {
+  const [captainEventStep, setCaptainEventStep] =
+    useState<CaptainEventStep>("intro");
+
   return (
     <div>
       <div>
@@ -16,11 +23,15 @@ function EventsFlow({ crew, setCrew, captainId }: Props) {
           crew={crew}
           setCrew={setCrew}
           captainId={captainId}
+          captainEventStep={captainEventStep}
+          setCaptainEventStep={setCaptainEventStep}
         />
       </div>
       <div>
         {" "}
-        <EventsLife crew={crew} />
+        {captainEventStep === "life" && (
+          <EventsLife crew={crew} setView={setView} />
+        )}
       </div>
     </div>
   );
