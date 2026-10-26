@@ -1,6 +1,7 @@
 import type { CaptainEventStep } from "../EventsFlow";
 import type { Character } from "@/types/character";
 import type { CaptainEventsChoices } from "@/types/captainEvent";
+import Button from "@/components/Ui/Button";
 
 type Props = {
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
@@ -73,8 +74,7 @@ function CaptainEventsResult({
             </p>
           ))}
       </div>
-
-      <button onClick={handleStateCaptain}>continuer</button>
+      <Button onClick={handleStateCaptain}>continuer</Button>
     </div>
   );
 }

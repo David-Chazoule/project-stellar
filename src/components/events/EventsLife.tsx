@@ -7,6 +7,7 @@ import EventsCrew from "./EventsCrew";
 import type { LifeEvent } from "@/types/lifeEvent";
 import type { Character } from "@/types/character";
 import type { View } from "@/types/gameState";
+import Button from "../Ui/Button";
 
 type Props = {
   crew: Character[];
@@ -84,7 +85,7 @@ function EventsLife({ crew, setView }: Props) {
           </div>
         ))}
       </div>
-      <button onClick={() => setView("missions")}>Continuer</button>
+      <Button onClick={() => setView("missions")}>Continuer</Button>
     </div>
   );
 }

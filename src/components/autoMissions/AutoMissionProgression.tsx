@@ -6,6 +6,7 @@ import type {
   AutoMissionStep,
   SelectedCrewMember,
 } from "../../types/autoMissions";
+import Button from "../Ui/Button";
 
 type Props = {
   mission: AutoMission;
@@ -27,7 +28,7 @@ function AutoMissionProgression({
   return (
     <div>
       <p>{mission.progression.text}</p>{" "}
-      <button
+      <Button
         onClick={() => {
           const result = resolveAutoMission(missionCrew);
 
@@ -36,7 +37,7 @@ function AutoMissionProgression({
         }}
       >
         Suivant
-      </button>
+      </Button>
     </div>
   );
 }

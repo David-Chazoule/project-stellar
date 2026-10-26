@@ -8,7 +8,7 @@ import type { GameState } from "@/types/gameState";
 import type { SelectedCrewMember } from "../../types/autoMissions";
 import type { Character } from "@/types/character";
 import type { View } from "@/types/gameState";
-
+import Button from "../Ui/Button";
 
 type Props = {
   mission: AutoMission;
@@ -80,7 +80,7 @@ function AutoMissionConclusion({
 
       <p>Crédits : {conclusion.effects.credits}</p>
       <p>Réputation : {conclusion.effects.reputation}</p>
-      <button onClick={handleFinishMission}>Terminer</button>
+      <Button onClick={handleFinishMission}>Terminer</Button>
     </div>
   );
 }

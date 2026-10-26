@@ -8,6 +8,7 @@ import type {
 } from "../../types/autoMissions";
 import type { AutoMission } from "../../types/autoMissions";
 import type { Character } from "@/types/character";
+import Button from "../Ui/Button";
 
 type Props = {
   mission: AutoMission;
@@ -148,13 +149,12 @@ function AutoMissionSetup({
           );
         })}
       </div>
-
-      <button
+      <Button
         disabled={!canStartMission}
         onClick={() => setStep("progression")}
       >
         Lancer la mission
-      </button>
+      </Button>
     </div>
   );
 }
