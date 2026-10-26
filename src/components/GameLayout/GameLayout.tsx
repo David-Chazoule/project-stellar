@@ -76,7 +76,7 @@ function GameLayout() {
               setGameState={setGameState}
             />
           )}
-          {view === "event" && <EventsFlow crew={crew} />}
+          {view === "event" && <EventsFlow crew={crew} setCrew={setCrew} captainId={captainId} />}
         </section>
       </main>
     </div>

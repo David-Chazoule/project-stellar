@@ -63,7 +63,7 @@ function EventsLife({ crew }: Props) {
   }
 
   return (
-    <div>
+    <div className="start-panel">
       <div className="life-event-header"></div>
 
       <div className="life-event-card-box">
