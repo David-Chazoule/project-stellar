@@ -53,31 +53,35 @@ function CaptainEventsFlow({ crew, setCrew, captainId }: Props) {
   return (
     <div>
       <div>
-        <CaptainEventsIntro
-          crew={crew}
-          setCrew={setCrew}
-          captainId={captainId}
-          selectedEvent={selectedEvent}
-          participants={participants}
-          captainEventStep={captainEventStep}
-          setCaptainEventStep={setCaptainEventStep}
-          selectedChoice={selectedChoice}
-          setSelectedChoice={setSelectedChoice}
-        />
+        {captainEventStep === "intro" && (
+          <CaptainEventsIntro
+            crew={crew}
+            setCrew={setCrew}
+            captainId={captainId}
+            selectedEvent={selectedEvent}
+            participants={participants}
+            captainEventStep={captainEventStep}
+            setCaptainEventStep={setCaptainEventStep}
+            selectedChoice={selectedChoice}
+            setSelectedChoice={setSelectedChoice}
+          />
+        )}
       </div>
 
       <div>
-        <CaptainEventsResult
-          crew={crew}
-          setCrew={setCrew}
-          captainId={captainId}
-          selectedEvent={selectedEvent}
-          participants={participants}
-          captainEventStep={captainEventStep}
-          setCaptainEventStep={setCaptainEventStep}
-          selectedChoice={selectedChoice}
-          setSelectedChoice={setSelectedChoice}
-        />
+        {captainEventStep === "result" && selectedChoice && (
+          <CaptainEventsResult
+            crew={crew}
+            setCrew={setCrew}
+            captainId={captainId}
+            selectedEvent={selectedEvent}
+            participants={participants}
+            captainEventStep={captainEventStep}
+            setCaptainEventStep={setCaptainEventStep}
+            selectedChoice={selectedChoice}
+            setSelectedChoice={setSelectedChoice}
+          />
+        )}
       </div>
     </div>
   );

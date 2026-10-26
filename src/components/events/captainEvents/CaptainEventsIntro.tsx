@@ -51,12 +51,12 @@ function CaptainEventsIntro({
     <div className="start-panel">
       <div className="captain-event-img"></div>
       <div className="intro-captain-text">
-        <p>{selectedEvent.intro}</p>
+        <p>{ naming(participants, selectedEvent.intro)}</p>
       </div>
 
       <div className="choice-captain-event">
         {selectedEvent.choices.map((choice) => (
-          <span
+          <span className="captain-choice-card"
             key={choice.id}
             onClick={() => {
               setSelectedChoice(choice);
@@ -64,7 +64,7 @@ function CaptainEventsIntro({
             }}
           >
             <h3>{choice.label}</h3>
-            <p>{naming(participants, choice.text)}</p>
+            <p>{choice.text}</p>
           </span>
         ))}
       </div>
