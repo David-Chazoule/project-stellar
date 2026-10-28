@@ -6,9 +6,7 @@ import Button from "@/components/Ui/Button";
 type Props = {
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
   captainId: number | null;
-
   participants: Character[];
-
   setCaptainEventStep: React.Dispatch<React.SetStateAction<CaptainEventStep>>;
   selectedChoice: CaptainEventsChoices | null;
 };
@@ -62,10 +60,12 @@ function CaptainEventsResult({
 
   return (
     <div className="start-panel">
-      <div className="captain-result-text"><p>
-        {selectedChoice && naming(participants, selectedChoice.result.text)}
-      </p></div>
-      
+      <div className="captain-result-text">
+        <p>
+          {selectedChoice && naming(participants, selectedChoice.result.text)}
+        </p>
+      </div>
+
       <div className="effect">
         {selectedChoice &&
           Object.entries(selectedChoice.result.effects).map(([stat, value]) => (

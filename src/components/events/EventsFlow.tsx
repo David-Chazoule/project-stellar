@@ -32,7 +32,7 @@ function EventsFlow({ crew, setCrew, captainId, setView }: Props) {
       <div>
         {" "}
         {captainEventStep === "life" && (
-          <EventsLife crew={crew} setView={setView} />
+          <EventsLife crew={crew} setCrew={setCrew} setView={setView} />
         )}
       </div>
     </div>

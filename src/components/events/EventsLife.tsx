@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
 
-
-
 import type { LifeEvent } from "@/types/lifeEvent";
 import type { Character } from "@/types/character";
 import type { View } from "@/types/gameState";
@@ -11,10 +9,11 @@ import Button from "../Ui/Button";
 
 type Props = {
   crew: Character[];
+  setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
   setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
-function EventsLife({ crew, setView }: Props) {
+function EventsLife({ crew, setCrew, setView }: Props) {
   function shuffleLifeEvent(lifeEvents: LifeEvent[]) {
     const copyLifeEvent = [...lifeEvents];
     for (let i = copyLifeEvent.length - 1; i > 0; i--) {
@@ -37,34 +36,34 @@ function EventsLife({ crew, setView }: Props) {
     return copyCrew;
   }
 
- function assignParticipants(events: LifeEvent[], crew: Character[]) {
-  const appearanceCounts = new Map<Character["id"], number>();
+  function assignParticipants(events: LifeEvent[], crew: Character[]) {
+    const appearanceCounts = new Map<Character["id"], number>();
 
-  return events.map((event) => {
-    const availableCrew = shuffleCrew(crew)
-      .filter((member) => {
-        return (appearanceCounts.get(member.id) ?? 0) < 2;
-      })
-      .sort((a, b) => {
-        return (
-          (appearanceCounts.get(a.id) ?? 0) -
-          (appearanceCounts.get(b.id) ?? 0)
-        );
+    return events.map((event) => {
+      const availableCrew = shuffleCrew(crew)
+        .filter((member) => {
+          return (appearanceCounts.get(member.id) ?? 0) < 2;
+        })
+        .sort((a, b) => {
+          return (
+            (appearanceCounts.get(a.id) ?? 0) -
+            (appearanceCounts.get(b.id) ?? 0)
+          );
+        });
+
+      const participants = availableCrew.slice(0, event.participantCount);
+
+      participants.forEach((member) => {
+        const count = appearanceCounts.get(member.id) ?? 0;
+        appearanceCounts.set(member.id, count + 1);
       });
 
-    const participants = availableCrew.slice(0, event.participantCount);
-
-    participants.forEach((member) => {
-      const count = appearanceCounts.get(member.id) ?? 0;
-      appearanceCounts.set(member.id, count + 1);
+      return {
+        event,
+        participants,
+      };
     });
-
-    return {
-      event,
-      participants,
-    };
-  });
-}
+  }
 
   const [preparedEvents] = useState(() =>
     assignParticipants(shuffleLifeEvent(lifeEvents).slice(0, 4), crew),
@@ -88,6 +87,55 @@ function EventsLife({ crew, setView }: Props) {
     });
   }
 
+  function handleContinue() {
+    preparedEvents.forEach(({ event, participants }) => {
+      participants.forEach((member, index) => {
+        const effects = event.result?.participants?.[index];
+
+        if (!effects) return;
+
+        setCrew((prev) =>
+          prev.map((character) => {
+            if (character.id === member.id) {
+              const updatedSkills = { ...character.skills };
+              if (effects.skills) {
+                const skillEntries = Object.entries(effects.skills);
+                skillEntries.forEach(([skill, variation]) => {
+                  const skillKey = skill as keyof typeof updatedSkills;
+                  updatedSkills[skillKey] = Math.min(
+                    100,
+                    Math.max(0, updatedSkills[skillKey] + (variation ?? 0)),
+                  );
+                });
+              }
+              return {
+                ...character,
+                states: {
+                  ...character.states,
+                  moral: Math.min(
+                    100,
+                    Math.max(0, character.states.moral + (effects?.moral ?? 0)),
+                  ),
+                  fatigue: Math.min(
+                    100,
+                    Math.max(
+                      0,
+                      character.states.fatigue + (effects?.fatigue ?? 0),
+                    ),
+                  ),
+                },
+              };
+            }
+
+            return character;
+          }),
+        );
+      });
+    });
+
+    setView("missions");
+  }
+
   return (
     <div className="start-panel">
       <div className="life-event-header"></div>
@@ -98,7 +146,7 @@ function EventsLife({ crew, setView }: Props) {
           </div>
         ))}
       </div>
-      <Button onClick={() => setView("missions")}>Continuer</Button>
+      <Button onClick={handleContinue}>Continuer</Button>
     </div>
   );
 }
