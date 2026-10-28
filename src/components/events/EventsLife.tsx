@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
 
-import EventsCrew from "./EventsCrew";
+
 
 import type { LifeEvent } from "@/types/lifeEvent";
 import type { Character } from "@/types/character";
@@ -37,16 +37,34 @@ function EventsLife({ crew, setView }: Props) {
     return copyCrew;
   }
 
-  function assignParticipants(events: LifeEvent[], crew: Character[]) {
-    return events.map((event) => {
-      const participants = shuffleCrew(crew).slice(0, event.participantCount);
+ function assignParticipants(events: LifeEvent[], crew: Character[]) {
+  const appearanceCounts = new Map<Character["id"], number>();
 
-      return {
-        event,
-        participants,
-      };
+  return events.map((event) => {
+    const availableCrew = shuffleCrew(crew)
+      .filter((member) => {
+        return (appearanceCounts.get(member.id) ?? 0) < 2;
+      })
+      .sort((a, b) => {
+        return (
+          (appearanceCounts.get(a.id) ?? 0) -
+          (appearanceCounts.get(b.id) ?? 0)
+        );
+      });
+
+    const participants = availableCrew.slice(0, event.participantCount);
+
+    participants.forEach((member) => {
+      const count = appearanceCounts.get(member.id) ?? 0;
+      appearanceCounts.set(member.id, count + 1);
     });
-  }
+
+    return {
+      event,
+      participants,
+    };
+  });
+}
 
   const [preparedEvents] = useState(() =>
     assignParticipants(shuffleLifeEvent(lifeEvents).slice(0, 4), crew),
@@ -73,11 +91,6 @@ function EventsLife({ crew, setView }: Props) {
   return (
     <div className="start-panel">
       <div className="life-event-header"></div>
-
-      <div className="event-crew-container">
-        <EventsCrew />
-      </div>
-
       <div className="life-event-card-box">
         {preparedEvents.map(({ event, participants }) => (
           <div className="life-event-card" key={event.id}>
