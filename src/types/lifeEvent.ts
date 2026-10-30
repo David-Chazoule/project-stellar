@@ -10,6 +10,7 @@ export type LifeEventResult ={
    participants?: Record<number, LifeEventEffect>;
   allCrew?: LifeEventEffect;
   credits?: number;
+  
 }
 
 export type LifeEvent = {

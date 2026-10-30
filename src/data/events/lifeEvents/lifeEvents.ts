@@ -13,6 +13,32 @@ export const gameLifeEvent: LifeEvent[] = [
       },
     },
   },
+  {
+    id: "life-game-002",
+    participantCount: 2,
+    text: `{0} et {1} se sont affrontés dans un jeu de combat virtuel.`,
+    result: {
+      participants: {
+        0: { moral: 2 },
+        1: { moral: 2 },
+      },
+    },
+  },
+  {
+    id: "life-game-003",
+    participantCount: 1,
+    text: `{0} a remporté un tournoi d'échecs organisé à bord du vaisseau.`,
+    result: {
+      participants: {
+        0: {
+          moral: 3,
+          skills: {
+            intelligence: 1,
+          },
+        },
+      },
+    },
+  },
 ];
 
 export const foodLifeEvent: LifeEvent[] = [
@@ -20,6 +46,22 @@ export const foodLifeEvent: LifeEvent[] = [
     id: "life-food-001",
     participantCount: 1,
     text: "{0} a préparé à manger pour toute l'équipe le soir dernier.",
+  },
+  {
+    id: "life-food-002",
+    participantCount: 1,
+    text: `{0} a cuisiné pour tout l'équipage. Malheureusement, le repas était particulièrement mal préparé. Tout l'équipage est tombé légèrement malade.`,
+    result: {
+      allCrew: {
+        fatigue: 2,
+        moral: -2,
+      },
+      participants: {
+        0: {
+          moral: -3,
+        },
+      },
+    },
   },
 ];
 
@@ -45,6 +87,23 @@ export const sportLifeEvent: LifeEvent[] = [
       participants: {
         0: { moral: 2, fatigue: 2 },
         1: { moral: 2, fatigue: 2 },
+      },
+    },
+  },
+  {
+    id: "life-sport-001",
+    participantCount: 1,
+    text: `{0} a battu son record personnel au développé couché.`,
+    result: {
+      participants: {
+        0: {
+          moral: 2,
+          fatigue: 2,
+
+          skills: {
+            physical: 1,
+          },
+        },
       },
     },
   },

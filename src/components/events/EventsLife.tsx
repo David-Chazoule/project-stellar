@@ -89,6 +89,35 @@ function EventsLife({ crew, setCrew, setView }: Props) {
 
   function handleContinue() {
     preparedEvents.forEach(({ event, participants }) => {
+      const allCrewEffects = event.result?.allCrew;
+
+      if (allCrewEffects) {
+        setCrew((prev) =>
+          prev.map((character) => {
+            return {
+              ...character,
+              states: {
+                ...character.states,
+                moral: Math.min(
+                  100,
+                  Math.max(
+                    0,
+                    character.states.moral + (allCrewEffects.moral ?? 0),
+                  ),
+                ),
+                fatigue: Math.min(
+                  100,
+                  Math.max(
+                    0,
+                    character.states.fatigue + (allCrewEffects.fatigue ?? 0),
+                  ),
+                ),
+              },
+            };
+          }),
+        );
+      }
+
       participants.forEach((member, index) => {
         const effects = event.result?.participants?.[index];
 
@@ -110,6 +139,7 @@ function EventsLife({ crew, setCrew, setView }: Props) {
               }
               return {
                 ...character,
+                skills: updatedSkills,
                 states: {
                   ...character.states,
                   moral: Math.min(
@@ -143,6 +173,8 @@ function EventsLife({ crew, setCrew, setView }: Props) {
         {preparedEvents.map(({ event, participants }) => (
           <div className="life-event-card" key={event.id}>
             <p className="lifeEvent-text">{naming(participants, event.text)}</p>
+            <div className="line"></div>
+            <div><p>CONSEQUENCE</p></div>
           </div>
         ))}
       </div>
