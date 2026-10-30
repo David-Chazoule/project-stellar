@@ -34,6 +34,18 @@
         border-bottom: 1px solid #354b5b;
         margin: 8px 0;
       }
+
+      .consequence-box {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: #4fc3ff;
+          font-size: 10px;
+          letter-spacing: 1px;
+          margin: 8px 6px;
+        }
+      }
     }
   }
 }

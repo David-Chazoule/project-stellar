@@ -166,6 +166,26 @@ function EventsLife({ crew, setCrew, setView }: Props) {
     setView("missions");
   }
 
+  function renderConsequences(event: LifeEvent, participants: Character[]) {
+    const effects = event.result?.participants;
+
+    if (!effects) return null;
+
+    return participants.map((member, index) => {
+      const effect = effects?.[index];
+
+      return (
+        <div key={member.id} className="effect-card">
+          <span>{member.name} . </span>
+          {effect.fatigue !== undefined && (
+            <span>Fatigue {effect.fatigue}</span>
+          )}
+          {effect.moral !== undefined && <span>moral {effect.moral}</span>}
+        </div>
+      );
+    });
+  }
+
   return (
     <div className="start-panel">
       <div className="life-event-header"></div>
@@ -174,7 +194,10 @@ function EventsLife({ crew, setCrew, setView }: Props) {
           <div className="life-event-card" key={event.id}>
             <p className="lifeEvent-text">{naming(participants, event.text)}</p>
             <div className="line"></div>
-            <div><p>CONSEQUENCE</p></div>
+            <div className="consequence-box">
+              <p>CONSÉQUENCES</p>
+              <div>{renderConsequences(event, participants)}</div>
+            </div>
           </div>
         ))}
       </div>
