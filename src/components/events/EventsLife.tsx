@@ -13,6 +13,7 @@ import {
   TrendingUp,
   TrendingDown,
 } from "lucide-react";
+import { skillLabels } from "@/data/labels/skillLabels";
 import Button from "../Ui/Button";
 
 type Props = {
@@ -239,10 +240,7 @@ function EventsLife({ crew, setCrew, setView }: Props) {
                 </div>
               )}
               {skillEffects.map(([skill, value]) => (
-                <div
-                  key={skill}
-                  className={`effect-card skill`}
-                >
+                <div key={skill} className={`effect-card skill`}>
                   <span>
                     {" "}
                     {value < 0 ? (
@@ -251,12 +249,14 @@ function EventsLife({ crew, setCrew, setView }: Props) {
                       <TrendingUp size={14} color="#45D879" />
                     )}
                   </span>
-                  <span>{value > 0 ? "+" : ""}{value}</span>
                   <span>
-                    {skill}</span>  <span>
-                  <Dot size={10} />
-                </span> 
-                  
+                    {value > 0 ? "+" : ""}
+                    {value}
+                  </span>
+                  <span>{skillLabels[skill] ?? skill}</span>{" "}
+                  <span>
+                    <Dot size={10} />
+                  </span>
                   <span>{member.name}</span>
                 </div>
               ))}
