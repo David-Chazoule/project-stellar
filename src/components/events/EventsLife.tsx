@@ -5,6 +5,12 @@ import { lifeEvents } from "@/data/events/lifeEvents/lifeEvents";
 import type { LifeEvent } from "@/types/lifeEvent";
 import type { Character } from "@/types/character";
 import type { View } from "@/types/gameState";
+import {
+  Zap,
+  FaceSlightlySmiling,
+  FaceSlightlyFrowning,
+  Dot,
+} from "lucide-react";
 import Button from "../Ui/Button";
 
 type Props = {
@@ -166,6 +172,19 @@ function EventsLife({ crew, setCrew, setView }: Props) {
     setView("missions");
   }
 
+  function getEffectClass(type: "moral" | "fatigue", value: number) {
+    if (type === "moral") {
+      if (value === 0) return "";
+
+      return value < 0 ? "negatif" : "positif";
+    }
+
+    if (type === "fatigue") {
+      if (value === 0) return "";
+      return value < 0 ? "positif" : "negatif";
+    }
+  }
+
   function renderConsequences(event: LifeEvent, participants: Character[]) {
     const effects = event.result?.participants;
     const allCrewEffects = event.result?.allCrew;
@@ -176,26 +195,86 @@ function EventsLife({ crew, setCrew, setView }: Props) {
           const effect = effects?.[index];
           if (!effect) return null;
           return (
-            <div key={member.id} className="effect-card">
-              <span>{member.name} . </span>
-              {effect.fatigue !== undefined && (
-                <span>Fatigue {effect.fatigue}</span>
+            <div key={member.id} className="effect-box">
+              {effect.moral !== undefined && (
+                <div
+                  className={`effect-card ${getEffectClass("moral", effect.moral)}`}
+                >
+                  <span>
+                    {effect.moral < 0 ? (
+                      <FaceSlightlyFrowning size={14} />
+                    ) : (
+                      <FaceSlightlySmiling size={14} />
+                    )}
+                  </span>
+
+                  <span>
+                    {effect.moral > 0 ? "+" : ""}{effect.moral} Moral
+                  </span>
+                  <span>
+                    <Dot size={10} />
+                  </span>
+                  <span>{member.name}</span>
+                </div>
               )}
-              {effect.moral !== undefined && <span>moral {effect.moral}</span>}
+              {effect.fatigue !== undefined && (
+                <div
+                  className={`effect-card ${getEffectClass("fatigue", effect.fatigue)}`}
+                >
+                  <Zap size={14} />
+                  <span>
+                    {effect.fatigue > 0 ? "+" : ""}
+                    {effect.fatigue} Fatigue{" "}
+                  </span>
+                  <span>
+                    <Dot size={10} />
+                  </span>
+                  <span>{member.name}</span>
+                </div>
+              )}
             </div>
           );
         })}
 
         {allCrewEffects && (
-          <div className="effect-card">
-            <span>Tout l'équipage : </span>
-
+          <div className="effect-box">
             {allCrewEffects.moral !== undefined && (
-              <span>Moral {allCrewEffects.moral}</span>
+              <div
+                className={`effect-card ${getEffectClass("moral", allCrewEffects.moral)}`}
+              >
+                <span>
+                  {allCrewEffects.moral < 0 ? (
+                    <FaceSlightlyFrowning size={14} />
+                  ) : (
+                    <FaceSlightlySmiling size={14} />
+                  )}
+                </span>
+                <span>
+                  {" "}
+                  {allCrewEffects.moral > 0 ? "+" : ""} {allCrewEffects.moral}{" "}
+                  Moral
+                </span>
+                <span>
+                  <Dot size={10} />
+                </span>
+                <span>équipage</span>
+              </div>
             )}
 
             {allCrewEffects.fatigue !== undefined && (
-              <span>Fatigue {allCrewEffects.fatigue}</span>
+              <div
+                className={`effect-card ${getEffectClass("moral", allCrewEffects.fatigue)}`}
+              >
+                <Zap size={14} />
+                <span>
+                  {allCrewEffects.fatigue > 0 ? "+" : ""}{" "}
+                  {allCrewEffects.fatigue} Fatigue{" "}
+                </span>
+                <span>
+                  <Dot size={10} />
+                </span>
+                <span>équipage</span>
+              </div>
             )}
           </div>
         )}
@@ -214,9 +293,11 @@ function EventsLife({ crew, setCrew, setView }: Props) {
             {(event.result?.participants || event.result?.allCrew) && (
               <>
                 <div className="line"></div>
-                <div className="consequence-box">
+                <div className="consequence-container">
                   <p>CONSÉQUENCES</p>
-                  <div>{renderConsequences(event, participants)}</div>
+                  <div className="consequence-box">
+                    {renderConsequences(event, participants)}
+                  </div>
                 </div>
               </>
             )}
