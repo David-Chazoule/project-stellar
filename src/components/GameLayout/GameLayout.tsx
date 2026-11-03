@@ -7,7 +7,7 @@ import Crew from "../actions/crew/Crew";
 import Header from "../header/Header";
 import EventsFlow from "../events/EventsFlow";
 import MissionsSelection from "../actions/missionSelection/MissionsSelection";
-import AutoMissionFlow from "../autoMissions/AutoMissionFlow";
+import AutoMissionFlow from "../missions/autoMissions/AutoMissionFlow";
 import StartGameFlow from "../starGame/StartGameFlow";
 import { initialShip } from "@/data/ship";
 import { initialGameState } from "@/data/gameState";

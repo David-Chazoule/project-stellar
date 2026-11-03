@@ -2,13 +2,13 @@ import { initialGameState } from "@/data/gameState";
 import type {
   AutoMission,
   AutoMissionResultType,
-} from "../../types/autoMissions";
+} from "../../../types/autoMissions";
 
 import type { GameState } from "@/types/gameState";
-import type { SelectedCrewMember } from "../../types/autoMissions";
+import type { SelectedCrewMember } from "../../../types/autoMissions";
 import type { Character } from "@/types/character";
 import type { View } from "@/types/gameState";
-import Button from "../Ui/Button";
+import Button from "../../Ui/Button";
 
 type Props = {
   mission: AutoMission;

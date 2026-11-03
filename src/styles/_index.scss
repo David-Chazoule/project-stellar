@@ -5,9 +5,9 @@
 @use "../components/actions/crew/crewCard.scss";
 @use "../components/actions/missionSelection/missionSelection.scss";
 @use "../components/actions/missionSelection/missionSelectionCard.scss";
-@use "../components/autoMissions/autoMissionSetup.scss";
-@use "../components/autoMissions/autoMissionFlow.scss";
-@use "../components/autoMissions/autoMissionConclusion";
+@use "../components/missions/autoMissions/autoMissionSetup.scss";
+@use "../components/missions/autoMissions/autoMissionFlow";
+@use "../components/missions/autoMissions/autoMissionConclusion";
 @use "../components/starGame/captainSelection";
 @use "../components/starGame/characterSelectionCard";
 @use "../components/starGame/crewSelection";

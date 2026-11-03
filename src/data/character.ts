@@ -25,7 +25,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 78,
-      fatigue: 22,
+      fatigue: 90,
     },
   },
 
@@ -52,8 +52,8 @@ export const characters: Character[] = [
       instinct: 67,
     },
     states: {
-      moral: 86,
-      fatigue: 18,
+      moral: 16,
+      fatigue: 88,
     },
   },
 
@@ -138,7 +138,7 @@ export const characters: Character[] = [
 
   {
     id: 6,
-    name: "Cedric",
+    name: "Cedric Z",
     image: "/characters/Cedric.webp",
     specialty: { name: "liaisonOfficer", level: 80 },
     secondarySpecialties: [
@@ -191,7 +191,7 @@ export const characters: Character[] = [
 
   {
     id: 8,
-    name: "Jerome",
+    name: "Jérome C",
     image: "/characters/JeromeC.webp",
     specialty: { name: "engineer", level: 83 },
     secondarySpecialties: [
@@ -243,7 +243,7 @@ export const characters: Character[] = [
 
   {
     id: 10,
-    name: "Jerome",
+    name: "Jérome S",
     image: "/characters/Jerome.webp",
     specialty: { name: "engineer", level: 81 },
     secondarySpecialties: [{ name: "operative", level: 80 }],
@@ -268,7 +268,7 @@ export const characters: Character[] = [
 
   {
     id: 11,
-    name: "Christophe",
+    name: "Christophe B",
     image: "/characters/Christophe.webp",
     specialty: { name: "logistician", level: 78 },
     secondarySpecialties: [{ name: "operative", level: 70 }],
@@ -293,7 +293,7 @@ export const characters: Character[] = [
 
   {
     id: 12,
-    name: "Christophe",
+    name: "Christophe C",
     image: "/characters/ChristopheC.webp",
     specialty: { name: "liaisonOfficer", level: 81 },
     secondarySpecialties: [{ name: "pilot", level: 66 }],
@@ -393,7 +393,7 @@ export const characters: Character[] = [
 
   {
     id: 16,
-    name: "Cedric",
+    name: "Cedric M",
     image: "/characters/CedricM.webp",
     specialty: { name: "operative", level: 81 },
     secondarySpecialties: [{ name: "pilot", level: 70 }],

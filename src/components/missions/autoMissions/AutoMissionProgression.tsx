@@ -5,8 +5,8 @@ import type {
   AutoMissionResultType,
   AutoMissionStep,
   SelectedCrewMember,
-} from "../../types/autoMissions";
-import Button from "../Ui/Button";
+} from "../../../types/autoMissions";
+import Button from "../../Ui/Button";
 
 type Props = {
   mission: AutoMission;

@@ -1,14 +1,16 @@
 import { specialtyLabels } from "@/data/labels/specialtyLabels";
-import { getAptitudeLevel } from "../../logic/characters/getAptitudeLevel";
+import { getAptitudeLevel } from "../../../logic/characters/getAptitudeLevel";
 
 import type { SpecialtyName } from "@/types/character";
 import type {
   AutoMissionStep,
   SelectedCrewMember,
-} from "../../types/autoMissions";
-import type { AutoMission } from "../../types/autoMissions";
+} from "../../../types/autoMissions";
+import type { AutoMission } from "../../../types/autoMissions";
 import type { Character } from "@/types/character";
-import Button from "../Ui/Button";
+
+import Button from "../../Ui/Button";
+import MissionCrewSelectionCard from "../missionCrewSelection/MissionCrewSelectionCard";
 
 type Props = {
   mission: AutoMission;
@@ -52,6 +54,11 @@ function AutoMissionSetup({
 
       return;
     }
+
+    if (character.states.moral < 25 || character.states.fatigue > 85) {
+      return;
+    }
+
     const assignedElsewhere = missionCrew.some(
       (member) => member.character.id === character.id,
     );
@@ -123,12 +130,23 @@ function AutoMissionSetup({
                       member.aptitude === required.aptitude,
                   );
 
+                  const isAssignedElsewhere = missionCrew.some(
+                    (member) =>
+                      member.character.id === character.id &&
+                      member.aptitude !== required.aptitude,
+                  );
+                  const isLowMoral = character.states.moral < 25;
+                  const isHighFatigue = character.states.fatigue > 85;
                   return (
-                    <div
+                    <MissionCrewSelectionCard
                       key={character.id}
-                      className={`crew-card ${
-                        isQualified ? "qualified" : "unqualified"
-                      } ${isSelected ? "selected" : ""}`}
+                      character={character}
+                      score={getAptitudeLevel(character, required.aptitude)}
+                      isQualified={isQualified}
+                      isSelected={isSelected}
+                      isAssignedElsewhere={isAssignedElsewhere}
+                      isLowMoral={isLowMoral}
+                      isHighFatigue={isHighFatigue}
                       onClick={() =>
                         handleCrewSelect(
                           character,
@@ -136,12 +154,7 @@ function AutoMissionSetup({
                           required.count,
                         )
                       }
-                    >
-                      <p>
-                        {character.name} -{" "}
-                        {getAptitudeLevel(character, required.aptitude)}
-                      </p>
-                    </div>
+                    />
                   );
                 })}
               </div>
