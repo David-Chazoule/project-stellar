@@ -168,22 +168,39 @@ function EventsLife({ crew, setCrew, setView }: Props) {
 
   function renderConsequences(event: LifeEvent, participants: Character[]) {
     const effects = event.result?.participants;
+    const allCrewEffects = event.result?.allCrew;
 
-    if (!effects) return null;
+    return (
+      <>
+        {participants.map((member, index) => {
+          const effect = effects?.[index];
+          if (!effect) return null;
+          return (
+            <div key={member.id} className="effect-card">
+              <span>{member.name} . </span>
+              {effect.fatigue !== undefined && (
+                <span>Fatigue {effect.fatigue}</span>
+              )}
+              {effect.moral !== undefined && <span>moral {effect.moral}</span>}
+            </div>
+          );
+        })}
 
-    return participants.map((member, index) => {
-      const effect = effects?.[index];
+        {allCrewEffects && (
+          <div className="effect-card">
+            <span>Tout l'équipage : </span>
 
-      return (
-        <div key={member.id} className="effect-card">
-          <span>{member.name} . </span>
-          {effect.fatigue !== undefined && (
-            <span>Fatigue {effect.fatigue}</span>
-          )}
-          {effect.moral !== undefined && <span>moral {effect.moral}</span>}
-        </div>
-      );
-    });
+            {allCrewEffects.moral !== undefined && (
+              <span>Moral {allCrewEffects.moral}</span>
+            )}
+
+            {allCrewEffects.fatigue !== undefined && (
+              <span>Fatigue {allCrewEffects.fatigue}</span>
+            )}
+          </div>
+        )}
+      </>
+    );
   }
 
   return (
@@ -193,11 +210,16 @@ function EventsLife({ crew, setCrew, setView }: Props) {
         {preparedEvents.map(({ event, participants }) => (
           <div className="life-event-card" key={event.id}>
             <p className="lifeEvent-text">{naming(participants, event.text)}</p>
-            <div className="line"></div>
-            <div className="consequence-box">
-              <p>CONSÉQUENCES</p>
-              <div>{renderConsequences(event, participants)}</div>
-            </div>
+
+            {(event.result?.participants || event.result?.allCrew) && (
+              <>
+                <div className="line"></div>
+                <div className="consequence-box">
+                  <p>CONSÉQUENCES</p>
+                  <div>{renderConsequences(event, participants)}</div>
+                </div>
+              </>
+            )}
           </div>
         ))}
       </div>
