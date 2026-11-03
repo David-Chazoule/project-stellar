@@ -10,6 +10,8 @@ import {
   FaceSlightlySmiling,
   FaceSlightlyFrowning,
   Dot,
+  TrendingUp,
+  TrendingDown,
 } from "lucide-react";
 import Button from "../Ui/Button";
 
@@ -172,7 +174,7 @@ function EventsLife({ crew, setCrew, setView }: Props) {
     setView("missions");
   }
 
-  function getEffectClass(type: "moral" | "fatigue", value: number) {
+  function getEffectClass(type: "moral" | "fatigue" | "skill", value: number) {
     if (type === "moral") {
       if (value === 0) return "";
 
@@ -181,8 +183,10 @@ function EventsLife({ crew, setCrew, setView }: Props) {
 
     if (type === "fatigue") {
       if (value === 0) return "";
-      return value < 0 ? "positif" : "negatif";
+      return value > 0 ? "negatif" : "positif";
     }
+
+    return value < 0 ? "negatif" : "positif";
   }
 
   function renderConsequences(event: LifeEvent, participants: Character[]) {
@@ -194,6 +198,7 @@ function EventsLife({ crew, setCrew, setView }: Props) {
         {participants.map((member, index) => {
           const effect = effects?.[index];
           if (!effect) return null;
+          const skillEffects = Object.entries(effect.skills ?? {});
           return (
             <div key={member.id} className="effect-box">
               {effect.moral !== undefined && (
@@ -209,7 +214,8 @@ function EventsLife({ crew, setCrew, setView }: Props) {
                   </span>
 
                   <span>
-                    {effect.moral > 0 ? "+" : ""}{effect.moral} Moral
+                    {effect.moral > 0 ? "+" : ""}
+                    {effect.moral} Moral
                   </span>
                   <span>
                     <Dot size={10} />
@@ -232,6 +238,28 @@ function EventsLife({ crew, setCrew, setView }: Props) {
                   <span>{member.name}</span>
                 </div>
               )}
+              {skillEffects.map(([skill, value]) => (
+                <div
+                  key={skill}
+                  className={`effect-card skill`}
+                >
+                  <span>
+                    {" "}
+                    {value < 0 ? (
+                      <TrendingDown size={14} color="#FF6464" />
+                    ) : (
+                      <TrendingUp size={14} color="#45D879" />
+                    )}
+                  </span>
+                  <span>{value > 0 ? "+" : ""}{value}</span>
+                  <span>
+                    {skill}</span>  <span>
+                  <Dot size={10} />
+                </span> 
+                  
+                  <span>{member.name}</span>
+                </div>
+              ))}
             </div>
           );
         })}
