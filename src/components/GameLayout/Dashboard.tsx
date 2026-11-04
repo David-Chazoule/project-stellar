@@ -2,6 +2,7 @@ import React from "react";
 
 import type { GameState, View } from "@/types/gameState";
 import type { Character } from "@/types/character";
+import { START_DATE, addDays, formatDate } from "@/utils/gameDate";
 
 type Props = {
   view: View;
@@ -26,6 +27,8 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
       setView("missions");
     }
   };
+
+  const currentDate = formatDate(addDays(START_DATE,gameState.elapsedDays))
 
   return (
     <div className="dashboard-container">
@@ -53,7 +56,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
 
           <div className="dashboard-card">
             <p className="dashBoard-label">DATE</p>
-            <p className="dashboard-value">{gameState.elapsedDays}</p>
+            <p className="dashboard-value">{currentDate}</p>
           </div>
 
           <div className="dashboard-card">
