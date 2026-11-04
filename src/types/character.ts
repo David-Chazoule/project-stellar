@@ -36,6 +36,7 @@ export type Character = {
   id: number;
   name: string;
   image:string;
+  portrait:string;
   origin?: {
     planet?: string;
     country?: string;

@@ -1,5 +1,9 @@
 .start-panel {
-  h4 {
+  p {
+    color: #91a9b8;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
     margin: 6px;
   }
   .mission-bref {
@@ -9,8 +13,24 @@
     align-items: center;
     justify-content: center;
     margin: 30px 0 30px 0;
+
+    h2 {
+      color: #aab8c1;
+    }
+
+    .required-box {
+      p {
+        margin: 5px;
+        color: #aab8c1;
+      }
+    }
+
+    h3 {
+      color: #aab8c1;
+    }
     p {
       margin: 5px;
+      color: #aab8c1;
     }
     .required-box {
       display: flex;
@@ -23,10 +43,14 @@
   .selectedTeam-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+
+    h3 {
+      color: #aab8c1;
+    }
 
     .aptitude-selected-box {
       display: flex;
@@ -35,38 +59,39 @@
       width: 100%;
       margin-top: 20px;
 
+      .crewSelect-category {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #354b5b;
+        margin-bottom: 20px;
+        width: 100%;
+        border-top: 1px solid #354b5b;
+        margin-top: 20px;
+        color: #4fc3ff;
+
+        span {
+          display: flex;
+          align-items: center;
+          font-family: monospace;
+          font-size: 10px;
+        }
+
+        h3 {
+          color: #4fc3ff;
+        }
+        .selected-crew-head {
+          font-size: 14px;
+        }
+      }
+
       .crew-card-box {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 10px;
         width: 100%;
-        margin-top: 15px;
-
-        .crew-card {
-          display: flex;
-         
-          align-items: center;
-          justify-content: center;
-          min-width: 0;
-          padding: 12px 8px;
-          border: 2px solid transparent;
-          border-radius: 8px;
-          cursor: pointer;
-          text-align: center;
-        }
-
-        .crew-card.qualified {
-          background-color: #1a3448;
-        }
-
-        .crew-card.unqualified {
-          background-color: #343940;
-        }
-
-        .crew-card.selected {
-          border-color: #4fc3ff;
-          background-color: #17613d;
-        }
+        grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+        gap: 10px;
       }
     }
   }

@@ -101,12 +101,15 @@ function AutoMissionSetup({
             </p>
           ))}
         </div>
-        <h4>{mission.setup.briefing}</h4>
+        <p>{mission.setup.briefing}</p>
       </div>
       <div className="selectedTeam-container">
         <h3>selectionner équipe</h3>
 
         {mission.setup.requiredCrew.map((required) => {
+          const selectedCount = missionCrew.filter(
+            (member) => member.aptitude === required.aptitude,
+          ).length;
           const candidates = [...crew];
           candidates.sort(
             (a, b) =>
@@ -116,7 +119,13 @@ function AutoMissionSetup({
 
           return (
             <div key={required.aptitude} className="aptitude-selected-box">
-              <h3>{specialtyLabels[required.aptitude]} </h3>
+             <div className="crewSelect-category"> 
+              <span>SYS.CREW_{required.aptitude.toUpperCase()}</span>
+              <h3>{specialtyLabels[required.aptitude].toUpperCase()} </h3>
+              <span className="selected-crew-head">
+                {selectedCount}/{required.count}
+              </span></div>
+             
               <div className="crew-card-box">
                 {candidates.map((character) => {
                   const isQualified =
