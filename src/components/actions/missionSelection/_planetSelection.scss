@@ -10,7 +10,6 @@
   border: 3px solid red;
   border-radius: 10px;
   width: 100%;
-  align-items: center;
 
   .sector-info {
     display: flex;
@@ -19,17 +18,31 @@
 
   .planet-list {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 240px;
+    margin-top: 20px;
 
     .planet-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      width: 100%;
+      height: 200px;
+
+      p {
+        margin-top: 10px;
+        background-color: #25313c;
+        padding: 6px;
+        border: 1px solid white;
+        border-radius: 6px;
+      }
 
       img {
-        width: 60px;
+        width: 70px;
         height: auto;
-        margin: 0 10px;
+        margin: 0 20px;
         background: transparent;
         border: none;
         padding: 0;
@@ -46,7 +59,7 @@
       .planet-actions {
         display: flex;
         flex-direction: column;
-
+        margin-top: 10px;
         button {
           padding: 8px 12px;
           background-color: #101a22;
