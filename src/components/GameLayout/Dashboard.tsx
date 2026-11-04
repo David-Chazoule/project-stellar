@@ -3,6 +3,7 @@ import React from "react";
 import type { GameState, View } from "@/types/gameState";
 import type { Character } from "@/types/character";
 import { START_DATE, addDays, formatDate } from "@/utils/gameDate";
+import { locations } from "@/data/locations";
 
 type Props = {
   view: View;
@@ -28,7 +29,11 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
     }
   };
 
-  const currentDate = formatDate(addDays(START_DATE,gameState.elapsedDays))
+  const currentDate = formatDate(addDays(START_DATE, gameState.elapsedDays));
+
+  const currentLocation = locations[gameState.currentLocationId];
+
+  console.log("Localisation :", gameState.currentLocationId);
 
   return (
     <div className="dashboard-container">
@@ -69,7 +74,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
 
           <div className="dashboard-card">
             <p className="dashBoard-label">LOCALISATION</p>
-            <p className="dashboard-value">TERRE</p>
+            <p className="dashboard-value">{currentLocation.name}</p>
           </div>
         </div>
       </div>

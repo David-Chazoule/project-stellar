@@ -1,0 +1,50 @@
+.planet-selection {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1a232c;
+  border: 1px solid #354b5b;
+  border-radius: 10px;
+
+  .planet-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    > button {
+      padding: 12px 20px;
+      background-color: #253440;
+      border: 1px solid #354b5b;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        border-color: #79b8d9;
+        background-color: #304656;
+      }
+    }
+
+    .planet-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      button {
+        padding: 8px 12px;
+        background-color: #101a22;
+        border: 1px solid #354b5b;
+        border-radius: 5px;
+        color: #d1e0ea;
+        cursor: pointer;
+
+        &:hover {
+          border-color: #79b8d9;
+          color: white;
+        }
+      }
+    }
+  }
+}

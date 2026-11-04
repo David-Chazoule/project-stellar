@@ -52,11 +52,11 @@ export type AutoMissionResolver = {
 export interface AutoMission {
   id: string;
   locationId: locationId;
-  sectorId:number;
+  sectorId: number;
   repeatable: boolean;
   duration: number;
   minReputation: number;
-
+  destinationLocationId?: string;
   resolver: AutoMissionResolver;
 
   card: {

@@ -1,5 +1,6 @@
 import { autoMissions } from "../../../data/missions/automissions/index";
-
+import { useState } from "react";
+import PlanetSelection from "./PlanetSelection";
 import MissionSelectionCard from "./MissionSelectionCard";
 
 import { getAvailableMissions } from "@/logic/missionSelection/getAvailableMissions";
@@ -7,6 +8,7 @@ import { getAvailableMissions } from "@/logic/missionSelection/getAvailableMissi
 import type { Character } from "@/types/character";
 import type { AutoMission } from "@/types/autoMissions";
 import type { GameState } from "@/types/gameState";
+import type { LocationId } from "@/data/locations";
 
 type Props = {
   setSelectedMission: (mission: AutoMission) => void;
@@ -16,6 +18,9 @@ type Props = {
 };
 
 function MissionsSelection({ setSelectedMission, gameState }: Props) {
+  const [missionsLocationId, setMissionsLocationId] =
+    useState<LocationId | null>(null);
+
   const handleSelectMission = (mission: AutoMission) => {
     setSelectedMission(mission);
   };
@@ -23,18 +28,27 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
   const availableMissions = getAvailableMissions(
     autoMissions,
     gameState.completedMissions,
-  );
+  ).filter((mission) => mission.locationId === missionsLocationId);
 
+  console.log("Planète demandée :", missionsLocationId);
+console.log("Missions trouvées :", availableMissions);
   return (
-    <div className="missionsSelection-container">
-      {availableMissions.map((mission) => (
-        <MissionSelectionCard
-          key={mission.id}
-          mission={mission}
-          onSelect={handleSelectMission}
-        />
-      ))}{" "}
-    </div>
+    <>
+      <div>
+        <PlanetSelection onShowMissions={setMissionsLocationId} />
+      </div>
+      {missionsLocationId !== null && (
+        <div className="missionsSelection-container">
+          {availableMissions.map((mission) => (
+            <MissionSelectionCard
+              key={mission.id}
+              mission={mission}
+              onSelect={handleSelectMission}
+            />
+          ))}{" "}
+        </div>
+      )}
+    </>
   );
 }
 
