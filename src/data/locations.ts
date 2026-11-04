@@ -2,31 +2,31 @@ export const locations = {
   mercury: {
     name: "Mercure",
     sectorId: 1,
-    image: "/planets/mercury.webp",
+    image: "/planets/Mercury.webp",
   },
 
   venus: {
     name: "Vénus",
     sectorId: 1,
-    image: "/planets/venus.webp",
+    image: "/planets/Venus.webp",
   },
 
   earth: {
     name: "Terre",
     sectorId: 1,
-    image: "",
+    image: "/planets/Hearth.webp",
   },
 
   moon: {
     name: "Lune",
     sectorId: 1,
-    image: "",
+    image: "/planets/Moon.webp",
   },
 
   mars: {
     name: "Mars",
     sectorId: 1,
-    image: "",
+    image: "/planets/Mars.webp",
   },
 
   ceres: {

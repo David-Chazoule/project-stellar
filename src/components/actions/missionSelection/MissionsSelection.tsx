@@ -33,12 +33,12 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
   console.log("Planète demandée :", missionsLocationId);
 console.log("Missions trouvées :", availableMissions);
   return (
-    <>
-      <div>
+    <div className="start-panel">
+      <div className="planetSelection-container">
         <PlanetSelection onShowMissions={setMissionsLocationId} />
       </div>
       {missionsLocationId !== null && (
-        <div className="missionsSelection-container">
+        <div className="missionsSelection-fiche">
           {availableMissions.map((mission) => (
             <MissionSelectionCard
               key={mission.id}
@@ -48,7 +48,7 @@ console.log("Missions trouvées :", availableMissions);
           ))}{" "}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

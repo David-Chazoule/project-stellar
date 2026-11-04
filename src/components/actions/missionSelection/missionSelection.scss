@@ -1,7 +1,26 @@
-.missionsSelection-container {
+
+
+.start-panel {
+
+
+.planetSelection-container{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.missionSelection-fiche{
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   padding: 1.5rem;
   flex-wrap: wrap;
 }
+
+}
+
+
+
+
+
+
