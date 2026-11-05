@@ -39,8 +39,7 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
     gameState.completedMissions,
   ).filter((mission) => mission.locationId === missionsLocationId);
 
-  console.log("Planète demandée :", missionsLocationId);
-  console.log("Missions trouvées :", availableMissions);
+  
   return (
     <div className="start-panel">
       <div className="planetSelection-container">
@@ -50,8 +49,8 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
         <div className="mission-list-detail">
           <h2>MISSIONS DISPONIBLE</h2>
           <div className="mission-list-info">
-            <p>TERRE</p>
-            <p>5 Contrats</p>
+            <p>{missionsLocationId}</p>
+            <p>{availableMissions.length} Contrats</p>
           </div>
 
           {missionsLocationId !== null && (
