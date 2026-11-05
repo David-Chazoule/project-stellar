@@ -10,7 +10,7 @@ function MissionDetailCard({ previewMission, setSelectedMission }: Props) {
     <div className="mission-detail-container">
       <div>IMG</div>
       <div className="info-mission-detail">
-        <h1>{previewMission.card.title}</h1>
+        <h3>{previewMission.card.title}</h3>
         <div className="info-container">
           <div className="info-detail">
             <span>{previewMission.card.location}</span>

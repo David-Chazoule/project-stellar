@@ -2,7 +2,7 @@ import { autoMissions } from "../../../data/missions/automissions/index";
 import { useState } from "react";
 import PlanetSelection from "./PlanetSelection";
 import MissionSelectionCard from "./MissionSelectionCard";
-
+import { locations } from "@/data/locations";
 import { getAvailableMissions } from "@/logic/missionSelection/getAvailableMissions";
 
 import type { Character } from "@/types/character";
@@ -10,6 +10,7 @@ import type { AutoMission } from "@/types/autoMissions";
 import type { GameState } from "@/types/gameState";
 import type { LocationId } from "@/data/locations";
 import MissionDetailCard from "./MissionDetailCard";
+import { ClipboardList, Wrench } from "lucide-react";
 
 type Props = {
   setSelectedMission: (mission: AutoMission) => void;
@@ -23,6 +24,12 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
     useState<LocationId | null>(null);
   const [previewMission, setPreviewMission] = useState<AutoMission | null>(
     null,
+  );
+  const [selectedPlanetId, setSelectedPlanetId] = useState<LocationId | null>(
+    null,
+  );
+  const [activeTab, setActiveTab] = useState<"missions" | "services">(
+    "missions",
   );
 
   const handleSelectMission = (mission: AutoMission) => {
@@ -39,17 +46,39 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
     gameState.completedMissions,
   ).filter((mission) => mission.locationId === missionsLocationId);
 
-  
   return (
     <div className="start-panel">
       <div className="planetSelection-container">
-        <PlanetSelection   onShowMissions={handleShowMissions} />
+        <PlanetSelection
+          onShowMissions={handleShowMissions}
+          selectedPlanetId={selectedPlanetId}
+          setSelectedPlanetId={setSelectedPlanetId}
+        />
       </div>
       <div className="mission-container">
         <div className="mission-list-detail">
           <h2>MISSIONS DISPONIBLE</h2>
+          <div className="planet-actions">
+            <button
+              className="mission-button"
+              type="button"
+              onClick={() => handleShowMissions(selectedPlanetId)}
+              disabled={selectedPlanetId === null}
+            >
+              <ClipboardList size={16} /> Missions
+            </button>
+
+            <button
+              className="service-button"
+              type="button"
+              onClick={() => handleShowMissions(null)}
+              disabled={selectedPlanetId === null}
+            >
+              <Wrench size={16} /> Services
+            </button>
+          </div>
           <div className="mission-list-info">
-            <p>{missionsLocationId}</p>
+            <p>{missionsLocationId && locations[missionsLocationId].name}</p>
             <p>{availableMissions.length} Contrats</p>
           </div>
 
@@ -66,7 +95,11 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
           )}
         </div>
         <div className="mission-detail">
-          <h2>Détails de la mission</h2>
+          <div className="mission-detail-header">
+            <span className="line-title"></span>
+            <h2>DETAILS DE LA MISSION</h2>
+          </div>
+
           {previewMission && (
             <MissionDetailCard
               previewMission={previewMission}

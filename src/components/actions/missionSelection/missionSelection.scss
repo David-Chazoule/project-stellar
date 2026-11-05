@@ -12,11 +12,43 @@
     .mission-list-detail {
       display: flex;
       flex-direction: column;
-      border: 1px solid red;
+      border: 2px solid #354b5b;
       min-width: 320px;
+
+      .planet-actions {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        button {
+          padding: 8px 12px;
+          background-color: #101a22;
+          border: 2px solid #354b5b;
+          align-items: center;
+          justify-content: center;
+
+          color: #d1e0ea;
+          cursor: pointer;
+
+          &:hover {
+            border-color: #79b8d9;
+            color: white;
+          }
+        }
+
+        .mission-button {
+          border-radius: 6px 6px 0 0;
+          border-bottom: 1px solid #354b5b;
+        }
+
+        .service-button {
+          border-radius: 0 0 6px 6px;
+          border-top: 1px solid #354b5b;
+        }
+      }
 
       .mission-list-info {
         display: flex;
+        width: 100%;
       }
 
       .missionsSelection-fiche {
@@ -30,7 +62,22 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      border: 1px solid red;
+      border: 2px solid #354b5b;
+
+      .mission-detail-header {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+
+        span {
+          display: flex;
+          width: 4px;
+          height: 22px;
+          border-left: 3px solid green;
+          margin: 6px;
+        }
+      }
     }
   }
 }

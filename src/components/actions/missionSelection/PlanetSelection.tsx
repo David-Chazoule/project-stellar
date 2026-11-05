@@ -1,19 +1,21 @@
 "use client";
 import { locations } from "@/data/locations";
-import { useState } from "react";
+
 import type { LocationId } from "@/data/locations";
-import { ClipboardList, Wrench } from "lucide-react";
+
 import { sectorNames } from "../../../data/locations";
 
 type Props = {
   onShowMissions: (locationId: LocationId | null) => void;
+  selectedPlanetId: LocationId | null;
+  setSelectedPlanetId: React.Dispatch<React.SetStateAction<LocationId | null>>;
 };
 
-function PlanetSelection({ onShowMissions }: Props) {
-  const [selectedPlanetId, setSelectedPlanetId] = useState<LocationId | null>(
-    null,
-  );
-
+function PlanetSelection({
+  onShowMissions,
+  selectedPlanetId,
+  setSelectedPlanetId,
+}: Props) {
   const currentSectorId = 1;
 
   const sectorPlanets = Object.entries(locations).filter(
@@ -34,32 +36,11 @@ function PlanetSelection({ onShowMissions }: Props) {
               alt={location.name}
               onClick={() => {
                 setSelectedPlanetId(id as LocationId);
-                onShowMissions(null);
+                onShowMissions(id as LocationId);
               }}
             />
 
             <p>{location.name}</p>
-
-            {selectedPlanetId === id && (
-              <div className="planet-actions">
-                <button
-                  className="mission-button"
-                  type="button"
-                  onClick={() => {
-                    onShowMissions(id as LocationId);
-                  }}
-                >
-                  <ClipboardList size={16} /> Missions
-                </button>
-                <button
-                  className="service-button"
-                  type="button"
-                  onClick={() => onShowMissions(null)}
-                >
-                  <Wrench size={16} /> Services
-                </button>
-              </div>
-            )}
           </div>
         ))}
       </div>
