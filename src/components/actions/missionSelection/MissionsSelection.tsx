@@ -9,6 +9,7 @@ import type { Character } from "@/types/character";
 import type { AutoMission } from "@/types/autoMissions";
 import type { GameState } from "@/types/gameState";
 import type { LocationId } from "@/data/locations";
+import MissionDetailCard from "./MissionDetailCard";
 
 type Props = {
   setSelectedMission: (mission: AutoMission) => void;
@@ -20,9 +21,17 @@ type Props = {
 function MissionsSelection({ setSelectedMission, gameState }: Props) {
   const [missionsLocationId, setMissionsLocationId] =
     useState<LocationId | null>(null);
+  const [previewMission, setPreviewMission] = useState<AutoMission | null>(
+    null,
+  );
 
   const handleSelectMission = (mission: AutoMission) => {
-    setSelectedMission(mission);
+    setPreviewMission(mission);
+  };
+
+  const handleShowMissions = (locationId: LocationId | null) => {
+    setMissionsLocationId(locationId);
+    setPreviewMission(null);
   };
 
   const availableMissions = getAvailableMissions(
@@ -31,23 +40,42 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
   ).filter((mission) => mission.locationId === missionsLocationId);
 
   console.log("Planète demandée :", missionsLocationId);
-console.log("Missions trouvées :", availableMissions);
+  console.log("Missions trouvées :", availableMissions);
   return (
     <div className="start-panel">
       <div className="planetSelection-container">
-        <PlanetSelection onShowMissions={setMissionsLocationId} />
+        <PlanetSelection   onShowMissions={handleShowMissions} />
       </div>
-      {missionsLocationId !== null && (
-        <div className="missionsSelection-fiche">
-          {availableMissions.map((mission) => (
-            <MissionSelectionCard
-              key={mission.id}
-              mission={mission}
-              onSelect={handleSelectMission}
-            />
-          ))}{" "}
+      <div className="mission-container">
+        <div className="mission-list-detail">
+          <h2>MISSIONS DISPONIBLE</h2>
+          <div className="mission-list-info">
+            <p>TERRE</p>
+            <p>5 Contrats</p>
+          </div>
+
+          {missionsLocationId !== null && (
+            <div className="missionsSelection-fiche">
+              {availableMissions.map((mission) => (
+                <MissionSelectionCard
+                  key={mission.id}
+                  mission={mission}
+                  onSelect={handleSelectMission}
+                />
+              ))}{" "}
+            </div>
+          )}
         </div>
-      )}
+        <div className="mission-detail">
+          <h2>Détails de la mission</h2>
+          {previewMission && (
+            <MissionDetailCard
+              previewMission={previewMission}
+              setSelectedMission={setSelectedMission}
+            />
+          )}
+        </div>
+      </div>
     </div>
   );
 }

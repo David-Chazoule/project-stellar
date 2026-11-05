@@ -1,26 +1,36 @@
-
-
 .start-panel {
+  .planetSelection-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
 
+  .mission-container {
+    display: flex;
+    width: 100%;
 
-.planetSelection-container{
-  display: flex;
-  width: 100%;
-  align-items: center;
+    .mission-list-detail {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid red;
+      min-width: 320px;
+
+      .mission-list-info {
+        display: flex;
+      }
+
+      .missionsSelection-fiche {
+        display: flex;
+        min-width: 200px;
+        flex-direction: column;
+      }
+    }
+
+    .mission-detail {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border: 1px solid red;
+    }
+  }
 }
-
-.missionSelection-fiche{
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  flex-wrap: wrap;
-}
-
-}
-
-
-
-
-
-

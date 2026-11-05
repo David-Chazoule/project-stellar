@@ -8,11 +8,15 @@ type Props = {
 function MissionSelectionCard({ mission, onSelect }: Props) {
   return (
     <div className="missionSelectionCard" onClick={() => onSelect(mission)}>
-      <h3>{mission.card.title}</h3>
-      <p>localisation:{mission.card.location}</p>
-      <p>{mission.card.shortDescription}</p>
-      <p>crédit : {mission.card.reward}</p>
-      <p>durée : {mission.duration} jours</p>
+      <div>image</div>
+
+      <div className="info-mission">
+        <h4>{mission.card.title}</h4>
+        <span>
+          <p>{mission.card.location}</p>
+          <p>{mission.card.reward} crédits</p>
+        </span>
+      </div>
     </div>
   );
 }

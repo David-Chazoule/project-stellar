@@ -37,3 +37,10 @@ export const locations = {
 } as const;
 
 export type LocationId = keyof typeof locations;
+
+export const sectorNames: Record<number, string> = {
+  1: "Planètes intérieures",
+  2: "Ceinture d'astéroïdes",
+  3: "Jupiter et Saturne",
+  4: "Système solaire externe",
+};

@@ -3,6 +3,7 @@ import { locations } from "@/data/locations";
 import { useState } from "react";
 import type { LocationId } from "@/data/locations";
 import { ClipboardList, Wrench } from "lucide-react";
+import { sectorNames } from "../../../data/locations";
 
 type Props = {
   onShowMissions: (locationId: LocationId | null) => void;
@@ -22,8 +23,8 @@ function PlanetSelection({ onShowMissions }: Props) {
   return (
     <div className="planet-selection">
       <div className="sector-info">
-        <h2>Secteur 1 </h2>
-        <p>PLANÈTES INTÉRIEURES</p>
+        <h2>Secteur {currentSectorId} </h2>
+        <p>{sectorNames[currentSectorId].toUpperCase()}</p>
       </div>
       <div className="planet-list">
         {sectorPlanets.map(([id, location]) => (

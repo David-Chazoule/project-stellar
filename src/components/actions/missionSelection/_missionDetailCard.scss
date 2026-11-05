@@ -1,0 +1,62 @@
+.mission-detail-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+color: black;
+  .info-mission-detail {
+    display: flex;
+    flex-direction: column;
+
+    .info-container{
+.info-detail {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      span {
+        color: black;
+        margin: 4px;
+        background-color: greenyellow;
+        padding: 8px;
+        border-radius: 6px;
+      }
+
+    }
+
+  }
+
+      .line {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid black;
+      }
+
+      .start-container {
+        display: flex;
+        
+
+        .crewRequest {
+          display: flex;
+          align-items: center;
+         
+
+          .request {
+            display: flex;
+            flex-direction: column;
+
+            span{
+              display: flex;
+            }
+          }
+        }
+
+        .btn-container{
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    
+  }
+}
