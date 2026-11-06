@@ -4,13 +4,14 @@ export const ceresContracts01: AutoMission[] = [
   {
     id: "auto-ceres-cargo-audit",
     locationId: "ceres",
-    sectorId: 2,
+     sectorId: 2,
     repeatable: true,
     duration: 2,
     minReputation: 0,
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type:"Mission auto",
       title: "Audit d'un cargo commercial",
       shortDescription: "Contrôle technique d'un cargo avant son départ.",
       location: "Cérès - Port commercial principal",
@@ -98,6 +99,7 @@ export const ceresContracts01: AutoMission[] = [
   {
     id: "auto-ceres-warehouse-security",
     locationId: "ceres",
+  
     sectorId: 2,
     repeatable: true,
     duration: 3,
@@ -105,6 +107,7 @@ export const ceresContracts01: AutoMission[] = [
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type:"Mission auto",
       title: "Surveillance d'un entrepôt portuaire",
       shortDescription:
         "Mission de surveillance temporaire dans une zone commerciale de Cérès.",

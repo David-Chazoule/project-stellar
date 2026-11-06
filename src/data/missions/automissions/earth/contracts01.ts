@@ -3,15 +3,17 @@ import type { AutoMission } from "@/types/autoMissions";
 export const earthContracts01: AutoMission[] = [
   {
     id: "auto-paris-conference",
+
     locationId: "earth",
     sectorId: 1,
     repeatable: true,
     duration: 1,
     minReputation: 0,
-    imageMission:"/autoMissions/briefing/auto-paris-conf.webp",
+    imageMission: "/autoMissions/briefing/auto-paris-conf.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type: "Mission auto",
       title: "Conférence scientifique à Paris",
       shortDescription: "Invitation pour une conférence scientifique à Paris",
       location: "Terre - Paris",
@@ -76,18 +78,20 @@ export const earthContracts01: AutoMission[] = [
     },
   },
   {
-    id: "auto-houston-test",
+    id: "auto-houston-test-combi",
     locationId: "earth",
     sectorId: 1,
     repeatable: true,
     duration: 2,
     minReputation: 0,
+    imageMission: "/autoMissions/briefing/auto-houston-test-combi.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type: "Mission auto",
       title: "Essai de combinaison spatiale",
-      shortDescription: "Invitation pour une conférence scientifique à Paris",
-      location: "Terre - France - Paris",
+      shortDescription: "Tester une nouvelle combinaison spatiale",
+      location: "Terre - Houston",
       reward: 3500,
     },
 

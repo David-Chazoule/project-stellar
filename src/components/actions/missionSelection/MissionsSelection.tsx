@@ -86,7 +86,7 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
             <p>{availableMissions.length} Contrats</p>
           </div>
 
-          {missionsLocationId !== null && (
+          {missionsLocationId !== null ? (
             <div className="missionsSelection-fiche">
               {availableMissions.map((mission) => (
                 <MissionSelectionCard
@@ -94,7 +94,16 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
                   mission={mission}
                   onSelect={handleSelectMission}
                 />
-              ))}{" "}
+              ))}
+            </div>
+          ) : (
+            <div className="mission-empty">
+              <p>
+                {" "}
+                &gt; AUCUNE PLANÈTE SÉLECTIONNÉE
+                <span className="cursor">_</span>
+              </p>
+              <span className="waiting">EN ATTENTE DE COORDONNÉES...</span>
             </div>
           )}
         </div>
@@ -104,11 +113,16 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
             <h2>DETAILS DE LA MISSION</h2>
           </div>
 
-          {previewMission && (
+          {previewMission ? (
             <MissionDetailCard
               previewMission={previewMission}
               setSelectedMission={setSelectedMission}
             />
+          ) : (
+            <div className="mission-empty">
+              <p>&gt; AUCUNE MISSION SÉLECTIONNÉE<span className="cursor">_</span></p>
+              <span className="waiting">EN ATTENTE DES DONNÉES DE MISSION...</span>
+            </div>
           )}
         </div>
       </div>

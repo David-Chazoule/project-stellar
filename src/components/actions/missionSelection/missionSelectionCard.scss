@@ -4,29 +4,45 @@
   display: flex;
   align-items: center;
   border: 1px solid #444;
-  
-  background: #fff;
+  color: white;
+
   cursor: pointer;
   transition: 0.2s ease;
-  
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   }
 
+  .img-select {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 0;
+  }
+
   .info-mission {
     display: flex;
     width: 100%;
     flex-direction: column;
+    margin-left: 4px;
 
-    span{
+    p {
+      margin-top: 4px;
+      font-size: 12px;
+    }
+
+    span {
       display: flex;
-      p{
-      margin: 2px 2px 2px 4px;
+      margin-top: 2px;
+      p {
+        font-size: 12px;
+        color: #79b8d9;
+        border: 1px solid #79b8d9;
+        border-radius: 10px;
+        padding: 4px 6px;
+      }
     }
-    }
-
-    
   }
 }

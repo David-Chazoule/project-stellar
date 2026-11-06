@@ -6,16 +6,18 @@ type Props = {
 };
 
 function MissionSelectionCard({ mission, onSelect }: Props) {
+
+
+ 
   return (
     <div className="missionSelectionCard" onClick={() => onSelect(mission)}>
-      <div>image</div>
+      <img className="img-select"src={`${mission.imageMission}`} alt={mission.id}/>
 
       <div className="info-mission">
-        <h4>{mission.card.title}</h4>
+        <p>{mission.card.title}</p>
         <span>
-          <p>{mission.card.location}</p>
-          <p>{mission.card.reward} crédits</p>
-        </span>
+          <p>{mission.card.type}</p>
+          </span>
       </div>
     </div>
   );

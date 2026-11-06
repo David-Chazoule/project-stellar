@@ -8,9 +8,11 @@ export const moonContracts01: AutoMission[] = [
     repeatable: true,
     duration: 2,
     minReputation: 0,
+    imageMission: "/autoMissions/briefing/auto-moon-tunnel-inspect.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type: "Mission auto",
       title: "Inspection d'une galerie souterraine",
       shortDescription:
         "Inspection des installations techniques d'une colonie lunaire.",
@@ -95,13 +97,16 @@ export const moonContracts01: AutoMission[] = [
   {
     id: "auto-moon-medical-delivery",
     locationId: "moon",
+
     sectorId: 1,
     repeatable: true,
     duration: 2,
     minReputation: 0,
+    imageMission: "/autoMissions/briefing/auto-moon-medical-delivery.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type: "Mission auto",
       title: "Livraison de matériel médical",
       shortDescription:
         "Transport urgent d'équipements médicaux vers une colonie lunaire isolée.",

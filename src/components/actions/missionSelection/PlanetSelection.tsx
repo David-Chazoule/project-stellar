@@ -30,15 +30,20 @@ function PlanetSelection({
       </div>
       <div className="planet-list">
         {sectorPlanets.map(([id, location]) => (
-          <div key={id} className="planet-item">
-            <img
-              src={location.image}
-              alt={location.name}
-              onClick={() => {
-                setSelectedPlanetId(id as LocationId);
-                onShowMissions(id as LocationId);
-              }}
-            />
+          <div key={id} className="planet-item ">
+            <div
+              className={`planet ${selectedPlanetId === id ? "planet-selected" : ""}`}
+            >
+              {" "}
+              <img
+                src={location.image}
+                alt={location.name}
+                onClick={() => {
+                  setSelectedPlanetId(id as LocationId);
+                  onShowMissions(id as LocationId);
+                }}
+              />
+            </div>
 
             <p>{location.name}</p>
           </div>

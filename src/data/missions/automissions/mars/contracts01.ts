@@ -4,13 +4,16 @@ export const marsContracts01: AutoMission[] = [
   {
     id: "auto-mars-formation",
     locationId: "mars",
+
     sectorId: 1,
     repeatable: false,
     duration: 28,
     minReputation: 0,
+    imageMission: "/autoMissions/briefing/auto-mars-formation.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type: "Mission auto",
       title: "Formation à la sécurité dans l'espace",
       shortDescription:
         "Former les nouvelles recrues d'une société privée martienne à la sécurité dans des environnements spatiaux",
@@ -81,9 +84,11 @@ export const marsContracts01: AutoMission[] = [
     repeatable: false,
     duration: 200,
     minReputation: 0,
+    imageMission: "/autoMissions/briefing/auto-mars-escort.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
+      type: "Mission auto",
       title: "Escorter un groupe de voyageurs",
       shortDescription:
         "Escorter un groupe de voyageurs fortunés depuis Mars pour rejoindre Cérès",
