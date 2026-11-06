@@ -1,23 +1,115 @@
 .start-panel {
+  // ==========================================
+  // HEADERS : NAVIGATION ET COMMUNICATION
+  // ==========================================
+
+  .planeteSelection-header,
+  .missionSelect-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #354b5b;
+    font-family: monospace;
+
+    .navigate-up,
+    .terminal {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      span {
+        display: flex;
+        align-items: center;
+
+        h2 {
+          margin-left: 6px;
+          color: white;
+        }
+      }
+    }
+
+    .navigate-down,
+    .terminal-info {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    p {
+      color: #4fc3ff;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin: 0 6px;
+    }
+
+    // Badge ONLINE commun aux deux headers
+    .online {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-sizing: border-box;
+      padding: 6px;
+      margin: 0 6px;
+      border: 1px solid #4fc3ff;
+      border-radius: 10px;
+      background-color: #4cb1e472;
+
+      color: #4fc3ff;
+      font-size: 11px;
+      font-weight: 900;
+
+      animation: waiting-blink 2.5s ease-in-out infinite;
+    }
+  }
+
+  // Alignement spécifique du header navigation
+  .navigate-down {
+    justify-content: space-between;
+  }
+
+  // ==========================================
+  // SELECTION DES PLANETES
+  // ==========================================
+
   .planetSelection-container {
     display: flex;
     width: 100%;
     align-items: center;
+    margin-bottom: 10px;
   }
+
+  // ==========================================
+  // CONTENEUR DES MISSIONS
+  // ==========================================
 
   .mission-container {
     display: flex;
     width: 100%;
     align-items: stretch;
 
-    .mission-list-detail {
+    // Propriétés communes aux deux panneaux
+    .mission-list-detail,
+    .mission-detail {
       display: flex;
       flex-direction: column;
-      min-width: 320px;
       height: 500px;
       min-height: 0;
       border: 3px solid #79b8d9;
       border-radius: 15px;
+    }
+
+    // ------------------------------------------
+    // PANNEAU GAUCHE : MISSIONS DISPONIBLES
+    // ------------------------------------------
+
+    .mission-list-detail {
+      min-width: 320px;
       margin-right: 4px;
 
       .title-box {
@@ -25,6 +117,7 @@
         width: 100%;
         height: 60px;
         align-items: center;
+
         span {
           display: flex;
           width: 4px;
@@ -40,17 +133,20 @@
         margin-top: 10px;
         align-items: center;
         justify-content: center;
+
         button {
           width: 200px;
           padding: 8px 12px;
+          margin: 0 2px;
+
           background-color: #101a22;
           border: 2px solid #354b5b;
           border-radius: 6px;
-          align-items: center;
-          justify-content: center;
-          margin: 0 2px;
           color: #d1e0ea;
           cursor: pointer;
+
+          align-items: center;
+          justify-content: center;
 
           &:hover {
             border-color: #79b8d9;
@@ -62,17 +158,47 @@
       .mission-list-info {
         display: flex;
         width: 100%;
+        margin: 10px;
       }
 
       .missionsSelection-fiche {
         display: flex;
-        min-width: 200px;
         flex-direction: column;
         flex: 1;
+        min-width: 200px;
         min-height: 0;
         overflow-y: auto;
       }
     }
+
+    // ------------------------------------------
+    // PANNEAU DROIT : DETAILS DE LA MISSION
+    // ------------------------------------------
+
+    .mission-detail {
+      width: 100%;
+      margin-left: 4px;
+      overflow: hidden;
+
+      .mission-detail-header {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        align-items: center;
+
+        span {
+          display: flex;
+          width: 4px;
+          height: 22px;
+          margin: 10px;
+          background-color: #4fc3ff;
+        }
+      }
+    }
+
+    // ------------------------------------------
+    // AFFICHAGE EN ATTENTE
+    // ------------------------------------------
 
     .mission-empty {
       display: flex;
@@ -105,50 +231,27 @@
       .waiting {
         animation: waiting-blink 2.5s ease-in-out infinite;
       }
-
-      @keyframes cursor-blink {
-        50% {
-          opacity: 0;
-        }
-      }
-
-      @keyframes waiting-blink {
-        0%,
-        100% {
-          opacity: 0.3;
-        }
-
-        50% {
-          opacity: 1;
-        }
-      }
     }
+  }
+}
 
-    .mission-detail {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 500px;
-      min-height: 0;
-      border: 3px solid #79b8d9;
-      border-radius: 15px;
-      margin-left: 4px;
-      overflow: hidden;
+// ==========================================
+// ANIMATIONS
+// ==========================================
 
-      .mission-detail-header {
-        display: flex;
-        width: 100%;
-        height: 60px;
-        align-items: center;
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
 
-        span {
-          display: flex;
-          width: 4px;
-          height: 22px;
-          background-color: #4fc3ff;
-          margin: 10px;
-        }
-      }
-    }
+@keyframes waiting-blink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
   }
 }

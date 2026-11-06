@@ -10,7 +10,7 @@ import type { AutoMission } from "@/types/autoMissions";
 import type { GameState } from "@/types/gameState";
 import type { LocationId } from "@/data/locations";
 import MissionDetailCard from "./MissionDetailCard";
-import { ClipboardList, Wrench } from "lucide-react";
+import { ClipboardList, Wrench, Orbit, SatelliteDish } from "lucide-react";
 
 type Props = {
   setSelectedMission: (mission: AutoMission) => void;
@@ -48,6 +48,22 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
 
   return (
     <div className="start-panel">
+      <div className="planeteSelection-header">
+        <div className="navigate-up">
+          {" "}
+          <span>
+            <Orbit size={20} color="#4fc3ff" />
+
+            <h2>SYSTÈME DE NAVIGATION</h2>
+          </span>{" "}
+          <p className="online">ONLINE</p>{" "}
+        </div>
+
+        <div className="navigate-down">
+          <p>NAV_CORE / SECTOR_01</p>
+          <p>ASTRO-NAV // SYS v2.3.0</p>
+        </div>
+      </div>
       <div className="planetSelection-container">
         <PlanetSelection
           onShowMissions={handleShowMissions}
@@ -55,6 +71,21 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
           setSelectedPlanetId={setSelectedPlanetId}
         />
       </div>
+
+      <div className="missionSelect-header">
+        <div className="terminal">
+          <span>
+            <SatelliteDish size={20} color="#4fc3ff" />
+
+            <h2>TERMINAL DE LIAISON</h2>
+          </span>{" "}
+          <p className="online">SIGNAL ACTIF</p>
+        </div>
+        <div className="terminal-info">
+          <p>COM_NETWORK // CHANNEL_7</p>
+        </div>
+      </div>
+
       <div className="mission-container">
         <div className="mission-list-detail">
           <div className="title-box">
@@ -120,8 +151,13 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
             />
           ) : (
             <div className="mission-empty">
-              <p>&gt; AUCUNE MISSION SÉLECTIONNÉE<span className="cursor">_</span></p>
-              <span className="waiting">EN ATTENTE DES DONNÉES DE MISSION...</span>
+              <p>
+                &gt; AUCUNE MISSION SÉLECTIONNÉE
+                <span className="cursor">_</span>
+              </p>
+              <span className="waiting">
+                EN ATTENTE DES DONNÉES DE MISSION...
+              </span>
             </div>
           )}
         </div>
