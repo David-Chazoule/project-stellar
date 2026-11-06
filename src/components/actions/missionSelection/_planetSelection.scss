@@ -8,13 +8,25 @@
   gap: 20px;
   padding: 14px 12px 12px;
   border: 3px solid #79b8d9;
-
+  font-family: monospace;
+        letter-spacing: 1px;
   border-radius: 15px;
   width: 100%;
 
   .sector-info {
     display: flex;
     flex-direction: column;
+    font-family: monospace;
+    width: 120px;
+
+    h2{
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    p{color: #79b8d9;
+    letter-spacing: 1px;}
+    
   }
 
   .planet-list {
@@ -90,10 +102,12 @@
       }
 
       p {
-        margin-top: 10px;
+        margin-top: 6px;
         color: #79b8d9;
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: monospace;
+        letter-spacing: 1px;
       }
 
       .planet.planet-selected + p {

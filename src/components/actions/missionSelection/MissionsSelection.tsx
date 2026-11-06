@@ -100,7 +100,10 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
               onClick={() => handleShowMissions(selectedPlanetId)}
               disabled={selectedPlanetId === null}
             >
-              <ClipboardList size={16} /> Missions
+              <span>
+                <ClipboardList size={16} />
+              </span>{" "}
+              Missions
             </button>
 
             <button
@@ -109,12 +112,16 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
               onClick={() => handleShowMissions(null)}
               disabled={selectedPlanetId === null}
             >
-              <Wrench size={16} /> Services
+              <span>
+                {" "}
+                <Wrench size={16} />
+              </span>
+              Services
             </button>
           </div>
           <div className="mission-list-info">
-            <p>{missionsLocationId && locations[missionsLocationId].name}</p>
-            <p>{availableMissions.length} Contrats</p>
+            <p>{missionsLocationId && locations[missionsLocationId].name.toUpperCase()}</p><p>|</p>
+            <p>{availableMissions.length} CONTRAT{availableMissions.length>1?"S":""}</p>
           </div>
 
           {missionsLocationId !== null ? (

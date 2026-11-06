@@ -4,6 +4,7 @@ import { locations } from "@/data/locations";
 import type { LocationId } from "@/data/locations";
 
 import { sectorNames } from "../../../data/locations";
+import SystemLogs from "@/components/Ui/SystemLogs";
 
 type Props = {
   onShowMissions: (locationId: LocationId | null) => void;
@@ -25,8 +26,9 @@ function PlanetSelection({
   return (
     <div className="planet-selection">
       <div className="sector-info">
-        <h2>Secteur {currentSectorId} </h2>
+        <h2>SECTEUR {currentSectorId} </h2>
         <p>{sectorNames[currentSectorId].toUpperCase()}</p>
+        <SystemLogs />
       </div>
       <div className="planet-list">
         {sectorPlanets.map(([id, location]) => (
@@ -45,7 +47,7 @@ function PlanetSelection({
               />
             </div>
 
-            <p>{location.name}</p>
+            <p>{location.name.toUpperCase()}</p>
           </div>
         ))}
       </div>

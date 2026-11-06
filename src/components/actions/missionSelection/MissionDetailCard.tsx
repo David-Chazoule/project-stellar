@@ -1,5 +1,6 @@
 import { AutoMission } from "@/types/autoMissions";
-import { UserGroup } from "lucide-react";
+import { UserGroup, StepForward } from "lucide-react";
+import { specialtyLabels } from "../../../data/labels/specialtyLabels";
 
 type Props = {
   previewMission: AutoMission;
@@ -38,24 +39,31 @@ function MissionDetailCard({ previewMission, setSelectedMission }: Props) {
         </div>
 
         <div className="start-container">
-          <div className="line"></div>
+          {/* <div className="line"></div> */}
           <div className="request">
-            <p>
+            <p className="request-title">
               <span>
-                <UserGroup size={16} />
+                <UserGroup size={20} />
               </span>
-              Equipage requis
+              ÉQUIPAGE REQUIS
             </p>
-            {previewMission.setup.requiredCrew.map((requirement) => (
-              <p key={requirement.aptitude}>
-                {requirement.aptitude} X {requirement.count}
-              </p>
-            ))}
+            <div className="requirement-box">
+              {previewMission.setup.requiredCrew.map((requirement) => (
+                <p key={requirement.aptitude}>
+                  {specialtyLabels[requirement.aptitude]} x {requirement.count}
+                </p>
+              ))}
+            </div>
           </div>
 
           <div className="btn-container">
             <button onClick={() => setSelectedMission(previewMission)}>
-              Commancer
+              {" "}
+              COMMANCER LA MISSION{" "}
+              <span>
+                {" "}
+                <StepForward size={16} />
+              </span>
             </button>
           </div>
         </div>
