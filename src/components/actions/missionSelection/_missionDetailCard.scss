@@ -1,62 +1,87 @@
 .mission-detail-container {
   display: flex;
+  width: 100%;
+  min-height: 300px;
   flex-direction: column;
-  background-color: white;
-color: black;
+  color: white;
+  border-radius: 0 0 15px 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   .info-mission-detail {
     display: flex;
     flex-direction: column;
 
-    .info-container{
-.info-detail {
+    .info-container {
       display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      span {
-        color: black;
-        margin: 4px;
-        background-color: greenyellow;
-        padding: 8px;
-        border-radius: 6px;
+      flex-direction: column;
+      margin-left: 6px;
+      margin-top: 6px;
+      .title-info {
+        display: flex;
+        width: 100%;
+        margin-left: 6px;
+        margin-bottom: 6px;
+      }
+      .info-detail {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 6px 0;
+
+        span {
+          color: white;
+          border: 1px solid #79b8d9;
+          margin: 4px 4px 0 6px;
+          font-size: 12px;
+          padding: 6px 8px;
+          border-radius: 10px;
+        }
       }
 
+      p {
+        font-size: 14px;
+        color: white;
+        margin: 10px 0;
+        span {
+          margin: 0 6px;
+        }
+      }
     }
 
-  }
+    .start-container {
+      display: flex;
+      flex-direction: column;
 
       .line {
         display: flex;
-        width: 100%;
-        border-bottom: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        border-bottom: 1px solid white;
+        margin: 6px;
       }
 
-      .start-container {
+      .request {
         display: flex;
-        
+        align-items: center;
+        color: white;
 
-        .crewRequest {
+        p {
           display: flex;
-          align-items: center;
-         
-
-          .request {
-            display: flex;
-            flex-direction: column;
-
-            span{
-              display: flex;
-            }
-          }
-        }
-
-        .btn-container{
-          display: flex;
-          width: 100%;
-          align-items: center;
-          justify-content: center;
+          font-size: 14px;
+          color: white;
         }
       }
-    
+
+      .btn-container {
+        display: flex;
+        width: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 20px;
+        padding: 20px;
+      }
+    }
   }
 }

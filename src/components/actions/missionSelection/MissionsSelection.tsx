@@ -57,7 +57,11 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
       </div>
       <div className="mission-container">
         <div className="mission-list-detail">
-          <h2>MISSIONS DISPONIBLE</h2>
+          <div className="title-box">
+            <span className="line-title"></span>
+            <h2>MISSIONS DISPONIBLE</h2>
+          </div>
+
           <div className="planet-actions">
             <button
               className="mission-button"

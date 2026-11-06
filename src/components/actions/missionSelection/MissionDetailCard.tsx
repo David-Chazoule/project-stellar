@@ -1,4 +1,5 @@
 import { AutoMission } from "@/types/autoMissions";
+import { UserGroup } from "lucide-react";
 
 type Props = {
   previewMission: AutoMission;
@@ -7,11 +8,26 @@ type Props = {
 
 function MissionDetailCard({ previewMission, setSelectedMission }: Props) {
   return (
-    <div className="mission-detail-container">
-      <div>IMG</div>
+    <div
+      className="mission-detail-container"
+      style={{
+        backgroundImage: `
+      linear-gradient(
+        to bottom,
+        #0b1520 0%,
+        rgba(11, 21, 32, 0.95) 25%,
+        rgba(11, 21, 32, 0.6) 60%,
+        transparent 100%
+      ),
+      url("${previewMission.imageMission}")
+    `,
+      }}
+    >
       <div className="info-mission-detail">
-        <h3>{previewMission.card.title}</h3>
         <div className="info-container">
+          <div className="title-info">
+            <h3>{previewMission.card.title}</h3>
+          </div>
           <div className="info-detail">
             <span>{previewMission.card.location}</span>
             <span>{previewMission.duration} jours</span>
@@ -21,18 +37,20 @@ function MissionDetailCard({ previewMission, setSelectedMission }: Props) {
           <p>{previewMission.card.shortDescription}</p>
         </div>
 
-        <div className="line"></div>
         <div className="start-container">
-          <div className="crewRequest">
-            <span>ICON</span>
-            <div className="request">
-              <h3>Equipage requis</h3>
-              {previewMission.setup.requiredCrew.map((requirement) => (
-                <p key={requirement.aptitude}>
-                  {requirement.aptitude} : {requirement.count}
-                </p>
-              ))}
-            </div>
+          <div className="line"></div>
+          <div className="request">
+            <p>
+              <span>
+                <UserGroup size={16} />
+              </span>
+              Equipage requis
+            </p>
+            {previewMission.setup.requiredCrew.map((requirement) => (
+              <p key={requirement.aptitude}>
+                {requirement.aptitude} X {requirement.count}
+              </p>
+            ))}
           </div>
 
           <div className="btn-container">

@@ -8,12 +8,13 @@ export const earthContracts01: AutoMission[] = [
     repeatable: true,
     duration: 1,
     minReputation: 0,
+    imageMission:"/autoMissions/briefing/auto-paris-conf.webp",
     resolver: { type: "aptitudeAverage" },
 
     card: {
       title: "Conférence scientifique à Paris",
       shortDescription: "Invitation pour une conférence scientifique à Paris",
-      location: "Terre - France - Paris",
+      location: "Terre - Paris",
       reward: 2500,
     },
 

@@ -57,6 +57,7 @@ export interface AutoMission {
   duration: number;
   minReputation: number;
   destinationLocationId?: string;
+  imageMission?: string;
   resolver: AutoMissionResolver;
 
   card: {
