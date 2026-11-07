@@ -1,4 +1,5 @@
 import { initialGameState } from "@/data/gameState";
+import { ClipboardCheck } from "lucide-react";
 import type {
   AutoMission,
   AutoMissionResultType,
@@ -75,6 +76,22 @@ function AutoMissionConclusion({
 
   return (
     <div className="start-panel">
+      <div className="planeteSelection-header">
+        <div className="navigate-up">
+          {" "}
+          <span>
+            <ClipboardCheck size={20} color="#4fc3ff" />
+
+            <h2>RAPPORT DE MISSION</h2>
+          </span>{" "}
+          <p className="online">COMPLETED</p>{" "}
+        </div>
+
+        <div className="navigate-down">
+          <p>OPS_CORE // MISSION_REPORT</p>
+          <p>DATA_LOG // ARCHIVED</p>
+        </div>
+      </div>
       <h2>{conclusion.title}</h2>
       <p>{conclusion.text}</p>
 

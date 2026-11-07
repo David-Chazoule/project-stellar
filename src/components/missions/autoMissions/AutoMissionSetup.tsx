@@ -8,6 +8,7 @@ import type {
 } from "../../../types/autoMissions";
 import type { AutoMission } from "../../../types/autoMissions";
 import type { Character } from "@/types/character";
+import { ClipboardList } from "lucide-react";
 
 import Button from "../../Ui/Button";
 import MissionCrewSelectionCard from "../missionCrewSelection/MissionCrewSelectionCard";
@@ -90,7 +91,24 @@ function AutoMissionSetup({
 
   return (
     <div className="start-panel">
+      <div className="planeteSelection-header">
+        <div className="navigate-up">
+          {" "}
+          <span>
+            <ClipboardList size={20} color="#4fc3ff" />
+
+            <h2>BRIEFING OPÉRATIONNEL</h2>
+          </span>{" "}
+          <p className="online">EN PRÉPARATION</p>{" "}
+        </div>
+
+        <div className="navigate-down">
+          <p>OPS_CORE // MISSION_SETUP</p>
+          <p>CREW_ASSIGN // PENDING</p>
+        </div>
+      </div>
       <div className="mission-bref">
+        <img src={mission.imageMission} alt={mission.id} />
         <h2>{mission.card.title}</h2>
         <p>location : {mission.card.location}</p>
         <div className="required-box">
@@ -119,13 +137,14 @@ function AutoMissionSetup({
 
           return (
             <div key={required.aptitude} className="aptitude-selected-box">
-             <div className="crewSelect-category"> 
-              <span>SYS.CREW_{required.aptitude.toUpperCase()}</span>
-              <h3>{specialtyLabels[required.aptitude].toUpperCase()} </h3>
-              <span className="selected-crew-head">
-                {selectedCount}/{required.count}
-              </span></div>
-             
+              <div className="crewSelect-category">
+                <span>SYS.CREW_{required.aptitude.toUpperCase()}</span>
+                <h3>{specialtyLabels[required.aptitude].toUpperCase()} </h3>
+                <span className="selected-crew-head">
+                  {selectedCount}/{required.count}
+                </span>
+              </div>
+
               <div className="crew-card-box">
                 {candidates.map((character) => {
                   const isQualified =

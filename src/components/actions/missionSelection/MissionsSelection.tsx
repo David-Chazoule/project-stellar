@@ -120,8 +120,15 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
             </button>
           </div>
           <div className="mission-list-info">
-            <p>{missionsLocationId && locations[missionsLocationId].name.toUpperCase()}</p><p>|</p>
-            <p>{availableMissions.length} CONTRAT{availableMissions.length>1?"S":""}</p>
+            <p>
+              {missionsLocationId &&
+                locations[missionsLocationId].name.toUpperCase()}
+            </p>
+            <p>|</p>
+            <p>
+              {availableMissions.length} CONTRAT
+              {availableMissions.length > 1 ? "S" : ""}
+            </p>
           </div>
 
           {missionsLocationId !== null ? (

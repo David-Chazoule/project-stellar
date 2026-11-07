@@ -1,4 +1,5 @@
 import { resolveAutoMission } from "@/logic/automission/resolveAutoMission";
+import { SquareActivity } from "lucide-react";
 
 import type {
   AutoMission,
@@ -26,7 +27,23 @@ function AutoMissionProgression({
   missionCrew,
 }: Props) {
   return (
-    <div>
+    <div className="start-panel">
+      <div className="planeteSelection-header">
+        <div className="navigate-up">
+          {" "}
+          <span>
+            <SquareActivity size={20} color="#4fc3ff" />
+
+            <h2>SUIVI OPÉRATIONNEL</h2>
+          </span>{" "}
+          <p className="online">IN PROGRESS</p>{" "}
+        </div>
+
+        <div className="navigate-down">
+          <p>OPS_CORE // MISSION_ACTIVE</p>
+          <p>CREW_STATUS // DEPLOYED</p>
+        </div>
+      </div>
       <p>{mission.progression.text}</p>{" "}
       <Button
         onClick={() => {
