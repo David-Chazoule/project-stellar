@@ -16,6 +16,7 @@ import type { AutoMission } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { Ship } from "@/types/Ship";
 
+
 function GameLayout() {
   const [view, setView] = useState<View>("startGame");
   const [selectedMission, setSelectedMission] = useState<AutoMission | null>(
@@ -73,6 +74,7 @@ function GameLayout() {
               setSelectedMission={setSelectedMission}
               crew={crew}
               setCrew={setCrew}
+              gameState={gameState}
               setGameState={setGameState}
               setView={setView}
             />
