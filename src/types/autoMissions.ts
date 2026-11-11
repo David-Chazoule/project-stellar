@@ -1,7 +1,7 @@
 import { SpecialtyName } from "./character";
 import { Character } from "./character";
 
-export type AutoMissionStep = "setup" | "progression" | "conclusion";
+export type AutoMissionStep = "setup" | "progression" | "conclusion" |"arrival";
 
 export type AutoMissionResultType =
   | "criticalFailure"

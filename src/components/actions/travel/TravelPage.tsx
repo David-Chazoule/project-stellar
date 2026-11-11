@@ -8,7 +8,7 @@ import Button from "../../Ui/Button";
 type Props = {
   departureId: LocationId;
   destinationId: LocationId;
-  onContinue: () => void;
+ onContinue: () => void;
   travelDuration: number;
 };
 

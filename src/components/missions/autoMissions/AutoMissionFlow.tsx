@@ -12,6 +12,7 @@ import type { AutoMissionStep } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { GameState } from "@/types/gameState";
 import type { View } from "@/types/gameState";
+import TravelArrival from "@/components/actions/travel/TravelArrival";
 
 type Props = {
   mission: AutoMission;
@@ -46,7 +47,7 @@ function AutoMissionFlow({
 
   return (
     <div className="autoMissionFlow-container">
-      {showTravel && (
+      {showTravel && step === "setup" && (
         <TravelPage
           departureId={gameState.currentLocationId}
           destinationId={mission.locationId}
@@ -57,8 +58,16 @@ function AutoMissionFlow({
               currentLocationId: mission.locationId,
               elapsedDays: prev.elapsedDays + travelDuration,
             }));
-
+            setStep("arrival");
+          }}
+        />
+      )}
+      {showTravel && step === "arrival" && (
+        <TravelArrival
+          destinationId={mission.locationId}
+          onContinue={() => {
             setShowTravel(false);
+            setStep("setup");
           }}
         />
       )}
