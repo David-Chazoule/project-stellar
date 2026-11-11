@@ -33,8 +33,6 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
 
   const currentLocation = locations[gameState.currentLocationId];
 
-  console.log("Localisation :", gameState.currentLocationId);
-
   return (
     <div className="dashboard-container">
       <div className="dashboard-screen">

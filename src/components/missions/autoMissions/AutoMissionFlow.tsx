@@ -65,6 +65,8 @@ function AutoMissionFlow({
       {showTravel && step === "arrival" && (
         <TravelArrival
           destinationId={mission.locationId}
+          travelDuration={travelDuration}
+          gameState={gameState}
           onContinue={() => {
             setShowTravel(false);
             setStep("setup");
