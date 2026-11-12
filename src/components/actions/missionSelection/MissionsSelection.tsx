@@ -11,7 +11,7 @@ import type { GameState } from "@/types/gameState";
 import type { LocationId } from "@/data/locations";
 import MissionDetailCard from "./MissionDetailCard";
 import { ClipboardList, Wrench, Orbit, SatelliteDish } from "lucide-react";
-import TravelPage from "../travel/TravelPage";
+
 
 type Props = {
   setSelectedMission: (mission: AutoMission) => void;

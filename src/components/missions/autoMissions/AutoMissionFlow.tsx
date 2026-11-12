@@ -13,6 +13,7 @@ import type { Character } from "@/types/character";
 import type { GameState } from "@/types/gameState";
 import type { View } from "@/types/gameState";
 import TravelArrival from "@/components/actions/travel/TravelArrival";
+import { getTravelOrbit } from "../../../logic/travel/getTravelDuration";
 
 type Props = {
   mission: AutoMission;
@@ -42,7 +43,9 @@ function AutoMissionFlow({
   );
 
   const [travelDuration] = useState(() =>
-    getTravelDuration(gameState.currentLocationId, mission.locationId),
+    getTravelOrbit(
+      getTravelDuration(gameState.currentLocationId, mission.locationId),
+    ),
   );
 
   return (
@@ -52,6 +55,7 @@ function AutoMissionFlow({
           departureId={gameState.currentLocationId}
           destinationId={mission.locationId}
           travelDuration={travelDuration}
+          gameState={gameState}
           onContinue={() => {
             setGameState((prev) => ({
               ...prev,
