@@ -50,7 +50,6 @@
       flex: 1;
       min-width: 0;
       gap: 3px;
-
       text-align: left;
 
       // NOM
@@ -72,14 +71,11 @@
         align-items: center;
         align-self: flex-start;
         gap: 4px;
-
         width: fit-content;
         max-width: 100%;
         box-sizing: border-box;
-
         padding: 4px;
         border-radius: 6px;
-
         background-color: rgba(255, 255, 255, 0.08);
 
         .statut {
@@ -151,16 +147,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
       width: 30px;
       height: 30px;
       flex-shrink: 0;
       margin-left: 10px;
-
       background-color: #1a232c;
       border: 1px solid #4f6575;
       border-radius: 7px;
-
       color: #4fc3ff;
       font-size: 14px;
       font-weight: 800;
