@@ -18,3 +18,13 @@ export function getTravelDuration(
 
   return duration;
 }
+
+export function getTravelOrbit(duration: number) {
+  const orbitalCoefficients = [1, 1.1, 1.2, 1.3, 1.4, 1.5];
+
+  const randomIndex = Math.floor(Math.random() * orbitalCoefficients.length);
+
+  const coefficient = orbitalCoefficients[randomIndex];
+
+  return Math.ceil(duration * coefficient);
+}
