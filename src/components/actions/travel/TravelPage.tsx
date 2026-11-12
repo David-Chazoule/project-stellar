@@ -74,9 +74,9 @@ function TravelPage({
           <div className="location-box">
             <p className="title">POINT DE DÉPART </p>
             {departure.name === "Terre" ? (
-              <Earth size={20} color="#4fc3ff" />
+              <Earth size={28} color="#4fc3ff" />
             ) : (
-              <Orbit size={20} color="#4fc3ff" />
+              <Orbit size={28} color="#4fc3ff" />
             )}
             <p className="planet-name">{departure.name.toUpperCase()}</p>
             <p className="sector-name">Secteur 0{departure.sectorId}</p>
@@ -94,9 +94,9 @@ function TravelPage({
           <div className="destination-box">
             <p className="title">DESTINATION</p>
             {destination.name === "Terre" ? (
-              <Earth size={20} color="orange" />
+              <Earth size={28} color="#4fc3ff" />
             ) : (
-              <Orbit size={20} color="orange" />
+              <Orbit size={28} color="#4fc3ff" />
             )}
             <p className="planet-name">{destination.name.toUpperCase()}</p>
             <p className="sector-name">Secteur 0{destination.sectorId} </p>
@@ -146,7 +146,7 @@ function TravelPage({
       <div className="button-box">
         <button onClick={onContinue}>
           <p>CONFIRMER LE DÉPART</p>
-          <MoveRight size={20} />
+          <MoveRight size={20} color="white" />
         </button>
       </div>
     </div>

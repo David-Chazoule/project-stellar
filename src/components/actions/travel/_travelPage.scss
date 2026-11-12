@@ -14,6 +14,7 @@
 
     h3 {
       margin: 0 0 2px 0;
+      color: #d5e0e8;
     }
   }
 
@@ -46,16 +47,16 @@
         font-family: monospace;
 
         .title {
-          font-size: 10px;
+          font-size: 12px;
         }
 
         .planet-name {
-          font-size: 20px;
+          font-size: 24px;
           color: white;
         }
 
         .sector-name {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .confirm-box {
@@ -76,7 +77,7 @@
         align-items: center;
 
         p {
-          font-size: 12px;
+          font-size: 14px;
           color: #4fc3ff;
           font-family: monospace;
         }
@@ -105,6 +106,7 @@
         display: flex;
         align-items: center;
         p {
+          
           color: #4fc3ff;
           font-size: 10px;
         }
@@ -117,6 +119,7 @@
     }
 
     p {
+     margin: 8px 0;
       color: white;
     }
 
@@ -141,7 +144,7 @@
         font-family: monospace;
 
         .title {
-          color: gray;
+          color: #d5e0e8;;
           font-size: 14px;
           margin: 2px 0;
         }
@@ -171,7 +174,7 @@
       margin-bottom: 4px;
       p {
         font-size: 12px;
-        color: gray;
+        color: #d5e0e8;
         margin: 4px;
       }
     }
@@ -191,10 +194,18 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+       border: 1px solid #36789a;
       border-radius: 10px;
       padding: 10px;
+      background-color: #245775;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
 
+      &:hover {
+        background-color: #32789e;
+      }
       p {
+        color: white;
       }
     }
   }
