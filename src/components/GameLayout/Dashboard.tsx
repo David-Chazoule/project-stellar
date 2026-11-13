@@ -60,6 +60,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
           <div className="dashboard-card">
             <p className="dashBoard-label">DATE</p>
             <p className="dashboard-value">{currentDate}</p>
+            <p>JOURS ÉCOULÉS : {gameState.elapsedDays}</p>
           </div>
 
           <div className="dashboard-card">

@@ -12,15 +12,15 @@ import type { LocationId } from "@/data/locations";
 import MissionDetailCard from "./MissionDetailCard";
 import { ClipboardList, Wrench, Orbit, SatelliteDish } from "lucide-react";
 
-
 type Props = {
   setSelectedMission: (mission: AutoMission) => void;
   gameState: GameState;
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
+  onTravel: (destinationId: LocationId) => void;
 };
 
-function MissionsSelection({ setSelectedMission, gameState }: Props) {
+function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
   const [missionsLocationId, setMissionsLocationId] =
     useState<LocationId | null>(null);
   const [previewMission, setPreviewMission] = useState<AutoMission | null>(
@@ -70,6 +70,8 @@ function MissionsSelection({ setSelectedMission, gameState }: Props) {
           onShowMissions={handleShowMissions}
           selectedPlanetId={selectedPlanetId}
           setSelectedPlanetId={setSelectedPlanetId}
+          gameState={gameState}
+          onTravel={onTravel}
         />
       </div>
 

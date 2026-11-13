@@ -1,7 +1,7 @@
 import { SpecialtyName } from "./character";
 import { Character } from "./character";
 
-export type AutoMissionStep = "setup" | "progression" | "conclusion" |"arrival";
+export type AutoMissionStep = "setup" | "progression" | "conclusion";
 
 export type AutoMissionResultType =
   | "criticalFailure"
@@ -51,7 +51,7 @@ export type AutoMissionResolver = {
 
 export interface AutoMission {
   id: string;
-  
+
   locationId: locationId;
   sectorId: number;
   repeatable: boolean;
@@ -62,7 +62,7 @@ export interface AutoMission {
   resolver: AutoMissionResolver;
 
   card: {
-    type:string;
+    type: string;
     title: string;
     shortDescription: string;
     location: string;

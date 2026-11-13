@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import TravelPage from "@/components/actions/travel/TravelPage";
+
 import AutoMissionSetup from "./AutoMissionSetup";
 import AutoMissionProgression from "./AutoMissionProgression";
 import AutoMissionConclusion from "./AutoMissionConclusion";
-import { getTravelDuration } from "@/logic/travel/getTravelDuration";
+
 import type { AutoMission } from "@/types/autoMissions";
 import type { AutoMissionResultType } from "@/types/autoMissions";
 import type { SelectedCrewMember } from "@/types/autoMissions";
@@ -12,8 +12,7 @@ import type { AutoMissionStep } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { GameState } from "@/types/gameState";
 import type { View } from "@/types/gameState";
-import TravelArrival from "@/components/actions/travel/TravelArrival";
-import { getTravelOrbit } from "../../../logic/travel/getTravelDuration";
+
 
 type Props = {
   mission: AutoMission;
@@ -38,47 +37,13 @@ function AutoMissionFlow({
   const [missionCrew, setMissionCrew] = useState<SelectedCrewMember[]>([]);
   const [missionResult, setMissionResult] =
     useState<AutoMissionResultType | null>(null);
-  const [showTravel, setShowTravel] = useState(
-    gameState.currentLocationId !== mission.locationId,
-  );
-
-  const [travelDuration] = useState(() =>
-    getTravelOrbit(
-      getTravelDuration(gameState.currentLocationId, mission.locationId),
-    ),
-  );
+ 
 
   return (
     <div className="autoMissionFlow-container">
-      {showTravel && step === "setup" && (
-        <TravelPage
-          departureId={gameState.currentLocationId}
-          destinationId={mission.locationId}
-          travelDuration={travelDuration}
-          gameState={gameState}
-          onContinue={() => {
-            setGameState((prev) => ({
-              ...prev,
-              currentLocationId: mission.locationId,
-              elapsedDays: prev.elapsedDays + travelDuration,
-            }));
-            setStep("arrival");
-          }}
-        />
-      )}
-      {showTravel && step === "arrival" && (
-        <TravelArrival
-          destinationId={mission.locationId}
-          travelDuration={travelDuration}
-          gameState={gameState}
-          onContinue={() => {
-            setShowTravel(false);
-            setStep("setup");
-          }}
-        />
-      )}
+      
 
-      {!showTravel && step === "setup" && (
+      { step === "setup" && (
         <AutoMissionSetup
           mission={mission}
           setStep={setStep}
