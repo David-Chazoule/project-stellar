@@ -1,4 +1,3 @@
-
 export const locations = {
   // SECTEUR 1 — SYSTÈME INTÉRIEUR
 
@@ -26,11 +25,10 @@ export const locations = {
     imageArrival: "",
     type: "Planète tellurique",
     population: 1_000_000,
-    gravity: 0.90,
+    gravity: 0.9,
     temperature: 464,
     atmosphere: "CO₂ (96,5 %), azote",
-    politics:
-      "République indépendante, gouverneur et Conseil des Huit",
+    politics: "République indépendante, gouverneur et Conseil des Huit",
     activity: "Tourisme, divertissement, recherche et services",
     description:
       "Ancienne colonie internationale devenue indépendante. Vénus possède huit grandes cités atmosphériques et de nombreuses stations privées, touristiques et industrielles.",
@@ -46,8 +44,7 @@ export const locations = {
     gravity: 1,
     temperature: 15,
     atmosphere: "Azote (78 %), oxygène (21 %)",
-    politics:
-      "États souverains, organisations et alliances internationales",
+    politics: "États souverains, organisations et alliances internationales",
     activity: "Industrie, commerce, finance et recherche",
     description:
       "Berceau de l'humanité et principal centre démographique du système solaire. La Terre conserve ses nations et ses organisations internationales, tandis que plusieurs coalitions exercent leur influence sur les colonies spatiales.",
@@ -63,8 +60,7 @@ export const locations = {
     gravity: 0.165,
     temperature: -20,
     atmosphere: "Quasi inexistante (exosphère)",
-    politics:
-      "Territoire autonome sous influence internationale terrestre",
+    politics: "Territoire autonome sous influence internationale terrestre",
     activity: "Industrie, commerce, tourisme et recherche",
     description:
       "La population lunaire vit principalement dans de vastes cités souterraines aménagées sur plusieurs niveaux. La Lune dispose d'un gouvernement local, mais conserve des liens politiques étroits avec la Terre.",
@@ -80,8 +76,7 @@ export const locations = {
     gravity: 0.38,
     temperature: -63,
     atmosphere: "CO₂ (environ 95 %)",
-    politics:
-      "Deux États indépendants, d'influences occidentale et sino-russe",
+    politics: "Deux États indépendants, d'influences occidentale et sino-russe",
     activity: "Métallurgie, exploitation minière et industrie",
     description:
       "Mars est divisée en deux États souverains, organisés autour de deux mégapoles souterraines reliées par La Jonction. Une station orbitale commune assure les contrôles frontaliers et comprend une zone neutre.",
@@ -92,7 +87,7 @@ export const locations = {
   ceres: {
     name: "Cérès",
     sectorId: 2,
-    image: "",
+    image: "/planets/Cérès.webp",
     imageArrival: "",
     type: "Planète naine",
     population: 1_200_000,
@@ -109,15 +104,14 @@ export const locations = {
   beltInner: {
     name: "Ceinture interne",
     sectorId: 2,
-    image: "",
+    image: "/planets/ceinture-interne.webp",
     imageArrival: "",
     type: "Région d'astéroïdes",
     population: "Indéfinie",
     gravity: "Aucune",
     temperature: "Indéfinie",
     atmosphere: "Quasi inexistante",
-    politics:
-      "Diverses juridictions, concessions et colonies indépendantes",
+    politics: "Diverses juridictions, concessions et colonies indépendantes",
     activity: "Extraction minière, prospection et industrie",
     description:
       "Région de la ceinture la plus proche de Mars. Elle accueille des exploitations minières, des installations industrielles et des avant-postes spécialisés.",
@@ -126,15 +120,14 @@ export const locations = {
   beltMiddle: {
     name: "Ceinture médiane",
     sectorId: 2,
-    image: "",
+    image: "/planets/ceinture-mediane.webp",
     imageArrival: "",
     type: "Région d'astéroïdes",
     population: "Indéfinie",
     gravity: "Aucune",
     temperature: "Indéfinie",
     atmosphere: "Quasi inexistante",
-    politics:
-      "Diverses juridictions, concessions et colonies indépendantes",
+    politics: "Diverses juridictions, concessions et colonies indépendantes",
     activity: "Extraction minière, industrie et logistique",
     description:
       "Région centrale de la ceinture, où se trouve Cérès. Elle regroupe des installations minières, des plateformes industrielles et des stations de transit.",
@@ -143,15 +136,14 @@ export const locations = {
   beltOuter: {
     name: "Ceinture externe",
     sectorId: 2,
-    image: "",
+    image: "/planets/ceinture-externe.webp",
     imageArrival: "",
     type: "Région d'astéroïdes",
     population: "Indéfinie",
     gravity: "Aucune",
     temperature: "Indéfinie",
     atmosphere: "Quasi inexistante",
-    politics:
-      "Diverses juridictions, concessions et colonies indépendantes",
+    politics: "Diverses juridictions, concessions et colonies indépendantes",
     activity: "Extraction minière, prospection et avant-postes",
     description:
       "Région extérieure de la ceinture, en direction de Jupiter. Elle abrite des exploitations isolées, des installations scientifiques et des colonies indépendantes.",
@@ -163,7 +155,7 @@ export const locations = {
     name: "Ganymède",
     sectorId: 3,
     image: "",
-    imageArrival: "",
+    imageArrival: "/planets/Ganymède.webp",
     type: "Satellite naturel de Jupiter",
     population: 2_500_000,
     gravity: 0.146,
@@ -171,8 +163,7 @@ export const locations = {
     atmosphere: "Exosphère très ténue, traces d'oxygène",
     politics:
       "République indépendante et démocratique, puissance principale du système jovien",
-    activity:
-      "Agriculture, industrie, commerce, métallurgie et services",
+    activity: "Agriculture, industrie, commerce, métallurgie et services",
     description:
       "Ancienne colonie internationale devenue indépendante par une transition pacifique, Ganymède est le centre politique et économique du système jovien. Sa société démocratique associe industrie, commerce, services publics et niveau de vie relativement élevé. De vastes exploitations agricoles souterraines alimentent une partie du système solaire extérieur. Ganymède administre également Europe et Callisto.",
   },
@@ -180,15 +171,14 @@ export const locations = {
   europa: {
     name: "Europe",
     sectorId: 3,
-    image: "",
+    image: "/planets/Europe.webp",
     imageArrival: "",
     type: "Satellite naturel de Jupiter",
     population: 50_000,
     gravity: 0.134,
     temperature: -171,
     atmosphere: "Exosphère très ténue, principalement oxygène",
-    politics:
-      "Territoire scientifique sous administration ganymédienne",
+    politics: "Territoire scientifique sous administration ganymédienne",
     activity:
       "Recherche scientifique, exploration sous-glaciaire et technologies polaires",
     description:
@@ -198,7 +188,7 @@ export const locations = {
   callisto: {
     name: "Callisto",
     sectorId: 3,
-    image: "",
+    image: "/planets/Callisto.webp",
     imageArrival: "",
     type: "Satellite naturel de Jupiter",
     population: 200_000,
@@ -207,8 +197,7 @@ export const locations = {
     atmosphere: "Exosphère extrêmement ténue",
     politics:
       "Territoire industriel et stratégique sous administration ganymédienne",
-    activity:
-      "Exploitation minière, métallurgie, logistique et défense",
+    activity: "Exploitation minière, métallurgie, logistique et défense",
     description:
       "Principal centre minier du système jovien après Ganymède, Callisto possède des exploitations industrielles, des zones résidentielles et des infrastructures de transport spatial. Sa position périphérique en fait également un point stratégique de surveillance. Des installations militaires et portuaires contrôlent une partie du trafic entrant dans le système jovien.",
   },
@@ -216,7 +205,7 @@ export const locations = {
   io: {
     name: "Io",
     sectorId: 3,
-    image: "",
+    image: "/planets/Io.webp",
     imageArrival: "",
     type: "Satellite naturel de Jupiter",
     population: 5_000,
@@ -236,7 +225,7 @@ export const locations = {
   titan: {
     name: "Titan",
     sectorId: 4,
-    image: "",
+    image: "/planets/Titan.webp",
     imageArrival: "",
     type: "Satellite naturel de Saturne",
     population: 5_000_000,
@@ -245,8 +234,7 @@ export const locations = {
     atmosphere: "Azote (environ 95 %), méthane",
     politics:
       "État indépendant, gouvernement autoritaire et forte influence des grandes entreprises",
-    activity:
-      "Hydrocarbures, pétrochimie, finance, commerce et tourisme",
+    activity: "Hydrocarbures, pétrochimie, finance, commerce et tourisme",
     description:
       "Puissance économique du système saturnien, Titan s'est développé autour de l'exploitation des hydrocarbures et de grandes entreprises industrielles. Son immense métropole futuriste rassemble quartiers luxueux, centres financiers, zones commerciales et populations ouvrières. Le rêve titanesque attire de nombreux migrants, mais l'accès à la citoyenneté reste sélectif et les inégalités sociales importantes. Titan possède ses propres forces armées et entretient d'excellentes relations commerciales avec Ganymède.",
   },
@@ -254,7 +242,7 @@ export const locations = {
   enceladus: {
     name: "Encelade",
     sectorId: 4,
-    image: "",
+    image: "/planets/Encelade.webp",
     imageArrival: "",
     type: "Satellite naturel de Saturne",
     population: 12_000,
@@ -263,8 +251,7 @@ export const locations = {
     atmosphere: "Exosphère ténue, vapeur d'eau",
     politics:
       "Territoire sous administration titanienne, accueillant des établissements scientifiques étrangers",
-    activity:
-      "Recherche biologique, exploration océanique et tourisme de luxe",
+    activity: "Recherche biologique, exploration océanique et tourisme de luxe",
     description:
       "Sous son épaisse croûte glacée, Encelade possède un océan abritant une faune extraterrestre bioluminescente. Des bases scientifiques internationales étudient cet écosystème exceptionnel. La lune est également célèbre pour ses expéditions touristiques sous-glaciaires à bord de grands sous-marins de luxe. Ces voyages permettent d'observer des créatures lumineuses dans les profondeurs obscures de l'océan.",
   },
@@ -272,15 +259,14 @@ export const locations = {
   rhea: {
     name: "Rhéa",
     sectorId: 4,
-    image: "",
+    image: "/planets/Rhéa.webp",
     imageArrival: "",
     type: "Satellite naturel de Saturne",
     population: 300_000,
     gravity: 0.027,
     temperature: -174,
     atmosphere: "Exosphère extrêmement ténue",
-    politics:
-      "Territoire industriel sous administration titanienne",
+    politics: "Territoire industriel sous administration titanienne",
     activity:
       "Industrie lourde, construction spatiale, manufacture et ingénierie",
     description:
@@ -290,15 +276,14 @@ export const locations = {
   dione: {
     name: "Dioné",
     sectorId: 4,
-    image: "",
+    image: "/planets/Dione.webp",
     imageArrival: "",
     type: "Satellite naturel de Saturne",
     population: 100_000,
     gravity: 0.023,
     temperature: -186,
     atmosphere: "Exosphère extrêmement ténue",
-    politics:
-      "Colonie agricole et scientifique étroitement liée à Titan",
+    politics: "Colonie agricole et scientifique étroitement liée à Titan",
     activity:
       "Agriculture sous serre, production alimentaire, exploitation de glace et recherche",
     description:
@@ -308,7 +293,7 @@ export const locations = {
   iapetus: {
     name: "Japet",
     sectorId: 4,
-    image: "",
+    image: "/planets/Japet.webp",
     imageArrival: "",
     type: "Satellite naturel de Saturne",
     population: 5_000,
@@ -328,7 +313,7 @@ export const locations = {
   titania: {
     name: "Titania",
     sectorId: 5,
-    image: "",
+    image: "/planets/Titania.webp",
     imageArrival: "",
     type: "Satellite naturel d'Uranus",
     population: "Indéfinie",
@@ -346,7 +331,7 @@ export const locations = {
   oberon: {
     name: "Obéron",
     sectorId: 5,
-    image: "",
+    image: "/planets/Oberon.webp",
     imageArrival: "",
     type: "Satellite naturel d'Uranus",
     population: "Indéfinie",
@@ -355,8 +340,7 @@ export const locations = {
     atmosphere: "Quasi inexistante",
     politics:
       "Colonies minières et militaires sous juridictions étrangères distinctes",
-    activity:
-      "Extraction minière, défense, surveillance et logistique",
+    activity: "Extraction minière, défense, surveillance et logistique",
     description:
       "Situé à la périphérie du système uranien, Obéron accueille des installations minières isolées et des avant-postes militaires appartenant à différentes puissances. Son éloignement complique les approvisionnements et les déplacements. La présence de forces étrangères et d'intérêts économiques concurrents entretient un climat de méfiance politique.",
   },
@@ -364,7 +348,7 @@ export const locations = {
   ariel: {
     name: "Ariel",
     sectorId: 5,
-    image: "",
+    image: "/planets/Ariel.webp",
     imageArrival: "",
     type: "Satellite naturel d'Uranus",
     population: "Indéfinie",
@@ -382,7 +366,7 @@ export const locations = {
   umbriel: {
     name: "Umbriel",
     sectorId: 5,
-    image: "",
+    image: "/planets/Umbriel.webp",
     imageArrival: "",
     type: "Satellite naturel d'Uranus",
     population: "Indéfinie",
@@ -391,8 +375,7 @@ export const locations = {
     atmosphere: "Quasi inexistante",
     politics:
       "Colonies industrielles sous contrôle de puissances et de sociétés étrangères",
-    activity:
-      "Exploitation minière, industrie et traitement des ressources",
+    activity: "Exploitation minière, industrie et traitement des ressources",
     description:
       "Umbriel accueille principalement des colonies industrielles et minières implantées dans un environnement particulièrement hostile. Certaines installations appartiennent à de grandes entreprises qui contrôlent une partie importante de la vie économique locale. Les conditions de travail, la dépendance aux ravitaillements et les revendications des habitants alimentent les tensions sociales.",
   },
@@ -400,7 +383,7 @@ export const locations = {
   miranda: {
     name: "Miranda",
     sectorId: 5,
-    image: "",
+    image: "/planets/Miranda.webp",
     imageArrival: "",
     type: "Satellite naturel d'Uranus",
     population: "Indéfinie",
@@ -409,20 +392,13 @@ export const locations = {
     atmosphere: "Quasi inexistante",
     politics:
       "Petites colonies scientifiques et avant-postes sous administrations diverses",
-    activity:
-      "Recherche géologique, exploration et tourisme spécialisé",
+    activity: "Recherche géologique, exploration et tourisme spécialisé",
     description:
       "Miranda possède des paysages exceptionnels, marqués par d'immenses falaises et des formations géologiques spectaculaires. Elle accueille de petites colonies scientifiques et des installations d'exploration. Son relief attire également un tourisme spécialisé, malgré l'isolement de ses établissements et les contraintes de sécurité.",
   },
-
 } as const;
 
-
-
-
-
 export const travelDurations = {
-
   // SECTEUR 1 — SYSTÈME INTÉRIEUR
   mercury: {
     venus: 35,
@@ -985,8 +961,6 @@ export const travelDurations = {
     umbriel: 6,
   },
 } as const;
-
-
 
 export type LocationId = keyof typeof locations;
 
