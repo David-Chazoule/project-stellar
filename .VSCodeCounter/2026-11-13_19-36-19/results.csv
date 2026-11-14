@@ -1,0 +1,105 @@
+"filename", "language", "SCSS", "TypeScript JSX", "TypeScript", "PostCSS", "comment", "blank", "total"
+"c:\Users\dchaz\Desktop\project-stellar\src\app\globals.css", "PostCSS", 0, 0, 0, 37, 0, 8, 45
+"c:\Users\dchaz\Desktop\project-stellar\src\app\layout.tsx", "TypeScript JSX", 0, 32, 0, 0, 0, 7, 39
+"c:\Users\dchaz\Desktop\project-stellar\src\app\page.module.css", "PostCSS", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\dchaz\Desktop\project-stellar\src\app\page.tsx", "TypeScript JSX", 0, 10, 0, 0, 0, 3, 13
+"c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\Dashboard.tsx", "TypeScript JSX", 0, 70, 0, 0, 0, 15, 85
+"c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\GameLayout.tsx", "TypeScript JSX", 0, 109, 0, 0, 0, 12, 121
+"c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\dashboard.scss", "SCSS", 79, 0, 0, 0, 0, 10, 89
+"c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\gamelayout.scss", "SCSS", 15, 0, 0, 0, 0, 3, 18
+"c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\Button.tsx", "TypeScript JSX", 0, 14, 0, 0, 0, 3, 17
+"c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\SystemLogs.tsx", "TypeScript JSX", 0, 44, 0, 0, 0, 13, 57
+"c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\_button.scss", "SCSS", 22, 0, 0, 0, 0, 5, 27
+"c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\_systemLogs.scss", "SCSS", 15, 0, 0, 0, 0, 3, 18
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\Crew.tsx", "TypeScript JSX", 0, 16, 0, 0, 0, 5, 21
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\CrewCard.tsx", "TypeScript JSX", 0, 44, 0, 0, 0, 5, 49
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\crew.scss", "SCSS", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\crewCard.scss", "SCSS", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\MissionDetailCard.tsx", "TypeScript JSX", 0, 68, 0, 0, 1, 7, 76
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\MissionSelectionCard.tsx", "TypeScript JSX", 0, 19, 0, 0, 0, 8, 27
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\MissionsSelection.tsx", "TypeScript JSX", 0, 169, 0, 0, 0, 18, 187
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\PlanetSelection.tsx", "TypeScript JSX", 0, 84, 0, 0, 0, 12, 96
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\_missionDetailCard.scss", "SCSS", 147, 0, 0, 0, 0, 12, 159
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\_planetSelection.scss", "SCSS", 191, 0, 0, 0, 7, 34, 232
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\missionSelection.scss", "SCSS", 216, 0, 0, 0, 24, 45, 285
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\missionSelectionCard.scss", "SCSS", 42, 0, 0, 0, 0, 7, 49
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\TravelArrival.tsx", "TypeScript JSX", 0, 46, 0, 0, 0, 8, 54
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\TravelFlow.tsx", "TypeScript JSX", 0, 57, 0, 0, 0, 14, 71
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\TravelPage.tsx", "TypeScript JSX", 0, 137, 0, 0, 0, 20, 157
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\_travelArrival.scss", "SCSS", 13, 0, 0, 0, 0, 3, 16
+"c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\_travelPage.scss", "SCSS", 185, 0, 0, 0, 0, 28, 213
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\EventsFlow.tsx", "TypeScript JSX", 0, 36, 0, 0, 0, 7, 43
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\EventsLife.tsx", "TypeScript JSX", 0, 306, 0, 0, 0, 35, 341
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\_eventsLife.scss", "SCSS", 90, 0, 0, 0, 0, 13, 103
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\-captainEventsResult.scss", "SCSS", 29, 0, 0, 0, 0, 4, 33
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\CaptainEventsFlow.tsx", "TypeScript JSX", 0, 76, 0, 0, 0, 11, 87
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\CaptainEventsIntro.tsx", "TypeScript JSX", 0, 56, 0, 0, 0, 13, 69
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\CaptainEventsResult.tsx", "TypeScript JSX", 0, 72, 0, 0, 0, 12, 84
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\_captainEventsFlow.scss", "SCSS", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\_captainEventsIntro.scss", "SCSS", 51, 0, 0, 0, 0, 5, 56
+"c:\Users\dchaz\Desktop\project-stellar\src\components\header\Header.tsx", "TypeScript JSX", 0, 5, 0, 0, 0, 3, 8
+"c:\Users\dchaz\Desktop\project-stellar\src\components\header\_header.scss", "SCSS", 5, 0, 0, 0, 0, 1, 6
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionConclusion.tsx", "TypeScript JSX", 0, 92, 0, 0, 0, 14, 106
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionFlow.tsx", "TypeScript JSX", 0, 69, 0, 0, 0, 12, 81
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionProgression.tsx", "TypeScript JSX", 0, 53, 0, 0, 0, 10, 63
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionSetup.tsx", "TypeScript JSX", 0, 181, 0, 0, 0, 23, 204
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\_autoMissionConclusion.scss", "SCSS", 0, 0, 0, 0, 0, 1, 1
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\_autoMissionFlow.scss", "SCSS", 7, 0, 0, 0, 0, 1, 8
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\autoMissionSetup.scss", "SCSS", 88, 0, 0, 0, 0, 11, 99
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\missionCrewSelection\MissionCrewSelectionCard.tsx", "TypeScript JSX", 0, 101, 0, 0, 0, 6, 107
+"c:\Users\dchaz\Desktop\project-stellar\src\components\missions\missionCrewSelection\_missionCrewSelectionCard.scss", "SCSS", 144, 0, 0, 0, 17, 33, 194
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\CaptainSelection.tsx", "TypeScript JSX", 0, 110, 0, 0, 0, 15, 125
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\CharacterSelectionCard.tsx", "TypeScript JSX", 0, 94, 0, 0, 0, 11, 105
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\CrewSelection.tsx", "TypeScript JSX", 0, 106, 0, 0, 0, 17, 123
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\GetShipName.tsx", "TypeScript JSX", 0, 42, 0, 0, 0, 6, 48
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\IntroductionStar.tsx", "TypeScript JSX", 0, 31, 0, 0, 0, 8, 39
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\StartGame.tsx", "TypeScript JSX", 0, 16, 0, 0, 0, 5, 21
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\StartGameFlow.tsx", "TypeScript JSX", 0, 88, 0, 0, 0, 13, 101
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\Welcome.tsx", "TypeScript JSX", 0, 46, 0, 0, 0, 5, 51
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_captainSelection.scss", "SCSS", 187, 0, 0, 0, 0, 24, 211
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_characterSelectionCard.scss", "SCSS", 163, 0, 0, 0, 0, 29, 192
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_crewSelection.scss", "SCSS", 97, 0, 0, 0, 0, 15, 112
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_getShipName.scss", "SCSS", 33, 0, 0, 0, 0, 8, 41
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_introductionStar.scss", "SCSS", 25, 0, 0, 0, 0, 3, 28
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_starGame.scss", "SCSS", 14, 0, 0, 0, 0, 2, 16
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_starGameFlow.scss", "SCSS", 8, 0, 0, 0, 0, 1, 9
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_welcome.scss", "SCSS", 26, 0, 0, 0, 0, 3, 29
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\CaptainSpeechFlow.tsx", "TypeScript JSX", 0, 54, 0, 0, 0, 8, 62
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\SpeechChoice.tsx", "TypeScript JSX", 0, 48, 0, 0, 0, 8, 56
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\SpeechPrep.tsx", "TypeScript JSX", 0, 65, 0, 0, 0, 6, 71
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\SpeechResult.tsx", "TypeScript JSX", 0, 69, 0, 0, 0, 15, 84
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\_SpeechChoice.scss", "SCSS", 52, 0, 0, 0, 0, 4, 56
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\_speechPrep.scss", "SCSS", 66, 0, 0, 0, 0, 6, 72
+"c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\_speechResult.scss", "SCSS", 30, 0, 0, 0, 0, 4, 34
+"c:\Users\dchaz\Desktop\project-stellar\src\data\character.ts", "TypeScript", 0, 0, 478, 0, 0, 16, 494
+"c:\Users\dchaz\Desktop\project-stellar\src\data\events\captainEvents\captainEvents.ts", "TypeScript", 0, 0, 297, 0, 0, 5, 302
+"c:\Users\dchaz\Desktop\project-stellar\src\data\events\lifeEvents\lifeEvents.ts", "TypeScript", 0, 0, 148, 0, 0, 11, 159
+"c:\Users\dchaz\Desktop\project-stellar\src\data\gameState.ts", "TypeScript", 0, 0, 10, 0, 0, 2, 12
+"c:\Users\dchaz\Desktop\project-stellar\src\data\labels\skillLabels.ts", "TypeScript", 0, 0, 13, 0, 0, 0, 13
+"c:\Users\dchaz\Desktop\project-stellar\src\data\labels\specialtyLabels.ts", "TypeScript", 0, 0, 10, 0, 0, 2, 12
+"c:\Users\dchaz\Desktop\project-stellar\src\data\locations.ts", "TypeScript", 0, 0, 245, 0, 2, 28, 275
+"c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\ceres\contracts01.ts", "TypeScript", 0, 0, 177, 0, 0, 18, 195
+"c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\earth\contracts01.ts", "TypeScript", 0, 0, 143, 0, 0, 11, 154
+"c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\index.ts", "TypeScript", 0, 0, 11, 0, 0, 2, 13
+"c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\mars\contracts01.ts", "TypeScript", 0, 0, 151, 0, 0, 12, 163
+"c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\moon\contracts01.ts", "TypeScript", 0, 0, 179, 0, 0, 17, 196
+"c:\Users\dchaz\Desktop\project-stellar\src\data\missions\captainspeech.ts", "TypeScript", 0, 0, 114, 0, 0, 19, 133
+"c:\Users\dchaz\Desktop\project-stellar\src\data\ship.ts", "TypeScript", 0, 0, 5, 0, 0, 2, 7
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\automission\resolveAutoMission.ts", "TypeScript", 0, 0, 21, 0, 0, 8, 29
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\characters\getAptitudeLevel.ts", "TypeScript", 0, 0, 25, 0, 0, 9, 34
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\characters\getGeneralLevel.ts", "TypeScript", 0, 0, 26, 0, 0, 8, 34
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\characters\specialtySkillMap.ts", "TypeScript", 0, 0, 31, 0, 0, 8, 39
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\missionSelection\getAvailableMissions.ts", "TypeScript", 0, 0, 15, 0, 0, 3, 18
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\resolvers\aptitudeAverage.ts", "TypeScript", 0, 0, 10, 0, 0, 3, 13
+"c:\Users\dchaz\Desktop\project-stellar\src\logic\travel\getTravelDuration.ts", "TypeScript", 0, 0, 21, 0, 0, 10, 31
+"c:\Users\dchaz\Desktop\project-stellar\src\styles\_index.scss", "SCSS", 33, 0, 0, 0, 0, 1, 34
+"c:\Users\dchaz\Desktop\project-stellar\src\styles\_start-panel.scss", "SCSS", 13, 0, 0, 0, 0, 3, 16
+"c:\Users\dchaz\Desktop\project-stellar\src\types\CaptainSpeech.ts", "TypeScript", 0, 0, 18, 0, 0, 4, 22
+"c:\Users\dchaz\Desktop\project-stellar\src\types\Ship.ts", "TypeScript", 0, 0, 4, 0, 0, 2, 6
+"c:\Users\dchaz\Desktop\project-stellar\src\types\autoMissions.ts", "TypeScript", 0, 0, 67, 0, 0, 16, 83
+"c:\Users\dchaz\Desktop\project-stellar\src\types\captainEvent.ts", "TypeScript", 0, 0, 20, 0, 0, 2, 22
+"c:\Users\dchaz\Desktop\project-stellar\src\types\character.ts", "TypeScript", 0, 0, 45, 0, 0, 6, 51
+"c:\Users\dchaz\Desktop\project-stellar\src\types\gameState.ts", "TypeScript", 0, 0, 11, 0, 0, 3, 14
+"c:\Users\dchaz\Desktop\project-stellar\src\types\lifeEvent.ts", "TypeScript", 0, 0, 17, 0, 0, 5, 22
+"c:\Users\dchaz\Desktop\project-stellar\src\utils\gameDate.ts", "TypeScript", 0, 0, 14, 0, 0, 4, 18
+"Total", "-", 2086, 2735, 2326, 37, 51, 983, 8218

@@ -1,0 +1,171 @@
+Date : 2026-11-13 19:36:19
+Directory : c:\Users\dchaz\Desktop\project-stellar\src
+Total : 103 files,  7184 codes, 51 comments, 983 blanks, all 8218 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         38 |      2,735 |          1 |        413 |      3,149 |
+| TypeScript     |         29 |      2,326 |          2 |        236 |      2,564 |
+| SCSS           |         34 |      2,086 |         48 |        325 |      2,459 |
+| PostCSS        |          2 |         37 |          0 |          9 |         46 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                               | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                  |        103 |      7,184 |         51 |        983 |      8,218 |
+| app                                                                                                                |          4 |         79 |          0 |         19 |         98 |
+| components                                                                                                         |         68 |      4,733 |         49 |        724 |      5,506 |
+| components\GameLayout                                                                                              |          4 |        273 |          0 |         40 |        313 |
+| components\Ui                                                                                                      |          4 |         95 |          0 |         24 |        119 |
+| components\actions                                                                                                 |         17 |      1,434 |         32 |        228 |      1,694 |
+| components\actions\crew                                                                                            |          4 |         60 |          0 |         12 |         72 |
+| components\actions\missionSelection                                                                                |          8 |        936 |         32 |        143 |      1,111 |
+| components\actions\travel                                                                                          |          5 |        438 |          0 |         73 |        511 |
+| components\events                                                                                                  |          9 |        716 |          0 |        101 |        817 |
+| components\events (Files)                                                                                          |          3 |        432 |          0 |         55 |        487 |
+| components\events\captainEvents                                                                                    |          6 |        284 |          0 |         46 |        330 |
+| components\header                                                                                                  |          2 |         10 |          0 |          4 |         14 |
+| components\missions                                                                                                |          9 |        735 |         17 |        111 |        863 |
+| components\missions\autoMissions                                                                                   |          7 |        490 |          0 |         72 |        562 |
+| components\missions\missionCrewSelection                                                                           |          2 |        245 |         17 |         39 |        301 |
+| components\starGame                                                                                                |         23 |      1,470 |          0 |        216 |      1,686 |
+| components\starGame (Files)                                                                                        |         16 |      1,086 |          0 |        165 |      1,251 |
+| components\starGame\captainSpeech                                                                                  |          7 |        384 |          0 |         51 |        435 |
+| data                                                                                                               |         14 |      1,981 |          2 |        145 |      2,128 |
+| data (Files)                                                                                                       |          4 |        738 |          2 |         48 |        788 |
+| data\events                                                                                                        |          2 |        445 |          0 |         16 |        461 |
+| data\events\captainEvents                                                                                          |          1 |        297 |          0 |          5 |        302 |
+| data\events\lifeEvents                                                                                             |          1 |        148 |          0 |         11 |        159 |
+| data\labels                                                                                                        |          2 |         23 |          0 |          2 |         25 |
+| data\missions                                                                                                      |          6 |        775 |          0 |         79 |        854 |
+| data\missions (Files)                                                                                              |          1 |        114 |          0 |         19 |        133 |
+| data\missions\automissions                                                                                         |          5 |        661 |          0 |         60 |        721 |
+| data\missions\automissions (Files)                                                                                 |          1 |         11 |          0 |          2 |         13 |
+| data\missions\automissions\ceres                                                                                   |          1 |        177 |          0 |         18 |        195 |
+| data\missions\automissions\earth                                                                                   |          1 |        143 |          0 |         11 |        154 |
+| data\missions\automissions\mars                                                                                    |          1 |        151 |          0 |         12 |        163 |
+| data\missions\automissions\moon                                                                                    |          1 |        179 |          0 |         17 |        196 |
+| logic                                                                                                              |          7 |        149 |          0 |         49 |        198 |
+| logic\automission                                                                                                  |          1 |         21 |          0 |          8 |         29 |
+| logic\characters                                                                                                   |          3 |         82 |          0 |         25 |        107 |
+| logic\missionSelection                                                                                             |          1 |         15 |          0 |          3 |         18 |
+| logic\resolvers                                                                                                    |          1 |         10 |          0 |          3 |         13 |
+| logic\travel                                                                                                       |          1 |         21 |          0 |         10 |         31 |
+| styles                                                                                                             |          2 |         46 |          0 |          4 |         50 |
+| types                                                                                                              |          7 |        182 |          0 |         38 |        220 |
+| utils                                                                                                              |          1 |         14 |          0 |          4 |         18 |
++--------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                           | language       | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Users\dchaz\Desktop\project-stellar\src\app\globals.css                                                         | PostCSS        |         37 |          0 |          8 |         45 |
+| c:\Users\dchaz\Desktop\project-stellar\src\app\layout.tsx                                                          | TypeScript JSX |         32 |          0 |          7 |         39 |
+| c:\Users\dchaz\Desktop\project-stellar\src\app\page.module.css                                                     | PostCSS        |          0 |          0 |          1 |          1 |
+| c:\Users\dchaz\Desktop\project-stellar\src\app\page.tsx                                                            | TypeScript JSX |         10 |          0 |          3 |         13 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\Dashboard.tsx                                     | TypeScript JSX |         70 |          0 |         15 |         85 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\GameLayout.tsx                                    | TypeScript JSX |        109 |          0 |         12 |        121 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\dashboard.scss                                    | SCSS           |         79 |          0 |         10 |         89 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\GameLayout\gamelayout.scss                                   | SCSS           |         15 |          0 |          3 |         18 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\Button.tsx                                                | TypeScript JSX |         14 |          0 |          3 |         17 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\SystemLogs.tsx                                            | TypeScript JSX |         44 |          0 |         13 |         57 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\_button.scss                                              | SCSS           |         22 |          0 |          5 |         27 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\Ui\_systemLogs.scss                                          | SCSS           |         15 |          0 |          3 |         18 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\Crew.tsx                                        | TypeScript JSX |         16 |          0 |          5 |         21 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\CrewCard.tsx                                    | TypeScript JSX |         44 |          0 |          5 |         49 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\crew.scss                                       | SCSS           |          0 |          0 |          1 |          1 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\crew\crewCard.scss                                   | SCSS           |          0 |          0 |          1 |          1 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\MissionDetailCard.tsx               | TypeScript JSX |         68 |          1 |          7 |         76 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\MissionSelectionCard.tsx            | TypeScript JSX |         19 |          0 |          8 |         27 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\MissionsSelection.tsx               | TypeScript JSX |        169 |          0 |         18 |        187 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\PlanetSelection.tsx                 | TypeScript JSX |         84 |          0 |         12 |         96 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\_missionDetailCard.scss             | SCSS           |        147 |          0 |         12 |        159 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\_planetSelection.scss               | SCSS           |        191 |          7 |         34 |        232 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\missionSelection.scss               | SCSS           |        216 |         24 |         45 |        285 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\missionSelection\missionSelectionCard.scss           | SCSS           |         42 |          0 |          7 |         49 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\TravelArrival.tsx                             | TypeScript JSX |         46 |          0 |          8 |         54 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\TravelFlow.tsx                                | TypeScript JSX |         57 |          0 |         14 |         71 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\TravelPage.tsx                                | TypeScript JSX |        137 |          0 |         20 |        157 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\_travelArrival.scss                           | SCSS           |         13 |          0 |          3 |         16 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\actions\travel\_travelPage.scss                              | SCSS           |        185 |          0 |         28 |        213 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\EventsFlow.tsx                                        | TypeScript JSX |         36 |          0 |          7 |         43 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\EventsLife.tsx                                        | TypeScript JSX |        306 |          0 |         35 |        341 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\_eventsLife.scss                                      | SCSS           |         90 |          0 |         13 |        103 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\-captainEventsResult.scss               | SCSS           |         29 |          0 |          4 |         33 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\CaptainEventsFlow.tsx                   | TypeScript JSX |         76 |          0 |         11 |         87 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\CaptainEventsIntro.tsx                  | TypeScript JSX |         56 |          0 |         13 |         69 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\CaptainEventsResult.tsx                 | TypeScript JSX |         72 |          0 |         12 |         84 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\_captainEventsFlow.scss                 | SCSS           |          0 |          0 |          1 |          1 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\events\captainEvents\_captainEventsIntro.scss                | SCSS           |         51 |          0 |          5 |         56 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\header\Header.tsx                                            | TypeScript JSX |          5 |          0 |          3 |          8 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\header\_header.scss                                          | SCSS           |          5 |          0 |          1 |          6 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionConclusion.tsx              | TypeScript JSX |         92 |          0 |         14 |        106 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionFlow.tsx                    | TypeScript JSX |         69 |          0 |         12 |         81 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionProgression.tsx             | TypeScript JSX |         53 |          0 |         10 |         63 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\AutoMissionSetup.tsx                   | TypeScript JSX |        181 |          0 |         23 |        204 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\_autoMissionConclusion.scss            | SCSS           |          0 |          0 |          1 |          1 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\_autoMissionFlow.scss                  | SCSS           |          7 |          0 |          1 |          8 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\autoMissions\autoMissionSetup.scss                  | SCSS           |         88 |          0 |         11 |         99 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\missionCrewSelection\MissionCrewSelectionCard.tsx   | TypeScript JSX |        101 |          0 |          6 |        107 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\missions\missionCrewSelection\_missionCrewSelectionCard.scss | SCSS           |        144 |         17 |         33 |        194 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\CaptainSelection.tsx                                | TypeScript JSX |        110 |          0 |         15 |        125 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\CharacterSelectionCard.tsx                          | TypeScript JSX |         94 |          0 |         11 |        105 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\CrewSelection.tsx                                   | TypeScript JSX |        106 |          0 |         17 |        123 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\GetShipName.tsx                                     | TypeScript JSX |         42 |          0 |          6 |         48 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\IntroductionStar.tsx                                | TypeScript JSX |         31 |          0 |          8 |         39 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\StartGame.tsx                                       | TypeScript JSX |         16 |          0 |          5 |         21 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\StartGameFlow.tsx                                   | TypeScript JSX |         88 |          0 |         13 |        101 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\Welcome.tsx                                         | TypeScript JSX |         46 |          0 |          5 |         51 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_captainSelection.scss                              | SCSS           |        187 |          0 |         24 |        211 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_characterSelectionCard.scss                        | SCSS           |        163 |          0 |         29 |        192 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_crewSelection.scss                                 | SCSS           |         97 |          0 |         15 |        112 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_getShipName.scss                                   | SCSS           |         33 |          0 |          8 |         41 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_introductionStar.scss                              | SCSS           |         25 |          0 |          3 |         28 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_starGame.scss                                      | SCSS           |         14 |          0 |          2 |         16 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_starGameFlow.scss                                  | SCSS           |          8 |          0 |          1 |          9 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\_welcome.scss                                       | SCSS           |         26 |          0 |          3 |         29 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\CaptainSpeechFlow.tsx                 | TypeScript JSX |         54 |          0 |          8 |         62 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\SpeechChoice.tsx                      | TypeScript JSX |         48 |          0 |          8 |         56 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\SpeechPrep.tsx                        | TypeScript JSX |         65 |          0 |          6 |         71 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\SpeechResult.tsx                      | TypeScript JSX |         69 |          0 |         15 |         84 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\_SpeechChoice.scss                    | SCSS           |         52 |          0 |          4 |         56 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\_speechPrep.scss                      | SCSS           |         66 |          0 |          6 |         72 |
+| c:\Users\dchaz\Desktop\project-stellar\src\components\starGame\captainSpeech\_speechResult.scss                    | SCSS           |         30 |          0 |          4 |         34 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\character.ts                                                       | TypeScript     |        478 |          0 |         16 |        494 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\events\captainEvents\captainEvents.ts                              | TypeScript     |        297 |          0 |          5 |        302 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\events\lifeEvents\lifeEvents.ts                                    | TypeScript     |        148 |          0 |         11 |        159 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\gameState.ts                                                       | TypeScript     |         10 |          0 |          2 |         12 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\labels\skillLabels.ts                                              | TypeScript     |         13 |          0 |          0 |         13 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\labels\specialtyLabels.ts                                          | TypeScript     |         10 |          0 |          2 |         12 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\locations.ts                                                       | TypeScript     |        245 |          2 |         28 |        275 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\ceres\contracts01.ts                         | TypeScript     |        177 |          0 |         18 |        195 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\earth\contracts01.ts                         | TypeScript     |        143 |          0 |         11 |        154 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\index.ts                                     | TypeScript     |         11 |          0 |          2 |         13 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\mars\contracts01.ts                          | TypeScript     |        151 |          0 |         12 |        163 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\missions\automissions\moon\contracts01.ts                          | TypeScript     |        179 |          0 |         17 |        196 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\missions\captainspeech.ts                                          | TypeScript     |        114 |          0 |         19 |        133 |
+| c:\Users\dchaz\Desktop\project-stellar\src\data\ship.ts                                                            | TypeScript     |          5 |          0 |          2 |          7 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\automission\resolveAutoMission.ts                                 | TypeScript     |         21 |          0 |          8 |         29 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\characters\getAptitudeLevel.ts                                    | TypeScript     |         25 |          0 |          9 |         34 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\characters\getGeneralLevel.ts                                     | TypeScript     |         26 |          0 |          8 |         34 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\characters\specialtySkillMap.ts                                   | TypeScript     |         31 |          0 |          8 |         39 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\missionSelection\getAvailableMissions.ts                          | TypeScript     |         15 |          0 |          3 |         18 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\resolvers\aptitudeAverage.ts                                      | TypeScript     |         10 |          0 |          3 |         13 |
+| c:\Users\dchaz\Desktop\project-stellar\src\logic\travel\getTravelDuration.ts                                       | TypeScript     |         21 |          0 |         10 |         31 |
+| c:\Users\dchaz\Desktop\project-stellar\src\styles\_index.scss                                                      | SCSS           |         33 |          0 |          1 |         34 |
+| c:\Users\dchaz\Desktop\project-stellar\src\styles\_start-panel.scss                                                | SCSS           |         13 |          0 |          3 |         16 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\CaptainSpeech.ts                                                  | TypeScript     |         18 |          0 |          4 |         22 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\Ship.ts                                                           | TypeScript     |          4 |          0 |          2 |          6 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\autoMissions.ts                                                   | TypeScript     |         67 |          0 |         16 |         83 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\captainEvent.ts                                                   | TypeScript     |         20 |          0 |          2 |         22 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\character.ts                                                      | TypeScript     |         45 |          0 |          6 |         51 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\gameState.ts                                                      | TypeScript     |         11 |          0 |          3 |         14 |
+| c:\Users\dchaz\Desktop\project-stellar\src\types\lifeEvent.ts                                                      | TypeScript     |         17 |          0 |          5 |         22 |
+| c:\Users\dchaz\Desktop\project-stellar\src\utils\gameDate.ts                                                       | TypeScript     |         14 |          0 |          4 |         18 |
+| Total                                                                                                              |                |      7,184 |         51 |        983 |      8,218 |
++--------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
