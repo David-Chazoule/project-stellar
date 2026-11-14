@@ -154,8 +154,8 @@ export const locations = {
   ganymede: {
     name: "Ganymède",
     sectorId: 3,
-    image: "",
-    imageArrival: "/planets/Ganymède.webp",
+    image: "/planets/Ganymède.webp",
+    imageArrival: "",
     type: "Satellite naturel de Jupiter",
     population: 2_500_000,
     gravity: 0.146,
@@ -967,6 +967,17 @@ export type LocationId = keyof typeof locations;
 export const sectorNames: Record<number, string> = {
   1: "Planètes intérieures",
   2: "Ceinture d'astéroïdes",
-  3: "Jupiter et Saturne",
-  4: "Système solaire externe",
+  3: "Système jovien",
+  4: "Système saturnien",
+  5: "Système uranien",
 };
+
+export const sectorEntryPoints: Partial<Record<SectorId, LocationId>> = {
+  1: "earth",
+  2: "ceres",
+  3: "ganymede",
+  4: "titan",
+  5: "titania",
+};
+
+export type SectorId = 1 | 2 | 3 | 4 | 5;

@@ -4,6 +4,7 @@ import { locations, sectorNames, type LocationId } from "@/data/locations";
 import type { GameState } from "@/types/gameState";
 import SystemLogs from "@/components/Ui/SystemLogs";
 import { Rocket, MapPin } from "lucide-react";
+import type { SectorId } from "@/data/locations";
 
 type Props = {
   onShowMissions: (locationId: LocationId | null) => void;
@@ -11,6 +12,8 @@ type Props = {
   setSelectedPlanetId: React.Dispatch<React.SetStateAction<LocationId | null>>;
   gameState: GameState;
   onTravel: (destinationId: LocationId) => void;
+  selectedSectorId: SectorId;
+  currentSectorId: SectorId;
 };
 
 function PlanetSelection({
@@ -19,19 +22,19 @@ function PlanetSelection({
   setSelectedPlanetId,
   gameState,
   onTravel,
+  selectedSectorId,
+  currentSectorId,
 }: Props) {
-  const currentSectorId = 1;
-
   const sectorPlanets = Object.entries(locations).filter(
-    ([, location]) => location.sectorId === currentSectorId,
+    ([, location]) => location.sectorId === selectedSectorId,
   );
 
   return (
     <div className="planet-selection">
       <div className="sector-info">
         <div className="sector-heading">
-          <h2>SECTEUR {currentSectorId}</h2>
-          <p>{sectorNames[currentSectorId].toUpperCase()}</p>
+          <h2>SECTEUR {selectedSectorId}</h2>
+          <p>{sectorNames[selectedSectorId].toUpperCase()}</p>
         </div>
         <div className="system-logs-box">
           <SystemLogs />
@@ -57,7 +60,8 @@ function PlanetSelection({
             <div className="localisation-box">
               {id === gameState.currentLocationId ? (
                 <MapPin className="current-location-icon" size={19} />
-              ) : selectedPlanetId === id ? (
+              ) : selectedPlanetId === id &&
+                selectedSectorId === currentSectorId ? (
                 <button
                   type="button"
                   className="travel-icon"
@@ -77,7 +81,15 @@ function PlanetSelection({
               <img
                 src={location.image}
                 alt={location.name}
+                style={{
+                  cursor:
+                    selectedSectorId === currentSectorId
+                      ? "pointer"
+                      : "default",
+                }}
                 onClick={() => {
+                  if (selectedSectorId !== currentSectorId) return;
+
                   setSelectedPlanetId(id as LocationId);
                   onShowMissions(id as LocationId);
                 }}

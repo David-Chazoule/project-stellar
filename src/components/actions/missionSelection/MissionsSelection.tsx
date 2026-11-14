@@ -9,6 +9,7 @@ import type { Character } from "@/types/character";
 import type { AutoMission } from "@/types/autoMissions";
 import type { GameState } from "@/types/gameState";
 import type { LocationId } from "@/data/locations";
+import type { SectorId } from "@/data/locations";
 import MissionDetailCard from "./MissionDetailCard";
 import { ClipboardList, Wrench, Orbit, SatelliteDish } from "lucide-react";
 import SectorSelection from "./SectorSelection";
@@ -30,6 +31,9 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
   const [selectedPlanetId, setSelectedPlanetId] = useState<LocationId | null>(
     null,
   );
+  const [selectedSectorId, setSelectedSectorId] = useState<SectorId>(
+    locations[gameState.currentLocationId].sectorId,
+  );
   const [activeTab, setActiveTab] = useState<"missions" | "services">(
     "missions",
   );
@@ -43,10 +47,16 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
     setPreviewMission(null);
   };
 
+  const currentSectorId = locations[gameState.currentLocationId].sectorId;
+
+  const isCurrentSector = selectedSectorId === currentSectorId;
+
   const availableMissions = getAvailableMissions(
     autoMissions,
     gameState.completedMissions,
-  ).filter((mission) => mission.locationId === missionsLocationId);
+  ).filter(
+    (mission) => isCurrentSector && mission.locationId === missionsLocationId,
+  );
 
   return (
     <div className="start-panel">
@@ -73,10 +83,17 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
           setSelectedPlanetId={setSelectedPlanetId}
           gameState={gameState}
           onTravel={onTravel}
+          selectedSectorId={selectedSectorId}
+          currentSectorId={currentSectorId}
         />
       </div>
       <div>
-        <SectorSelection/>
+        <SectorSelection
+          selectedSectorId={selectedSectorId}
+          setSelectedSectorId={setSelectedSectorId}
+          currentSectorId={currentSectorId}
+          onTravel={onTravel}
+        />
       </div>
 
       <div className="missionSelect-header">
@@ -138,7 +155,7 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
             </p>
           </div>
 
-          {missionsLocationId !== null ? (
+          {missionsLocationId !== null && isCurrentSector ? (
             <div className="missionsSelection-fiche">
               {availableMissions.map((mission) => (
                 <MissionSelectionCard
