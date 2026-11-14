@@ -87,7 +87,7 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
           currentSectorId={currentSectorId}
         />
       </div>
-      <div>
+      <div className="planetSelection-container" >
         <SectorSelection
           selectedSectorId={selectedSectorId}
           setSelectedSectorId={setSelectedSectorId}

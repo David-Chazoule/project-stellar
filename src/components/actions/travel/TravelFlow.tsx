@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState } from "react";
 
-import TravelPage from "./TravelPage"
-import TravelArrival from "./TravelArrival"
+import TravelPage from "./TravelPage";
+import TravelArrival from "./TravelArrival";
 
-import { getTravelDuration, getTravelOrbit } from "@/logic/travel/getTravelDuration"
-import type { LocationId } from "@/data/locations"
-import type { GameState } from "@/types/gameState"
-
+import {
+  getTravelDuration,
+  getTravelOrbit,
+} from "@/logic/travel/getTravelDuration";
+import type { LocationId } from "@/data/locations";
+import type { GameState } from "@/types/gameState";
 
 type Props = {
   destinationId: LocationId;
@@ -21,19 +23,15 @@ function TravelFlow({
   setGameState,
   onComplete,
 }: Props) {
+  const [step, setStep] = useState<"departure" | "arrival">("departure");
 
- const [step, setStep] = useState<"departure" | "arrival">("departure");
-
-   const [departureId] = useState<LocationId>(
-    gameState.currentLocationId
-  );
+  const [departureId] = useState<LocationId>(gameState.currentLocationId);
 
   const [travelDuration] = useState(() =>
     getTravelOrbit(
-      getTravelDuration(gameState.currentLocationId, destinationId)
-    )
+      getTravelDuration(gameState.currentLocationId, destinationId),
+    ),
   );
-
 
   return (
     <div className="travelFlow-container">
@@ -65,7 +63,6 @@ function TravelFlow({
       )}
     </div>
   );
-  
 }
 
-export default TravelFlow
+export default TravelFlow;
