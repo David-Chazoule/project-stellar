@@ -5,11 +5,111 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+
+    h2 {
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .planet-detail-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #1a232c;
+      border: 3px solid #2a3944;
+      padding: 6px 0;
+      border-radius: 10px;
+
+      .planet-detail {
+        display: flex;
+
+        .img-detail {
+          img {
+            width: 240px;
+          }
+        }
+
+        .detail {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-left: 10px;
+
+          .detail-title {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #2a3944;
+
+            h3 {
+              font-size: 30px;
+              color: white;
+            }
+
+            display: flex;
+            p {
+              font-size: 12px;
+            }
+          }
+
+          .detail-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            p {
+              font-size: 14px;
+              color: white;
+            }
+          }
+        }
+      }
+      .info-container {
+        display: flex;
+        width: 100%;
+
+        .description-box {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          p {
+            color: white;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .fact-box {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    border: 3px solid #4fc3ff;
+    border-radius: 10px;
   }
 
   .arrival-info {
-  }
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #2a3944;
+    padding: 10px;
+    border-radius: 10px;
 
-  .button-box {
+    .arrival-info-label {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      p {
+        color: white;
+      }
+
+      .finish {
+        color: #69c8a6;
+      }
+    }
   }
 }

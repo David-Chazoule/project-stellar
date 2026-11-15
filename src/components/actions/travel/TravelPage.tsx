@@ -3,7 +3,7 @@ import {
   sectorNames,
   type LocationId,
 } from "../../../data/locations";
-import Button from "../../Ui/Button";
+
 import { getTravelDuration } from "@/logic/travel/getTravelDuration";
 import { START_DATE, addDays, formatDate } from "@/utils/gameDate";
 import { GameState } from "../../../types/gameState";
@@ -63,6 +63,10 @@ function TravelPage({
   return (
     <div className="start-panel">
       <div className="header"></div>
+
+      <div>
+        <img src="/travel/travel.webp" alt="travel-page"/>
+       </div>
 
       <div className="title-travelPage">
         <h1>PLAN DE VOL</h1>
