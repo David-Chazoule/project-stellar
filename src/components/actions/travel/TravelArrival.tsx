@@ -8,6 +8,7 @@ type Props = {
   onContinue: () => void;
   travelDuration: number;
   gameState: GameState;
+  isMissionTravel: boolean | null;
 };
 
 function TravelArrival({
@@ -15,6 +16,7 @@ function TravelArrival({
   onContinue,
   travelDuration,
   gameState,
+  isMissionTravel,
 }: Props) {
   const destination = locations[destinationId];
 
@@ -58,12 +60,6 @@ function TravelArrival({
               </div>
             </div>
           </div>
-          <div className="info-container">
-            {/* <span className="description-box">
-          <p>Description:</p>
-           <p className="description">{destination.description}</p>
-        </span> */}
-          </div>
         </div>
       </div>
 
@@ -86,7 +82,9 @@ function TravelArrival({
       </div>
 
       <div className="button-box">
-        <Button onClick={onContinue}>ACCÉDER AU BRIEFING</Button>
+        <Button onClick={onContinue}>
+          {isMissionTravel ? "ACCÉDER AU BRIEFING" : "RETOUR AU TERMINAL"}
+        </Button>
       </div>
     </div>
   );

@@ -76,6 +76,7 @@ function GameLayout() {
               destinationId={travelDestinationId}
               gameState={gameState}
               setGameState={setGameState}
+              isMissionTravel={selectedMission !== null}
               onComplete={() => {
                 setTravelDestinationId(null);
               }}

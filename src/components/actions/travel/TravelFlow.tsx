@@ -14,6 +14,7 @@ type Props = {
   destinationId: LocationId;
   gameState: GameState;
   setGameState: React.Dispatch<React.SetStateAction<GameState>>;
+  isMissionTravel:boolean | null;
   onComplete: () => void;
 };
 
@@ -21,6 +22,7 @@ function TravelFlow({
   destinationId,
   gameState,
   setGameState,
+  isMissionTravel,
   onComplete,
 }: Props) {
   const [step, setStep] = useState<"departure" | "arrival">("departure");
@@ -59,6 +61,7 @@ function TravelFlow({
           travelDuration={travelDuration}
           gameState={gameState}
           onContinue={onComplete}
+          isMissionTravel={isMissionTravel}
         />
       )}
     </div>
