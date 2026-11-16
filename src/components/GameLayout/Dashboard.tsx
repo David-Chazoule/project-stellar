@@ -76,6 +76,15 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
             <p className="dashboard-value">{currentLocation.name}</p>
           </div>
         </div>
+        <div className="crew-debug">
+  {crew.map((member) => (
+    <div className="crew-debug-row" key={member.id}>
+      <span>{member.name}</span>
+      <span>❤️ {member.states.moral}</span>
+      <span>🧠 {member.states.fatigue}</span>
+    </div>
+  ))}
+</div>
       </div>
     </div>
   );
