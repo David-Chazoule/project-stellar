@@ -76,10 +76,13 @@ function GameLayout() {
               destinationId={travelDestinationId}
               gameState={gameState}
               setGameState={setGameState}
+              crew={crew}
+              setCrew={setCrew}
               isMissionTravel={selectedMission !== null}
               onComplete={() => {
                 setTravelDestinationId(null);
               }}
+              captainId={captainId}
             />
           )}
 
@@ -109,7 +112,8 @@ function GameLayout() {
               crew={crew}
               setCrew={setCrew}
               captainId={captainId}
-              setView={setView}
+              eventType="both"
+              onComplete={() => setView("missions")}
             />
           )}
         </section>

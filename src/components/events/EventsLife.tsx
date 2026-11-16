@@ -19,10 +19,10 @@ import Button from "../Ui/Button";
 type Props = {
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
-  setView: React.Dispatch<React.SetStateAction<View>>;
+  onComplete: () => void;
 };
 
-function EventsLife({ crew, setCrew, setView }: Props) {
+function EventsLife({ crew, setCrew, onComplete }: Props) {
   function shuffleLifeEvent(lifeEvents: LifeEvent[]) {
     const copyLifeEvent = [...lifeEvents];
     for (let i = copyLifeEvent.length - 1; i > 0; i--) {
@@ -172,7 +172,7 @@ function EventsLife({ crew, setCrew, setView }: Props) {
       });
     });
 
-    setView("missions");
+    onComplete();
   }
 
   function getEffectClass(type: "moral" | "fatigue" | "skill", value: number) {

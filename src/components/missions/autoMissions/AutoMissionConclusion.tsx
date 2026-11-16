@@ -20,7 +20,6 @@ type Props = {
   setMissionCrew: React.Dispatch<React.SetStateAction<SelectedCrewMember[]>>;
   crew: Character[];
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
-  setView: React.Dispatch<React.SetStateAction<View>>;
 };
 
 function AutoMissionConclusion({
@@ -32,7 +31,6 @@ function AutoMissionConclusion({
   setMissionCrew,
   crew,
   setCrew,
-  setView,
 }: Props) {
   const conclusion = mission.results[result];
 
@@ -47,7 +45,6 @@ function AutoMissionConclusion({
 
     handleStateCrew();
     setSelectedMission(null);
-    setView("event");
   }
 
   function handleStateCrew() {

@@ -2,6 +2,7 @@ import Button from "@/components/Ui/Button";
 import { locations, sectorNames, type LocationId } from "@/data/locations";
 import type { GameState } from "@/types/gameState";
 import { START_DATE, addDays, formatDate } from "@/utils/gameDate";
+import { Database } from "lucide-react";
 
 type Props = {
   destinationId: LocationId;
@@ -52,7 +53,10 @@ function TravelArrival({
 
                 <p>Gravité naturelle: {destination.gravity} g</p>
 
-                <p>Population: {destination.population}</p>
+                <p>
+                  Population: {destination.population.toLocaleString("fr-FR")}{" "}
+                  habitants
+                </p>
 
                 <p>Politique: {destination.politics}</p>
 
@@ -64,7 +68,14 @@ function TravelArrival({
       </div>
 
       <div className="fact-box">
-        <p>fact</p>
+        <div className="fact-header">
+          <Database size={14} color="#4fc3ff" />
+          <p>ARCHIVES LOCALES — {destination.name}</p>
+        </div>
+        <div className="fact-text"></div>
+        <div className="fact-footer">
+          <p>CIVILISATION · 2300</p>
+        </div>
       </div>
 
       <div className="arrival-info">

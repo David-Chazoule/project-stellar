@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 import AutoMissionSetup from "./AutoMissionSetup";
 import AutoMissionProgression from "./AutoMissionProgression";
 import AutoMissionConclusion from "./AutoMissionConclusion";
@@ -12,7 +11,6 @@ import type { AutoMissionStep } from "@/types/autoMissions";
 import type { Character } from "@/types/character";
 import type { GameState } from "@/types/gameState";
 import type { View } from "@/types/gameState";
-
 
 type Props = {
   mission: AutoMission;
@@ -37,13 +35,10 @@ function AutoMissionFlow({
   const [missionCrew, setMissionCrew] = useState<SelectedCrewMember[]>([]);
   const [missionResult, setMissionResult] =
     useState<AutoMissionResultType | null>(null);
- 
 
   return (
     <div className="autoMissionFlow-container">
-      
-
-      { step === "setup" && (
+      {step === "setup" && (
         <AutoMissionSetup
           mission={mission}
           setStep={setStep}
@@ -70,7 +65,6 @@ function AutoMissionFlow({
           setMissionCrew={setMissionCrew}
           crew={crew}
           setCrew={setCrew}
-          setView={setView}
         />
       )}
     </div>
