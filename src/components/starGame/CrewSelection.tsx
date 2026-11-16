@@ -84,7 +84,10 @@ function CrewSelection({
               <div className="crewSelect-categoryHeader">
                 <span>SYS.CREW_{specialty.toUpperCase()}</span>
                 <h3>{specialtyLabels[specialty].toUpperCase()}</h3>
-                <span>PERSONNEL DATABASE</span>
+                
+                <span><span className="numberCrewline">
+                  <UserGroup size={16} color={crew.length === 8?"#69c8a6":"#4fc3ff"} /> <p className={crew.length === 8 ?"completed":""}>{crew.length}/8</p>
+                </span> PERSONNEL DATABASE</span>
               </div>
 
               <div className="crewSelect-cards">

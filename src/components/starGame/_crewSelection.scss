@@ -85,18 +85,30 @@
       margin-top: 20px;
       padding-top: 12px;
       span {
+        display: flex;
+        align-items: center;
         color: #4fc3ff;
         font-size: 11px;
         letter-spacing: 1px;
         margin: 0 6px;
         font-family: monospace;
+        .numberCrewline{
+        display: flex;
+        align-items: center;
+       p{color: #4fc3ff;} 
+       .completed{
+        color: #69c8a6;
+       }
       }
+      }
+
+      
 
       h3 {
         color: #4fc3ff;
         font-family: monospace;
         letter-spacing: 1px;
-        font-size: 16px;
+        font-size: 18px;
       }
     }
 
