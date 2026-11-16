@@ -75,8 +75,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
             <p className="dashBoard-label">LOCALISATION</p>
             <p className="dashboard-value">{currentLocation.name}</p>
           </div>
-        </div>
-        <div className="crew-debug">
+          <div className="crew-debug">
   {crew.map((member) => (
     <div className="crew-debug-row" key={member.id}>
       <span>{member.name}</span>
@@ -85,6 +84,8 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
     </div>
   ))}
 </div>
+        </div>
+        
       </div>
     </div>
   );

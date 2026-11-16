@@ -3,6 +3,7 @@ import type { Character } from "@/types/character";
 import type { CaptainEventsChoices } from "@/types/captainEvent";
 import Button from "@/components/Ui/Button";
 
+import { ShieldCheck } from "lucide-react";
 type Props = {
   setCrew: React.Dispatch<React.SetStateAction<Character[]>>;
   captainId: number | null;
@@ -60,6 +61,10 @@ function CaptainEventsResult({
 
   return (
     <div className="start-panel">
+      <div className="header-captain">
+        <ShieldCheck size={40} color="green" />
+        <h1> ÉVÉNEMENT DU CAPITAINE</h1>
+      </div>
       <div className="captain-result-text">
         <p>
           {selectedChoice && naming(participants, selectedChoice.result.text)}

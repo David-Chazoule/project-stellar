@@ -4,6 +4,7 @@ export const soloCaptainEvents: captainEvents[] = [
   {
     id: "solo-captain-001",
     image: "",
+    titre:"Insomnie",
     intro:
       "Vous tournez dans votre lit depuis plusieurs heures. Impossible de trouver le sommeil. Le vaisseau est silencieux, et la plupart des membres de l'équipage dorment.",
     participantCount: 0,
@@ -43,6 +44,7 @@ export const soloCaptainEvents: captainEvents[] = [
   {
     id: "solo-captain-002",
     image: "",
+    titre:"Sentiment de nostalgie",
     intro: `Vous êtes dans votre chambre, à contempler l'immensité de l'espace par la fenêtre. Vous êtes soudainement envahi par un sentiment de nostalgie…
 
 Votre enfance, votre adolescence, vos premiers pas dans la vie adulte, vos sorties entre amis, vos jeux du dimanche après-midi, votre famille… Tout vous revient subitement en mémoire.
@@ -88,6 +90,7 @@ Vous ressentez le besoin d'apaiser cette nostalgie.`,
   {
     id: "solo-captain-003",
     image: "",
+    titre:"Un compagnon bruillant",
     intro: `« Bulubulu !! Bululu !!! »
 
 Ce petit son aigu est le cri de votre animal virtuel, un compagnon de route qui vit dans votre chambre et vous aide à garder le moral.
@@ -143,6 +146,7 @@ export const crewCaptainEvents: captainEvents[] = [
   {
     id: "crew-captain-001",
     image: "",
+    titre:"À vous de jouer",
     intro: `La journée a été éprouvante. Après avoir dégusté un repas préparé par {0}, vous vous lancez dans une partie d'échecs avec {1}.
     Bien installé dans votre fauteuil, vous êtes concentré sur la partie depuis plusieurs heures et souhaitez absolument remporter la victoire.
 D'un mouvement de doigt dans le vide, vous commandez vos pièces blanches, qui se déplacent automatiquement sur l'échiquier holographique.
@@ -199,6 +203,7 @@ Vous quittez votre fauteuil et décidez de retourner dans votre chambre, satisfa
   {
     id: "crew-captain-002",
     image: "",
+    titre:"Une histoire de bulle",
     intro: `Alors que vous marchez dans les couloirs de votre vaisseau, vous croisez {0} et {1} en plein débat devant la salle de sport, au lieu d'être à leur poste.
 
 Vous vous arrêtez pour écouter cette conversation particulièrement animée.
@@ -259,6 +264,7 @@ Et puis allez bosser, bordel ! On a beaucoup de boulot ! »
   {
     id: "crew-captain-003",
     image: "",
+    titre:"Des bruits étranges",
     intro: `Alors que vous vous dirigez vers la salle commune, vous entendez des claquements réguliers derrière la porte de la salle des drones.
 
 Le bruit est fort, répétitif et particulièrement insistant. Votre esprit quelque peu tordu vous laisse imaginer que deux personnes s'adonnent à des jeux pour adultes.`,

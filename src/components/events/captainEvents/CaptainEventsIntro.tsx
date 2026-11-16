@@ -2,6 +2,8 @@ import type { CaptainEventStep } from "../EventsFlow";
 import type { Character } from "@/types/character";
 import type { captainEvents, CaptainEventsChoices } from "@/types/captainEvent";
 
+import { ShieldAlert } from "lucide-react";
+
 type Props = {
   selectedEvent: captainEvents;
   participants: Character[];
@@ -41,6 +43,12 @@ function CaptainEventsIntro({
 
   return (
     <div className="start-panel">
+      <div className="header-captain">
+        <ShieldAlert size={40} color="orange" />
+        <h1> ÉVÉNEMENT DU CAPITAINE</h1>
+      </div>
+
+      <h2>{selectedEvent.titre}</h2>
       <div className="captain-event-img"></div>
       <div className="intro-captain-text">
         <p>{naming(participants, selectedEvent.intro)}</p>

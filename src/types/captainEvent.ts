@@ -15,6 +15,7 @@ export type CaptainEventsChoices = {
 export type captainEvents = {
   id: string;
   image: string;
+  titre: string;
   intro: string;
   participantCount: number;
   choices: CaptainEventsChoices[];
