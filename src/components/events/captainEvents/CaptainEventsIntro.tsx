@@ -44,7 +44,7 @@ function CaptainEventsIntro({
   return (
     <div className="start-panel">
       <div className="header-captain">
-        <ShieldAlert size={40} color="orange" />
+        <ShieldAlert size={30} color="orange" />
         <h1> ÉVÉNEMENT DU CAPITAINE</h1>
       </div>
 

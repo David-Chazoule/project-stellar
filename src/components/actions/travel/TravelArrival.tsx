@@ -2,7 +2,7 @@ import Button from "@/components/Ui/Button";
 import { locations, sectorNames, type LocationId } from "@/data/locations";
 import type { GameState } from "@/types/gameState";
 import { START_DATE, addDays, formatDate } from "@/utils/gameDate";
-import { Database } from "lucide-react";
+import { Database, Orbit } from "lucide-react";
 
 type Props = {
   destinationId: LocationId;
@@ -26,6 +26,21 @@ function TravelArrival({
   return (
     <div className="start-panel">
       <div className="arrival-container">
+        <div className="arrival-header">
+          <div className="navigate-up">
+            {" "}
+            <span className="icon">
+              <Orbit size={20} color="#4fc3ff" />
+              <h2>SYSTÈME DE NAVIGATION</h2>
+            </span>{" "}
+            <p className="online">ONLINE</p>{" "}
+          </div>
+
+          <div className="navigate-down">
+            <p>NAV_CORE / SECTOR_0{destination.sectorId}</p>
+            <p>ASTRO-NAV // SYS v2.3.0</p>
+          </div>
+        </div>
         <h2>DESTINATION ATTEINTE</h2>
 
         <div className="planet-detail-container">

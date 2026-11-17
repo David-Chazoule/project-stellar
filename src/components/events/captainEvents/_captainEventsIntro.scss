@@ -2,15 +2,15 @@
   .header-captain {
     display: flex;
     align-items: center;
-
     width: 100%;
-    background-color: #4fc3ff;
+    border-bottom: 1px solid #354b5b;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
     h1 {
-      color: white;
+      color: #4fc3ff;
       margin: 0 0 0 6px;
+      font-size: 20px;
     }
   }
 

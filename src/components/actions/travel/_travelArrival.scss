@@ -6,6 +6,71 @@
     align-items: center;
     justify-content: center;
 
+    .arrival-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 12px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #354b5b;
+      font-family: monospace;
+      letter-spacing: 1px;
+
+      .navigate-up {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+          display: flex;
+          align-items: center;
+
+          h2 {
+            margin: 0 0 0 6px;
+            color: white;
+          }
+        }
+      }
+
+      .navigate-down,
+      .terminal-info {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      p {
+        color: #4fc3ff;
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin: 0 6px;
+      }
+
+      .online {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 6px;
+        margin: 0 6px;
+        border: 1px solid #4fc3ff;
+        border-radius: 10px;
+        background-color: #4cb1e472;
+        color: #4fc3ff;
+        font-size: 11px;
+        font-weight: 900;
+        animation: waiting-blink 2.5s ease-in-out infinite;
+      }
+    }
+
+    .navigate-down {
+      justify-content: space-between;
+    }
+
     h2 {
       margin-bottom: 20px;
       color: white;
@@ -71,38 +136,36 @@
   .fact-box {
     display: flex;
     flex-direction: column;
-        width: 100%;
+    width: 100%;
     border: 3px solid #4fc3ff;
     border-radius: 10px;
 
-    .fact-header{
+    .fact-header {
       display: flex;
       width: 100%;
       margin-left: 6px;
       align-items: center;
-      p{
-        color:#4fc3ff;
+      p {
+        color: #4fc3ff;
         font-family: monospace;
-  letter-spacing: 1px;
-  font-size: 12px;
+        letter-spacing: 1px;
+        font-size: 12px;
       }
     }
 
-    .fact-text{
+    .fact-text {
       width: 100%;
       height: 80px;
-
     }
 
-    .fact-footer{
+    .fact-footer {
       display: flex;
       width: 100%;
-      p{
+      p {
         font-size: 12px;
-       color: #6b7780;
+        color: #6b7780;
       }
     }
-
   }
 
   .arrival-info {
@@ -120,7 +183,6 @@
 
       p {
         color: white;
-
       }
 
       .finish {
