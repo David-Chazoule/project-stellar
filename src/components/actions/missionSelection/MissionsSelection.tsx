@@ -72,7 +72,7 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
         </div>
 
         <div className="navigate-down">
-          <p>NAV_CORE / SECTOR_01</p>
+          <p>NAV_CORE / SECTOR_{currentSectorId}</p>
           <p>ASTRO-NAV // SYS v2.3.0</p>
         </div>
       </div>
