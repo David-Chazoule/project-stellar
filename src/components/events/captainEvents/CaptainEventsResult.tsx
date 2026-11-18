@@ -48,7 +48,7 @@ function CaptainEventsResult({
             states: {
               ...character.states,
               moral: character.states.moral + (effects?.moral ?? 0),
-              fatigue: character.states.fatigue + (effects?.fatigue ?? 0),
+              fatigue: character.states.forme + (effects?.forme ?? 0),
             },
           };
         }

@@ -4,14 +4,14 @@ export const ceresContracts01: AutoMission[] = [
   {
     id: "auto-ceres-cargo-audit",
     locationId: "ceres",
-     sectorId: 2,
+    sectorId: 2,
     repeatable: true,
     duration: 2,
     minReputation: 0,
     resolver: { type: "aptitudeAverage" },
 
     card: {
-      type:"Mission auto",
+      type: "Mission auto",
       title: "Audit d'un cargo commercial",
       shortDescription: "Contrôle technique d'un cargo avant son départ.",
       location: "Cérès - Port commercial principal",
@@ -49,7 +49,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3200,
           reputation: -5,
           moral: -4,
-          fatigue: 10,
+          forme: -10,
         },
       },
 
@@ -63,7 +63,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3200,
           reputation: -2,
           moral: -2,
-          fatigue: 8,
+          forme: -8,
         },
       },
 
@@ -76,7 +76,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3200,
           reputation: 2,
           moral: 2,
-          fatigue: 5,
+          forme: -5,
         },
       },
 
@@ -90,7 +90,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3200,
           reputation: 4,
           moral: 4,
-          fatigue: 4,
+          forme: -4,
         },
       },
     },
@@ -99,7 +99,7 @@ export const ceresContracts01: AutoMission[] = [
   {
     id: "auto-ceres-warehouse-security",
     locationId: "ceres",
-  
+
     sectorId: 2,
     repeatable: true,
     duration: 3,
@@ -107,7 +107,7 @@ export const ceresContracts01: AutoMission[] = [
     resolver: { type: "aptitudeAverage" },
 
     card: {
-      type:"Mission auto",
+      type: "Mission auto",
       title: "Surveillance d'un entrepôt portuaire",
       shortDescription:
         "Mission de surveillance temporaire dans une zone commerciale de Cérès.",
@@ -144,7 +144,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3500,
           reputation: -5,
           moral: -5,
-          fatigue: 12,
+          forme: -12,
         },
       },
 
@@ -158,7 +158,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3500,
           reputation: -2,
           moral: -2,
-          fatigue: 10,
+          forme: -10,
         },
       },
 
@@ -172,7 +172,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3500,
           reputation: 2,
           moral: 2,
-          fatigue: 7,
+          forme: -7,
         },
       },
 
@@ -186,7 +186,7 @@ export const ceresContracts01: AutoMission[] = [
           credits: 3500,
           reputation: 5,
           moral: 4,
-          fatigue: 6,
+          forme: -6,
         },
       },
     },

@@ -29,7 +29,7 @@ export type Skills = {
 
 export type States = {
   moral: number;
-  fatigue: number;
+  forme: number;
 };
 
 export type Character = {

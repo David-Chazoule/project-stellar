@@ -50,7 +50,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 4000,
           reputation: -5,
           moral: -5,
-          fatigue: 12,
+          forme: -12,
         },
       },
 
@@ -63,7 +63,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 4000,
           reputation: -2,
           moral: -2,
-          fatigue: 8,
+          forme: -8,
         },
       },
 
@@ -76,7 +76,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 4000,
           reputation: 2,
           moral: 2,
-          fatigue: 6,
+          forme: -6,
         },
       },
 
@@ -89,7 +89,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 4000,
           reputation: 4,
           moral: 4,
-          fatigue: 4,
+          forme: -4,
         },
       },
     },
@@ -146,7 +146,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 2800,
           reputation: -5,
           moral: -4,
-          fatigue: 9,
+          forme: -9,
         },
       },
 
@@ -160,7 +160,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 2800,
           reputation: -2,
           moral: -2,
-          fatigue: 7,
+          forme: -7,
         },
       },
 
@@ -173,7 +173,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 2800,
           reputation: 2,
           moral: 2,
-          fatigue: 5,
+          forme: -5,
         },
       },
 
@@ -187,7 +187,7 @@ export const moonContracts01: AutoMission[] = [
           credits: 2800,
           reputation: 4,
           moral: 4,
-          fatigue: 4,
+          forme: -4,
         },
       },
     },

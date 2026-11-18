@@ -42,7 +42,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 2500,
           reputation: -5,
           moral: -4,
-          fatigue: 4,
+          forme: -4,
         },
       },
       failure: {
@@ -52,7 +52,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 2500,
           reputation: -3,
           moral: -2,
-          fatigue: 4,
+          forme: -4,
         },
       },
       success: {
@@ -62,7 +62,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 2500,
           reputation: 3,
           moral: 2,
-          fatigue: 2,
+          forme: -2,
         },
       },
       criticalSuccess: {
@@ -72,7 +72,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 2500,
           reputation: 5,
           moral: 3,
-          fatigue: 2,
+          forme: -2,
         },
       },
     },
@@ -115,7 +115,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 3500,
           reputation: -5,
           moral: -4,
-          fatigue: 4,
+          forme: -4,
         },
       },
       failure: {
@@ -125,7 +125,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 3500,
           reputation: -3,
           moral: -2,
-          fatigue: 4,
+          forme: -4,
         },
       },
       success: {
@@ -135,7 +135,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 3500,
           reputation: 3,
           moral: 2,
-          fatigue: 2,
+          forme: -2,
         },
       },
       criticalSuccess: {
@@ -145,7 +145,7 @@ export const earthContracts01: AutoMission[] = [
           credits: 3500,
           reputation: 5,
           moral: 3,
-          fatigue: 2,
+          forme: -2,
         },
       },
     },

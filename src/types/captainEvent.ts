@@ -7,7 +7,7 @@ export type CaptainEventsChoices = {
     text: string;
     effects: {
       moral?: number;
-      fatigue?: number;
+      forme?: number;
     };
   };
 };

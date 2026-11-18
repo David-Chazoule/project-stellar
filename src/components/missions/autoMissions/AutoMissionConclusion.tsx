@@ -60,7 +60,7 @@ function AutoMissionConclusion({
             states: {
               ...character.states,
               fatigue:
-                character.states.fatigue + (conclusion.effects.fatigue ?? 0),
+                character.states.forme + (conclusion.effects.forme ?? 0),
               moral: character.states.moral + (conclusion.effects.moral ?? 0),
             },
           };

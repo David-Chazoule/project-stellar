@@ -4,7 +4,7 @@ export const soloCaptainEvents: captainEvents[] = [
   {
     id: "solo-captain-001",
     image: "",
-    titre:"Insomnie",
+    titre: "Insomnie",
     intro:
       "Vous tournez dans votre lit depuis plusieurs heures. Impossible de trouver le sommeil. Le vaisseau est silencieux, et la plupart des membres de l'équipage dorment.",
     participantCount: 0,
@@ -16,7 +16,7 @@ export const soloCaptainEvents: captainEvents[] = [
         result: {
           img: "",
           text: "Vous terminez une séance intensive et retournez dormir.",
-          effects: { fatigue: 5 },
+          effects: { forme: -5 },
         },
       },
       {
@@ -36,7 +36,7 @@ export const soloCaptainEvents: captainEvents[] = [
         result: {
           img: "",
           text: "Vous retournez dans votre bureau pour consulter les prochains contrats.",
-          effects: { fatigue: 10 },
+          effects: { forme: -10 },
         },
       },
     ],
@@ -44,7 +44,7 @@ export const soloCaptainEvents: captainEvents[] = [
   {
     id: "solo-captain-002",
     image: "",
-    titre:"Sentiment de nostalgie",
+    titre: "Sentiment de nostalgie",
     intro: `Vous êtes dans votre chambre, à contempler l'immensité de l'espace par la fenêtre. Vous êtes soudainement envahi par un sentiment de nostalgie…
 
 Votre enfance, votre adolescence, vos premiers pas dans la vie adulte, vos sorties entre amis, vos jeux du dimanche après-midi, votre famille… Tout vous revient subitement en mémoire.
@@ -60,7 +60,7 @@ Vous ressentez le besoin d'apaiser cette nostalgie.`,
           img: "",
           text: `Vous passez un bon moment à regarder les photos une par une, en vous remémorant d'innombrables souvenirs. 
           Certains moments de votre vie étaient incroyables, d'autres beaucoup moins. Vous oscillez entre tristesse et joie.`,
-          effects: { moral: 2, fatigue: 1 },
+          effects: { moral: 2, forme: -1 },
         },
       },
       {
@@ -71,7 +71,7 @@ Vous ressentez le besoin d'apaiser cette nostalgie.`,
           img: "",
           text: `Vous revivez plusieurs moments particulièrement agréables de votre enfance : ces jeux dans la rue avec les copains, ces instants de tendresse avec vos parents… 
           Tout semble presque réel, mais certains détails échappent à l'IA, rendant ces souvenirs artificiels parfois étranges.`,
-          effects: { fatigue: 5, moral: 4 },
+          effects: { moral: 4, forme: -5 },
         },
       },
       {
@@ -82,7 +82,7 @@ Vous ressentez le besoin d'apaiser cette nostalgie.`,
           img: "",
           text: `Vous publiez une photo de vous enfant, accompagnée d'une légende évoquant le bonheur de la vie d'avant. 
           Vous espérez attirer un peu d'attention et apaiser ce sentiment de nostalgie.`,
-          effects: { moral: -1, fatigue: 1 },
+          effects: { moral: -1, forme: -1 },
         },
       },
     ],
@@ -90,7 +90,7 @@ Vous ressentez le besoin d'apaiser cette nostalgie.`,
   {
     id: "solo-captain-003",
     image: "",
-    titre:"Un compagnon bruillant",
+    titre: "Un compagnon bruillant",
     intro: `« Bulubulu !! Bululu !!! »
 
 Ce petit son aigu est le cri de votre animal virtuel, un compagnon de route qui vit dans votre chambre et vous aide à garder le moral.
@@ -110,7 +110,7 @@ Alors que vous travaillez sur l'organisation de votre prochaine mission, votre p
       « Félicitations ! Votre compagnon vient d'entrer dans sa phase d'adolescence virtuelle. Durant cette période, il pourra présenter des comportements imprévisibles, des sautes d'humeur et une tendance excessive à réclamer de l'attention.
 Cette phase est parfaitement normale et devrait durer entre trois et six semaines. »
 Vous décidez de jouer un peu avec lui dans l'espoir de le fatiguer.`,
-          effects: { moral: 1, fatigue: 2 },
+          effects: { moral: 1, forme: -2 },
         },
       },
       {
@@ -122,7 +122,7 @@ Vous décidez de jouer un peu avec lui dans l'espoir de le fatiguer.`,
           text: `Vous versez du « snoufguougnou » virtuel dans un bol. Votre petite créature se jette dessus, mange quelques granulés, puis finit par les jeter à travers la pièce.
 Elle vous lance un regard insolent avant de recommencer à sauter partout.
 Vous préférez retourner à votre travail en essayant tant bien que mal d'ignorer ses cris insupportables.`,
-          effects: { moral: -1, fatigue: 4 },
+          effects: { moral: -1, forme: -4 },
         },
       },
       {
@@ -135,7 +135,7 @@ Pourtant, vous vous sentez légèrement triste. Vous savez que votre compagnon n
         result: {
           img: "",
           text: "Vous passez la nuit sur les dossiers.",
-          effects: { moral: -2, fatigue: 1 },
+          effects: { moral: -2, forme: -1 },
         },
       },
     ],
@@ -146,7 +146,7 @@ export const crewCaptainEvents: captainEvents[] = [
   {
     id: "crew-captain-001",
     image: "",
-    titre:"À vous de jouer",
+    titre: "À vous de jouer",
     intro: `La journée a été éprouvante. Après avoir dégusté un repas préparé par {0}, vous vous lancez dans une partie d'échecs avec {1}.
     Bien installé dans votre fauteuil, vous êtes concentré sur la partie depuis plusieurs heures et souhaitez absolument remporter la victoire.
 D'un mouvement de doigt dans le vide, vous commandez vos pièces blanches, qui se déplacent automatiquement sur l'échiquier holographique.
@@ -167,7 +167,7 @@ D'un mouvement de votre index, votre dame se déplace automatiquement de f6 à f
 Vous remportez la victoire !
 Vous poussez un petit cri de joie et serrez la main de {1}, visiblement déçu d'avoir perdu.
 Vous vous levez de votre fauteuil et regagnez votre chambre, satisfait de cette partie d'échecs.`,
-          effects: { moral: 4, fatigue: 4 },
+          effects: { moral: 4, forme: -4 },
         },
       },
       {
@@ -181,7 +181,7 @@ Mauvaise décision ! {1} déplace sa dame de b4 vers e1, vous mettant en échec.
 Vous posez les mains sur votre visage et lâchez un « Oh putain ! ».
 {1} exulte de joie, se lève et se tapote le crâne avec son index, se vantant de son intelligence.
 Vous quittez votre fauteuil et décidez de retourner dans votre chambre, satisfait de cette partie d'échecs malgré la défaite.`,
-          effects: { moral: 2, fatigue: 4 },
+          effects: { moral: 2, forme: -4 },
         },
       },
       {
@@ -194,7 +194,7 @@ Vous quittez votre fauteuil et décidez de retourner dans votre chambre, satisfa
         Vous protégez votre première rangée contre la menace de la dame adverse. La partie continue, sans vainqueur immédiat.
         {1} pousse un petit grognement.
        Vous restez concentré, bien décidé à gagner cette partie.`,
-          effects: { moral: 2, fatigue: 6 },
+          effects: { moral: 2, forme: -6 },
         },
       },
     ],
@@ -203,7 +203,7 @@ Vous quittez votre fauteuil et décidez de retourner dans votre chambre, satisfa
   {
     id: "crew-captain-002",
     image: "",
-    titre:"Une histoire de bulle",
+    titre: "Une histoire de bulle",
     intro: `Alors que vous marchez dans les couloirs de votre vaisseau, vous croisez {0} et {1} en plein débat devant la salle de sport, au lieu d'être à leur poste.
 
 Vous vous arrêtez pour écouter cette conversation particulièrement animée.
@@ -226,7 +226,7 @@ Vous vous arrêtez pour écouter cette conversation particulièrement animée.
 Alors tirez-vous de là ! Au boulot ! »
 
 {0} et {1} repartent en grognant.`,
-          effects: { moral: 0, fatigue: 0 },
+          effects: { moral: 0, forme: 0 },
         },
       },
       {
@@ -240,7 +240,7 @@ Alors tirez-vous de là ! Au boulot ! »
 On a du boulot et pas de temps à perdre avec des débats futiles ! »
 
 {0} et {1} repartent en grognant.`,
-          effects: { moral: 0, fatigue: 0 },
+          effects: { moral: 0, forme: 0 },
         },
       },
       {
@@ -256,7 +256,7 @@ Si vous aimez boire des produits chimiques, c'est votre choix, mais l'assurance 
 Et puis allez bosser, bordel ! On a beaucoup de boulot ! »
 
 {0} et {1} repartent, visiblement très agacés.`,
-          effects: { moral: 0, fatigue: 0 },
+          effects: { moral: 0, forme: 0 },
         },
       },
     ],
@@ -264,7 +264,7 @@ Et puis allez bosser, bordel ! On a beaucoup de boulot ! »
   {
     id: "crew-captain-003",
     image: "",
-    titre:"Des bruits étranges",
+    titre: "Des bruits étranges",
     intro: `Alors que vous vous dirigez vers la salle commune, vous entendez des claquements réguliers derrière la porte de la salle des drones.
 
 Le bruit est fort, répétitif et particulièrement insistant. Votre esprit quelque peu tordu vous laisse imaginer que deux personnes s'adonnent à des jeux pour adultes.`,
@@ -281,7 +281,7 @@ Le bruit est fort, répétitif et particulièrement insistant. Votre esprit quel
 Mais votre imagination vous travaille. Le soir, dans la salle commune, vous observez tous les membres de votre équipage avec suspicion.
 
 Qui sont donc les deux gros dégueulasses qui s'amusaient dans la salle des drones ?`,
-          effects: { moral: -1, fatigue: 0 },
+          effects: { moral: -1, forme: 0 },
         },
       },
       {
@@ -297,7 +297,7 @@ Mais finalement, vous découvrez {0}, qui essaie désespérément de faire gliss
 « Tu vas rentrer, bordel !!! » hurle {0}, au bord du désespoir.
 
 Vous décidez de lui donner un coup de main pour déplacer cette caisse qui, effectivement, est particulièrement lourde.`,
-          effects: { moral: 1, fatigue: 2 },
+          effects: { moral: 1, forme: -2 },
         },
       },
     ],

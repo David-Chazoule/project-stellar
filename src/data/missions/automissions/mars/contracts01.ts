@@ -42,7 +42,7 @@ export const marsContracts01: AutoMission[] = [
           credits: 4000,
           reputation: -5,
           moral: -4,
-          fatigue: 5,
+          forme: -5,
         },
       },
       failure: {
@@ -51,7 +51,7 @@ export const marsContracts01: AutoMission[] = [
         effects: {
           credits: 5000,
           reputation: -3,
-          fatigue: 5,
+          forme: -5,
         },
       },
       success: {
@@ -61,7 +61,7 @@ export const marsContracts01: AutoMission[] = [
           credits: 10000,
           reputation: 3,
           moral: 2,
-          fatigue: 5,
+          forme: -5,
         },
       },
       criticalSuccess: {
@@ -71,7 +71,7 @@ export const marsContracts01: AutoMission[] = [
           credits: 10000,
           reputation: 5,
           moral: 3,
-          fatigue: 5,
+          forme: -5,
         },
       },
     },
@@ -125,7 +125,7 @@ export const marsContracts01: AutoMission[] = [
           credits: 0,
           reputation: -6,
           moral: -5,
-          fatigue: 6,
+          forme: -6,
         },
       },
       failure: {
@@ -134,7 +134,7 @@ export const marsContracts01: AutoMission[] = [
         effects: {
           credits: 5000,
           reputation: -4,
-          fatigue: 6,
+          forme: -6,
         },
       },
       success: {
@@ -144,7 +144,7 @@ export const marsContracts01: AutoMission[] = [
           credits: 11000,
           reputation: 3,
           moral: 2,
-          fatigue: 6,
+          forme: -6,
         },
       },
       criticalSuccess: {
@@ -154,7 +154,7 @@ export const marsContracts01: AutoMission[] = [
           credits: 11000,
           reputation: 5,
           moral: 3,
-          fatigue: 6,
+          forme: -6,
         },
       },
     },

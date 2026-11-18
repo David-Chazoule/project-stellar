@@ -1,7 +1,7 @@
 import type { Skills } from "./character";
 
 export type LifeEventEffect = {
-  fatigue?: number;
+  forme?: number;
   moral?: number;
   skills?: Partial<Skills>;
 };

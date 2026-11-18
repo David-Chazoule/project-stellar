@@ -56,7 +56,7 @@ function AutoMissionSetup({
       return;
     }
 
-    if (character.states.moral < 25 || character.states.fatigue > 85) {
+    if (character.states.moral < 25 || character.states.forme < 25) {
       return;
     }
 
@@ -164,7 +164,7 @@ function AutoMissionSetup({
                       member.aptitude !== required.aptitude,
                   );
                   const isLowMoral = character.states.moral < 25;
-                  const isHighFatigue = character.states.fatigue > 85;
+                  const isHighFatigue = character.states.forme < 25;
                   return (
                     <MissionCrewSelectionCard
                       key={character.id}

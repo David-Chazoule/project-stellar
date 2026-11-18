@@ -80,7 +80,7 @@ function Dashboard({ view, setView, crew, gameState }: Props) {
     <div className="crew-debug-row" key={member.id}>
       <span>{member.name}</span>
       <span>❤️ {member.states.moral}</span>
-      <span>🧠 {member.states.fatigue}</span>
+      <span>🧠 {member.states.forme}</span>
     </div>
   ))}
 </div>

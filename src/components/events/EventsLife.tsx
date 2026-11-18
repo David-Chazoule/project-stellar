@@ -114,11 +114,11 @@ function EventsLife({ crew, setCrew, onComplete }: Props) {
                     character.states.moral + (allCrewEffects.moral ?? 0),
                   ),
                 ),
-                fatigue: Math.min(
+                forme: Math.min(
                   100,
                   Math.max(
                     0,
-                    character.states.fatigue + (allCrewEffects.fatigue ?? 0),
+                    character.states.forme + (allCrewEffects.forme ?? 0),
                   ),
                 ),
               },
@@ -155,12 +155,9 @@ function EventsLife({ crew, setCrew, onComplete }: Props) {
                     100,
                     Math.max(0, character.states.moral + (effects?.moral ?? 0)),
                   ),
-                  fatigue: Math.min(
+                  forme: Math.min(
                     100,
-                    Math.max(
-                      0,
-                      character.states.fatigue + (effects?.fatigue ?? 0),
-                    ),
+                    Math.max(0, character.states.forme + (effects?.forme ?? 0)),
                   ),
                 },
               };
@@ -175,16 +172,16 @@ function EventsLife({ crew, setCrew, onComplete }: Props) {
     onComplete();
   }
 
-  function getEffectClass(type: "moral" | "fatigue" | "skill", value: number) {
+  function getEffectClass(type: "moral" | "forme" | "skill", value: number) {
     if (type === "moral") {
       if (value === 0) return "";
 
       return value < 0 ? "negatif" : "positif";
     }
 
-    if (type === "fatigue") {
+    if (type === "forme") {
       if (value === 0) return "";
-      return value > 0 ? "negatif" : "positif";
+      return value < 0 ? "negatif" : "positif";
     }
 
     return value < 0 ? "negatif" : "positif";
@@ -224,14 +221,14 @@ function EventsLife({ crew, setCrew, onComplete }: Props) {
                   <span>{member.name}</span>
                 </div>
               )}
-              {effect.fatigue !== undefined && (
+              {effect.forme !== undefined && (
                 <div
-                  className={`effect-card ${getEffectClass("fatigue", effect.fatigue)}`}
+                  className={`effect-card ${getEffectClass("forme", effect.forme)}`}
                 >
                   <Zap size={14} />
                   <span>
-                    {effect.fatigue > 0 ? "+" : ""}
-                    {effect.fatigue} Fatigue{" "}
+                    {effect.forme > 0 ? "+" : ""}
+                    {effect.forme} Forme{" "}
                   </span>
                   <span>
                     <Dot size={10} />
@@ -289,14 +286,14 @@ function EventsLife({ crew, setCrew, onComplete }: Props) {
               </div>
             )}
 
-            {allCrewEffects.fatigue !== undefined && (
+            {allCrewEffects.forme !== undefined && (
               <div
-                className={`effect-card ${getEffectClass("moral", allCrewEffects.fatigue)}`}
+                className={`effect-card ${getEffectClass("forme", allCrewEffects.forme)}`}
               >
                 <Zap size={14} />
                 <span>
-                  {allCrewEffects.fatigue > 0 ? "+" : ""}{" "}
-                  {allCrewEffects.fatigue} Fatigue{" "}
+                  {allCrewEffects.forme > 0 ? "+" : ""} {allCrewEffects.forme}{" "}
+                  Fatigue{" "}
                 </span>
                 <span>
                   <Dot size={10} />

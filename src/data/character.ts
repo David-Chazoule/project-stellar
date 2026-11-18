@@ -26,7 +26,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 78,
-      fatigue: 90,
+      forme: 90,
     },
   },
 
@@ -54,8 +54,8 @@ export const characters: Character[] = [
       instinct: 67,
     },
     states: {
-      moral: 16,
-      fatigue: 88,
+      moral: 22,
+      forme: 88,
     },
   },
 
@@ -85,7 +85,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 74,
-      fatigue: 27,
+      forme: 77,
     },
   },
 
@@ -111,7 +111,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 81,
-      fatigue: 15,
+      forme: 45,
     },
   },
 
@@ -137,7 +137,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 72,
-      fatigue: 31,
+      forme: 61,
     },
   },
 
@@ -166,7 +166,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 83,
-      fatigue: 24,
+      forme: 64,
     },
   },
 
@@ -192,7 +192,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 88,
-      fatigue: 20,
+      forme: 50,
     },
   },
 
@@ -221,7 +221,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 76,
-      fatigue: 29,
+      forme: 59,
     },
   },
   {
@@ -249,7 +249,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 80,
-      fatigue: 20,
+      forme: 60,
     },
   },
 
@@ -275,7 +275,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 76,
-      fatigue: 24,
+      forme: 64,
     },
   },
 
@@ -301,7 +301,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 74,
-      fatigue: 19,
+      forme: 49,
     },
   },
 
@@ -327,7 +327,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 12,
-      fatigue: 18,
+      forme: 58,
     },
   },
 
@@ -353,7 +353,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 77,
-      fatigue: 21,
+      forme: 71,
     },
   },
 
@@ -379,7 +379,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 79,
-      fatigue: 23,
+      forme: 63,
     },
   },
 
@@ -408,7 +408,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 81,
-      fatigue: 17,
+      forme: 77,
     },
   },
 
@@ -434,7 +434,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 81,
-      fatigue: 17,
+      forme: 67,
     },
   },
   {
@@ -462,7 +462,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 81,
-      fatigue: 17,
+      forme: 77,
     },
   },
   {
@@ -487,7 +487,7 @@ export const characters: Character[] = [
     },
     states: {
       moral: 81,
-      fatigue: 17,
+      forme: 47,
     },
   },
 ];

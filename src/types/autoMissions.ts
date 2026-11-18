@@ -41,7 +41,7 @@ export type AutoMissionResult = {
     credits?: number;
     reputation?: number;
     moral?: number;
-    fatigue?: number;
+    forme?: number;
   };
 };
 
