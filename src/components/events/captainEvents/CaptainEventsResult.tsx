@@ -15,9 +15,7 @@ type Props = {
 function CaptainEventsResult({
   setCrew,
   captainId,
-
   participants,
-
   setCaptainEventStep,
   selectedChoice,
 }: Props) {
@@ -47,8 +45,14 @@ function CaptainEventsResult({
             ...character,
             states: {
               ...character.states,
-              moral: character.states.moral + (effects?.moral ?? 0),
-              fatigue: character.states.forme + (effects?.forme ?? 0),
+              moral: Math.min(
+                100,
+                Math.max(0, character.states.moral + (effects?.moral ?? 0)),
+              ),
+              forme: Math.min(
+                100,
+                Math.max(0, character.states.forme + (effects?.forme ?? 0)),
+              ),
             },
           };
         }

@@ -68,4 +68,121 @@
     margin-bottom: 20px;
     color: white;
   }
+
+  .text-intro-transition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .resume-situation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .resume-travel {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      .transit-info {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        background-color: #1a232c;
+        border: 3px solid #2a3944;
+        border-radius: 10px;
+        margin: 0 5px 0 5px;
+        padding: 40px;
+        color: white;
+
+        .transit-label {
+          display: flex;
+          align-items: center;
+          color: #6b7780;
+          font-size: 14px;
+        }
+
+        .transit-days {
+          color: #6b7780;
+        }
+      }
+    }
+
+    .progression {
+      display: flex;
+      background-color: #1a232c;
+      border: 3px solid #2a3944;
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      margin-top: 10px;
+      flex-direction: column;
+
+      .progress-info {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        span {
+          p {
+            color: #6b7780;
+          }
+
+          .progress {
+            color: #4fc3ff;
+          }
+        }
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background-color: #354b5b;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .progress-fill {
+          height: 100%;
+          background-color: #4fc3ff;
+          border-radius: inherit;
+          transition: width 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .button-box {
+    display: flex;
+    width: 100%;
+
+    button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #36789a;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #245775;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #32789e;
+      }
+      p {
+        color: white;
+      }
+    }
+  }
 }
