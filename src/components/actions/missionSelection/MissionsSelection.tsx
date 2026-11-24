@@ -91,6 +91,7 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
         <SectorSelection
           selectedSectorId={selectedSectorId}
           setSelectedSectorId={setSelectedSectorId}
+          gameState={gameState}
           currentSectorId={currentSectorId}
           onTravel={onTravel}
         />

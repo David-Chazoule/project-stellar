@@ -3,6 +3,9 @@ import { SectorId, type LocationId } from "@/data/locations";
 import { sectorNames } from "@/data/locations";
 import { sectorEntryPoints } from "@/data/locations";
 import { locations } from "@/data/locations";
+import { GameState } from "@/types/gameState";
+import { getTravelDuration } from "@/logic/travel/getTravelDuration";
+
 import {
   Orbit,
   ChevronLeft,
@@ -16,6 +19,7 @@ type Props = {
   setSelectedSectorId: React.Dispatch<React.SetStateAction<SectorId>>;
   currentSectorId: SectorId;
   onTravel: (destinationId: LocationId) => void;
+  gameState: GameState;
 };
 
 function SectorSelection({
@@ -23,8 +27,13 @@ function SectorSelection({
   setSelectedSectorId,
   currentSectorId,
   onTravel,
+  gameState,
 }: Props) {
   const entryLocationId = sectorEntryPoints[selectedSectorId];
+
+  const departureId = gameState.currentLocationId;
+  const destinationId = sectorEntryPoints[selectedSectorId]!;
+  const baseDuration = getTravelDuration(departureId, destinationId);
 
   return (
     <div className="sectorSelection-container">
@@ -83,9 +92,15 @@ function SectorSelection({
                 </span>
                 <span className="entry-point">
                   Point d'entrée :{" "}
-                  {entryLocationId
-                    ? locations[entryLocationId].name
-                    : "Non défini"}
+                  <span>
+                    {" "}
+                    {entryLocationId
+                      ? locations[entryLocationId].name.toUpperCase()
+                      : "Non défini"}
+                  </span>
+                </span>
+                <span className="entry-point">
+                  Durée minimal du transit : <span>{baseDuration} jours</span>
                 </span>
               </div>
 
