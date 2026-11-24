@@ -53,7 +53,7 @@ export const foodLifeEvent: LifeEvent[] = [
     text: `{0} a cuisiné pour tout l'équipage. Malheureusement, le repas était particulièrement mal préparé. Tout l'équipage est tombé légèrement malade.`,
     result: {
       allCrew: {
-        fatigue: 2,
+        forme: -2,
         moral: -2,
       },
       participants: {
@@ -85,8 +85,8 @@ export const sportLifeEvent: LifeEvent[] = [
     text: "{0} a fait une longue séance de musculation avec {1}. Ils se sentent tous les deux courbaturés.",
     result: {
       participants: {
-        0: { moral: 2, fatigue: 2 },
-        1: { moral: 2, fatigue: 2 },
+        0: { moral: 2, forme: -2 },
+        1: { moral: 2, forme: -2 },
       },
     },
   },
@@ -98,7 +98,7 @@ export const sportLifeEvent: LifeEvent[] = [
       participants: {
         0: {
           moral: 2,
-          fatigue: 2,
+          forme: -2,
 
           skills: {
             physical: 1,
