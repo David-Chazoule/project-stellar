@@ -4,6 +4,7 @@ import PlanetSelection from "./PlanetSelection";
 import MissionSelectionCard from "./MissionSelectionCard";
 import { locations } from "@/data/locations";
 import { getAvailableMissions } from "@/logic/missionSelection/getAvailableMissions";
+import TravelCard from "../travel/TravelCard";
 
 import type { Character } from "@/types/character";
 import type { AutoMission } from "@/types/autoMissions";
@@ -38,13 +39,16 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
     "missions",
   );
 
+  const [previewTravel, setPreviewTravel] = useState<LocationId | null>(null);
+
   const handleSelectMission = (mission: AutoMission) => {
     setPreviewMission(mission);
+    setPreviewTravel(null);
   };
-
   const handleShowMissions = (locationId: LocationId | null) => {
     setMissionsLocationId(locationId);
     setPreviewMission(null);
+    setPreviewTravel(null);
   };
 
   const currentSectorId = locations[gameState.currentLocationId].sectorId;
@@ -57,6 +61,11 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
   ).filter(
     (mission) => isCurrentSector && mission.locationId === missionsLocationId,
   );
+
+  const handlePreviewTravel = (destinationId: LocationId) => {
+    setPreviewTravel(destinationId);
+    setPreviewMission(null);
+  };
 
   return (
     <div className="start-panel">
@@ -82,12 +91,12 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
           selectedPlanetId={selectedPlanetId}
           setSelectedPlanetId={setSelectedPlanetId}
           gameState={gameState}
-          onTravel={onTravel}
+          onTravel={handlePreviewTravel}
           selectedSectorId={selectedSectorId}
           currentSectorId={currentSectorId}
         />
       </div>
-      <div className="planetSelection-container" >
+      <div className="planetSelection-container">
         <SectorSelection
           selectedSectorId={selectedSectorId}
           setSelectedSectorId={setSelectedSectorId}
@@ -180,10 +189,15 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
         <div className="mission-detail">
           <div className="mission-detail-header">
             <span className="line-title"></span>
-            <h2>DETAILS DE LA MISSION</h2>
+            {previewTravel ? <h2>TRANSIT</h2> : <h2>DETAILS DE LA MISSION</h2>}
           </div>
-
-          {previewMission ? (
+          {previewTravel ? (
+            <TravelCard
+              destinationId={previewTravel}
+              currentLocationId={gameState.currentLocationId}
+              onConfirm={() => onTravel(previewTravel)}
+            />
+          ) : previewMission ? (
             <MissionDetailCard
               previewMission={previewMission}
               setSelectedMission={setSelectedMission}
@@ -191,7 +205,10 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
           ) : (
             <div className="mission-empty">
               <p>
-                &gt; AUCUNE MISSION SÉLECTIONNÉE
+                &gt;{" "}
+                {missionsLocationId
+                  ? "AUCUNE MISSION SÉLECTIONNÉE"
+                  : "AUCUNE OPÉRATION SÉLECTIONNÉE"}
                 <span className="cursor">_</span>
               </p>
               <span className="waiting">
