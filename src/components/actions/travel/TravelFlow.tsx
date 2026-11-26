@@ -14,6 +14,7 @@ import { getTravelCycleCount } from "../../../logic/getTravelCount/getTravelCoun
 import type { Character } from "@/types/character";
 import EventsFlow from "@/components/events/EventsFlow";
 import { getTravelEventType } from "../../../logic/getTravelEventType/getTravelEventType";
+import PubEvents from "@/components/events/pubEvents/PubEvents";
 
 type Props = {
   destinationId: LocationId;
@@ -37,7 +38,7 @@ function TravelFlow({
   captainId,
 }: Props) {
   const [step, setStep] = useState<
-    "departure" | "events" | "transition" | "arrival"
+    "departure"|"pub" | "events" | "transition" | "arrival"
   >("departure");
 
   const [currentCycle, setCurrentCycle] = useState(0);
@@ -89,7 +90,17 @@ function TravelFlow({
     }
   };
 
-  const handleTravelStart = () => {
+const handleTravelStart = () => {
+  if (cycleCount <= 1) {
+    setStep("pub");
+  } else {
+    setStep("events");
+  }
+};
+
+
+
+  const handlePubContinue = () => {
     if (cycleCount === 0) {
       setGameState((prev) => ({
         ...prev,
@@ -124,7 +135,7 @@ function TravelFlow({
           elapsedTravelDays={elapsedTravelDays}
           travelDuration={travelDuration}
           onContinue={() => {
-            setStep("events");
+            setStep("pub");
           }}
         />
       )}
@@ -138,6 +149,14 @@ function TravelFlow({
           isMissionTravel={isMissionTravel}
         />
       )}
+
+     {step === "pub" && (
+
+    <PubEvents onContinue={handlePubContinue}/>
+
+     )}
+
+
 
       {step === "events" && (
         <EventsFlow
