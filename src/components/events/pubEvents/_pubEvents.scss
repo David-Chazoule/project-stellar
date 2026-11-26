@@ -1,43 +1,40 @@
 .start-panel {
-  
-    .header{
-display: flex;
-width: 100%;
-align-items: center;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #354b5b;
+  .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #354b5b;
 
-.network{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  .logo-network{
+    .network {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      .logo-network {
         width: 90px;
         border: none;
       }
 
-      .network-title{
+      .network-title {
         display: flex;
         flex-direction: column;
 
-        h2{
+        h2 {
           color: white;
           margin: 0 0 4px 6px;
         }
 
-        p{
-          margin:0 0 2px 6px ;
+        p {
+          margin: 0 0 2px 6px;
         }
       }
-}
-      
     }
+  }
   .img-pub {
     display: flex;
     width: 100%;
     justify-content: center;
-
 
     img {
       width: 100%;

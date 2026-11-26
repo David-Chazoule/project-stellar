@@ -1,11 +1,40 @@
 .start-panel {
+  .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #708c7e;
+
+    .event-life-title-box {
+      display: flex;
+      width: 100%;
+      align-items: center;
+
+      .event-life-title {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          color: #d7e1da;
+          margin: 0 0 4px 6px;
+        }
+
+        p {
+          color: #8c9e96;
+          margin: 0 0 2px 6px;
+        }
+      }
+    }
+  }
   .life-event-card-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
 
-    width: 90%;
+    width: 100%;
 
     .life-event-card {
       display: flex;

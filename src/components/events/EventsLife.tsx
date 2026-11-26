@@ -12,6 +12,7 @@ import {
   Dot,
   TrendingUp,
   TrendingDown,
+  BookOpen,
 } from "lucide-react";
 import { skillLabels } from "@/data/labels/skillLabels";
 import Button from "../Ui/Button";
@@ -309,7 +310,16 @@ function EventsLife({ crew, setCrew, onComplete }: Props) {
 
   return (
     <div className="start-panel">
-      <div className="life-event-header"></div>
+      <div className="header">
+        <div className="event-life-title-box">
+          <BookOpen size={40} color="#A6B8A5" />
+          <div className="event-life-title">
+            <h2>VIE À BORD</h2>
+            <p>CHRONIQUES DE L'ÉQUIPAGE</p>
+          </div>
+        </div>
+      </div>
+
       <div className="life-event-card-box">
         {preparedEvents.map(({ event, participants }) => (
           <div className="life-event-card" key={event.id}>

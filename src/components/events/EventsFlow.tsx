@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import EventsLife from "./EventsLife";
 import CaptainEventsFlow from "./captainEvents/CaptainEventsFlow";
-
+import { BookOpen } from "lucide-react";
 import type { View } from "@/types/gameState";
 import type { Character } from "@/types/character";
 
