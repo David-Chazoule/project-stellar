@@ -189,7 +189,13 @@ function MissionsSelection({ setSelectedMission, gameState, onTravel }: Props) {
         <div className="mission-detail">
           <div className="mission-detail-header">
             <span className="line-title"></span>
-            {previewTravel ? <h2>TRANSIT</h2> : <h2>DETAILS DE LA MISSION</h2>}
+            {previewTravel ? (
+              <h2>TRANSIT</h2>
+            ) : previewMission ? (
+              <h2>DÉTAILS DE LA MISSION</h2>
+            ) : (
+              <h2>EN ATTENTE DE DONNÉES</h2>
+            )}
           </div>
           {previewTravel ? (
             <TravelCard
